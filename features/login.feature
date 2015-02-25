@@ -27,7 +27,7 @@ Scenarios:
   And I enter invalid email ‘d.chen72@gmail.com’
   And I click login
   Then I should see login page
-  And I should see login error message
+  And I should see login error message 1
 
   # Login Fail (2)
   When I am on the login page
@@ -35,7 +35,7 @@ Scenarios:
   And I enter invalid password ‘imcool’
   And I click login
   Then I should see login
-  And I should see login error message
+  And I should see login error message 1
 
   # Login Success
   When I visit login page
