@@ -13,22 +13,22 @@ Scenarios:
   # Redirect man_store
   When I am on the index page
   And I click Manual Store
-  Then I should be redirected to Manual Store Page
+  Then I should be on the Manual Store Page
 
   # Redirect non-man_store
   When I am on the index page
   And I click Non-Manual Store
-  Then I should be redirected to Non-Manual Store Page
+  Then I should be on the Non-Manual Store Page
 
   # Redirect man_store
   When I am on the index page
   And I click Manual Take-out
-  Then I should be redirected to Manual Take-out Page
+  Then I should be on the Manual Take-out Page
 
   # Redirect man_store
   When I am on the index page
   And I click Non-Manual Take-out
-  Then I should be redirected to Non-Manual Take-out Page
+  Then I should be on the Non-Manual Take-out Page
 
   # Display correctly
   When I am on the index page
