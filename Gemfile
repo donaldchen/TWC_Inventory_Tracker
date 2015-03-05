@@ -11,7 +11,6 @@ group :assets do
 end
 
 group :development, :tests do
-        gem 'sqlite3'
 	gem 'database_cleaner'
 	gem 'cucumber-rails', :require => false
 end
