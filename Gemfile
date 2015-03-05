@@ -3,19 +3,30 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 gem 'rails', '3.2.16'
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  gem 'uglifier', '>= 1.0.3'
+group :development, :test do
+  gem 'sqlite3'
+  gem 'ruby-debug19'
+  gem 'database_cleaner'
+  gem 'cucumber-rails', :require => false
+  gem 'rspec-rails', '~> 2.14.0'
+  gem 'simplecov'
 end
 
-group :development, :tests do
-	gem 'database_cleaner'
-	gem 'cucumber-rails', :require => false
+
+group :production do
+  gem 'pg'
+end
+
+group :assets do
+  gem 'uglifier'
+  gem 'therubyracer'
+  gem 'sass-rails'
+  gem 'coffee-rails'
 end
 
 gem 'jquery-rails'
+gem 'haml'
+
 
 
 
