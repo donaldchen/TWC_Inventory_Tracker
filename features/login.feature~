@@ -1,7 +1,7 @@
 Feature: login page
-  As a volunteer or staff
-  I want to login
-  So I can carry out my job with security
+	As a volunteer or staff
+	I want to login
+	So I can carry out my job with security
 
 Background: movies have been added to database
 

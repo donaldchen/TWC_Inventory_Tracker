@@ -1,5 +1,5 @@
 Feature: choose between document or take out items
-  As a logged in user
+	As a logged in user
   I want to chose to store or take out items, manually or non-manually
   So that I can do the correct job
 
