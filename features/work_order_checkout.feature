@@ -24,4 +24,14 @@ Scenarios:
   When I press "yes"
   I should be on the Work Order page
 
+  Given I am on the Item List page
+  And I press "add item"
+  Then I should be on the Add Item page
+
+  Given I am on the Add Item page
+  When I fill in "item code" with "000"
+  And I select the quantity of "toothbrush" to be "4"
+  And I press "confirm item"
+  Then I should be on the Item List page
+
 
