@@ -5,8 +5,11 @@ class LoginController < ApplicationController
 
 	def login
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
 =======
+=======
+>>>>>>> Added code to login controller
         client = Databasedotcom::Client.new("config/databasedotcom.yml")
         client.authenticate :username => 'sampaul@berkeley.edu', :password => 'pleasedontkillme1TfPa8Eb0NneMsYA56IWaYDvd'
         client.materialize("Contact")
@@ -17,10 +20,17 @@ class LoginController < ApplicationController
         	# GRANT ACCESS
         else:
         	# DENY ACCESS
+<<<<<<< HEAD
+>>>>>>> Added code to login controller
+=======
 >>>>>>> Added code to login controller
 	end
 end
 
 
 # Added Password field to Contact.
+<<<<<<< HEAD
 # 
+=======
+# 
+>>>>>>> Added code to login controller
