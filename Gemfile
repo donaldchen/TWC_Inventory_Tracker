@@ -15,7 +15,12 @@ gem 'sdoc',                 '0.4.0', group: :doc
 gem 'rake'
 gem 'database_cleaner'
 <<<<<<< HEAD
+<<<<<<< HEAD
 gem 'haml'
+=======
+gem 'databasedotcom'
+gem 'databasedotcom-rails'
+>>>>>>> Added salesforce config file
 =======
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
