@@ -4,34 +4,38 @@ Feature: Index Page
   So that I can do the correct job
 
 Scenario: not logged in
-  When I am on the index page
-  And I am not logged in
-  Then I should go to login page
-  And I should see login error message 2 
+  Given I am not logged in
+  When I go to Index
+  Then I should see "Please log in"
 
-Scenario: choose manual storage  
-  When I am on the index page
-  And I click Manual Store
-  Then I should be on the Manual Store Page
+Scenario: choose manual storage
+  Given I am logged in
+  And I am on Index
+  When I press Manual Store
+  Then I should be on Manual Store
 
 Scenario: choose scanner storage
-  When I am on the index page
-  And I click Scanner Store
-  Then I should be on the Scanner Store Page
+  Given I am logged in
+  And I am on Index
+  When I press Scanner Store
+  Then I should be on Scanner Store
 
 Scenario: choose manual checkout
-  When I am on the index page
-  And I click Manual Checkout
-  Then I should be on the Manual Checkout Page
+  Given I am logged in
+  And I am on Index
+  When I press Manual Checkout
+  Then I should be on Manual Checkout
 
 Scenario: choose scanner checkout
-  When I am on the index page
-  And I click Scanner Checkout
-  Then I should be on the Scanner Checkout Page
+  Given I am logged in
+  And I am on Index
+  When I press Scanner Checkout
+  Then I should be on Scanner Checkout
 
 Scenario: displays storage and checkout buttons
-  When I am on the index page
-  Then I should see Scanner Checkout Button
-  And I should see Manual Checkout Button
-  And I should see Scanner Store Button
-  And I should see Manual Store Button
+  Given I am logged in
+  And I am on Index
+  Then I should see Scanner Checkout
+  And I should see Manual Checkout
+  And I should see Scanner Store
+  And I should see Manual Store

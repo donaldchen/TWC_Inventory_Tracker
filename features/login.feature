@@ -17,35 +17,36 @@ Background: movies have been added to database
 
 Scenario: display login page
   # Login Visit
-  When I am on the login page
-  Then I should see Username field
-  And I should see Password field
-  And I should see Login Button
+  Given I am on the login page
+  Then I should see Username
+  And I should see Password
+  And I should see Login
 
 Scenario: login with invalid email
   # Login Fail (1)
-  When I am on the login page
-  And I enter invalid email ‘d.chen72@gmail.com’
+  Given I am on the login page
+  When I fill in email with ‘d.chen72@gmail.com’
+  And I fill in password with 'imnotsara'
   And I press 'login'
-  Then I should see login page
-  And I should see login error message 1
+  Then I should be on Login
+  And I should see "Invalid Credentials"
 
 Scenario: login with invalid password
   # Login Fail (2)
-  When I am on the login page
-  And I enter valid email ‘sara.alexander@therewithcare.org ’
-  And I enter invalid password ‘imcool’
-  And I click login
-  Then I should see login
-  And I should see login error message 1
+  Given I am on the login page
+  When I fill in email with ‘sara.alexander@therewithcare.org’
+  And I fill in password with ‘imcool’
+  And I press 'login'
+  Then I should be on Login
+  And I should see "Invalid Credentials"
 
 Scenario: login success
   # Login Success
-  When I visit login page
-  And I enter valid email ‘donaldchen@berkeley.edu’
-  And I enter valid password ‘imnotsara’
-  And I click login
-  Then I should go to index
+  Given I am on the login page
+  When I fill in email with ‘donaldchen@berkeley.edu’
+  And I fill in password with ‘imnotsara’
+  And I press login
+  Then I should be on Index
 
 
 

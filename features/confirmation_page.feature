@@ -14,7 +14,7 @@ Background:
 Scenario: yes, confirm delivery
   Given I am on the Confirmation page for order number "000001"
   And I press "Delivered"
-  Then I should be on the Delivered page.
+  Then I should be on Delivered.
 
 Scenario: no, don't confirm delivery
   Given I am on the Confirmation Page for order number "000001"

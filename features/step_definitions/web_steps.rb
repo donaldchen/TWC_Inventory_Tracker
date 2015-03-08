@@ -16,6 +16,10 @@ Given(/^I am logged in$/) do
   pending # express the regexp above with the code you wish you had
 end
 
+Given(/^I am not logged in$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
 Given(/^the following items exist in the inventory$/) do |table|
   # table is a Cucumber::Ast::Table
   pending # express the regexp above with the code you wish you had
@@ -26,19 +30,7 @@ Given(/^the following work order with order number "(.*?)" exists$/) do |arg1, t
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I should see 'invalid item code'$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see 'number of items must be numeric'$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see 'not enough items in inventory'$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Given(/^when I am on the Add To Work Order page for order number "(.*?)"$/) do |arg1|
+Given(/^when I am on Add To Work Order for order number "(.*?)"$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
 
@@ -46,49 +38,6 @@ Then(/^I should see the Item List page for order number "(.*?)"$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
 
-When(/^I am not logged in$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should go to login page$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see login error message (\d+)$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I click Manual Store$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I click Scanner Store$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I click Manual Checkout$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I click Scanner Checkout$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see Scanner Checkout Button$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see Manual Checkout Button$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see Scanner Store Button$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see Manual Store Button$/) do
-  pending # express the regexp above with the code you wish you had
-end
 
 Then(/^I should see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|
   pending # express the regexp above with the code you wish you had
@@ -110,67 +59,6 @@ end
 Given(/^I am a volunteer$/) do
   pending # express the regexp above with the code you wish you had
 end
-
-Then(/^I should see Username field$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see Password field$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see Login Button$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I enter invalid email ‘d\.chen(\d+)@gmail\.com’$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I press 'login'$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see login page$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I enter valid email ‘sara\.alexander@therewithcare\.org ’$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I enter invalid password ‘imcool’$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I click login$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see login$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I visit login page$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I enter valid email ‘donaldchen@berkeley\.edu’$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^I enter valid password ‘imnotsara’$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should go to index$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Given(/^when I am on the Work Order page$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
 
 
 

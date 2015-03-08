@@ -17,12 +17,8 @@ Scenario: select valid work order
   Then I should be on the Item List page for order number "000001"
 
 Scenario: select invalid work order
-  Given when I am on the Work Order page
+  Given I am on the Work Order page
   When I fill in "work order code" with "DOESNTWORK"
   And I press "enter"
-  Then I should be on the Work Order page
+  Then I should be on Work Order
   And I should see "Invalid order number"
-
-
-
-

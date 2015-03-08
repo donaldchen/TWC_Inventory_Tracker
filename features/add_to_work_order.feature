@@ -32,7 +32,7 @@ Scenario: input invalid code for item
   When I fill in "item code" with "999"
   And I fill in "number of items" with "4"
   And I press "add to cart"
-  Then I should be on the Add To Work Order page
+  Then I should be on Add To Work Order
   And I should see 'invalid item code' 
 
 Scenario: input invalid number of items
@@ -40,7 +40,7 @@ Scenario: input invalid number of items
   When I fill in "item code" with "000"
   And I fill in "number of items" with "no"
   And I press "add to cart"
-  Then I should be on the Add To Work Order page
+  Then I should be on Add To Work Order
   And I should see 'number of items must be numeric' 
 
 Scenario: input valid code for item
@@ -48,11 +48,11 @@ Scenario: input valid code for item
   When I fill in "item code" with "000"
   And I fill in "number of items" with "100"
   And I press "add to cart"
-  Then I should be on the Add To Work Order page
+  Then I should be on Add To Work Order
   And I should see 'not enough items in inventory' 
 
 Scenario: return to item list
-  Given when I am on the Add To Work Order page for order number "000001"
+  Given when I am on Add To Work Order for order number "000001"
   When I press "Go Back"
   Then I should see the Item List page for order number "000001"
 
