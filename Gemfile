@@ -14,7 +14,12 @@ gem 'rails-html-sanitizer', '1.0.1'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'rake'
 gem 'database_cleaner'
+<<<<<<< HEAD
 gem 'haml'
+=======
+gem 'databasedotcom'
+gem 'databasedotcom-rails'
+>>>>>>> Added salesforce config file
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
