@@ -14,6 +14,8 @@ gem 'rails-html-sanitizer', '1.0.1'
 gem 'sdoc',                 '0.4.0', group: :doc
 gem 'rake'
 gem 'database_cleaner'
+gem 'databasedotcom'
+gem 'databasedotcom-rails'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
