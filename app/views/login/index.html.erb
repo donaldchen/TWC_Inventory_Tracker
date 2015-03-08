@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset = "UTF-8"
+        <meta charset = "UTF-8">
         <title> Login Page </title>
     </head>
     
@@ -13,18 +13,27 @@
     
     <section>
         <fieldset>
-            <form method = "post" action = "#">
-                <label>
-                    Username
-                    <input type = "text" placeholder = "Username" required id = "username">
+            <!--<form method = "post" action = "#">-->
+            <%= form_for @person do |f| %>
+                <%= f.label :first_name %>:
+                <%= f.text_field :first_name %><br />
+
+                <%= f.label :last_name %>:
+                <%= f.text_field :last_name %><br />
+
+                <%= f.submit %>
+            <% end %>
+                <!--<label>-->
+                <!--    Username-->
+                <!--    <input type = "text" placeholder = "Username" required id = "<%= username %>">-->
                     
-                </label>
-                <label>
-                    Password
-                    <input type = "password" placeholder = "Password" required id = "password">
-                </label>
-                <input type = "submit" value = "Login" id = "login_button">
-            </form>
+                <!--</label>-->
+                <!--<label>-->
+                <!--    Password-->
+                <!--    <input type = "password" placeholder = "Password" required id = "<%= password %>">-->
+                <!--</label>-->
+                <!--<input type = "submit" value = "Login" id = "login_button">-->
+            <!--</form>-->
         </fieldset>
     </section>
     </body>
