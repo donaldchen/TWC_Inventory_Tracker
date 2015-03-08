@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'login' => 'login#index'
-  get 'workorderhome' => 'workorder#index'
+  get 'workorderhome' => 'work_order#index'
 
 
 
