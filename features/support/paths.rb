@@ -16,7 +16,7 @@ module NavigationHelpers
     # edit this. this is just a placeholder to make cucumber work
     when /^the (TWC )?login\s?page$/ then '/login'
 
-      
+  
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

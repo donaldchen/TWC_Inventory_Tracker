@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %title Item List
+    = stylesheet_link_tag 'confirmation'
+    
+  %body
+    %header{:class => "header"}
+      %h2 Item List
+    %section{:class => "row section"}
+      %div{:class => "col-6"}
+        %div{:class => "btn left"}
+          = link_to 'Edit', "/login"
+      %div{:class => "col-6"}
+        %div{:class => "btn"} 
+          = link_to 'Checkout', "/confirmation"
