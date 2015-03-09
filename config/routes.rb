@@ -9,13 +9,13 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'login' => 'login#index'
-  get 'work_order_home' => 'work_order#index'
+  get 'work_order_home' => 'work_order#index', as: :swag #swag_path
   post 'work_order_home' => 'work_order#check'
-  get 'confirmation' => 'confirmation#index'
-  get 'item_list' => 'item_list#index'
+
+  get 'confirmation' => 'work_order#confirmation'
+  get 'item_list' => 'work_order#item_list'
   get 'add_item' => 'work_order#add_to_work_order'
   post 'add_item' => 'work_order#add_item_confirm'
-
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

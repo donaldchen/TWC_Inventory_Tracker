@@ -25,5 +25,4 @@ class WorkOrderController < ApplicationController
 		def work_order_params
     		params.require(:code).permit(:item, :quantity)
     	end
-
 end
