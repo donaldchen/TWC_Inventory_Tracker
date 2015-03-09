@@ -8,7 +8,8 @@ class WorkOrderController < ApplicationController
 		if not work_order_code =~ /^[0-9]+$/
 			flash[:notice] = "Invalid order number"
 			redirect_to work_order_home_path
-		elsif WorkOrder.where(code: work_order_code).first
+			#elsif WorkOrder.where(code: work_order_code).first
+		else
 			redirect_to item_list_path
 		end
 	end
@@ -19,6 +20,14 @@ class WorkOrderController < ApplicationController
 
 	def add_item_confirm
 		redirect_to item_list_path
+	end
+
+	def item_list
+
+	end
+
+	def confirmation
+
 	end
 
 	private 
