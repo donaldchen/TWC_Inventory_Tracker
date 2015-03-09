@@ -4,8 +4,9 @@ Feature: item list
   So I can correctly choose the items in the care package
 
 Background:
-  Given I am logged in
-  And the following items exist in the inventory
+  #Given I am logged in
+  #And the following items exist in the inventory
+  Given the following items exist in the inventory
   | item                  | code | quantity |
   | diapers               | 000  | 3        |
   | toothbrush            | 001  | 3        |
