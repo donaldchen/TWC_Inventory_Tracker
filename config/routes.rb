@@ -10,8 +10,15 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get 'login' => 'login#index'
   get 'workorderhome' => 'work_order#index'
+  
   get 'confirmation' => 'work_order#confirmation'
   get 'itemlist' => 'work_order#item_list'
+
+  post 'workorderhome' => 'work_order#check'
+  get 'confirmation' => 'confirmation#index'
+  get 'itemlist' => 'item_list#index'
+  get 'additem' => 'work_order#add_to_work_order'
+  post 'additem' => 'work_order#add_item_confirm'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
@@ -31,6 +38,7 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+
 
   # Example resource route with sub-resources:
   #   resources :products do

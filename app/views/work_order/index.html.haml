@@ -1,1 +1,7 @@
 %h1 Work Order Page
+
+%h4 Work Order Code:
+= form_tag workorderhome_path do
+	= text_field :work_order_code, 'Work Order Code: '
+
+	= submit_tag 'Select Code' 

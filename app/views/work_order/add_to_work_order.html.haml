@@ -1,0 +1,10 @@
+%h1 Add Item
+
+%h4 Item Code:
+= form_tag additem_path do
+	= text_field :work_order_code, 'Item Code: '
+	%br
+	%h4 Quantity:
+	%input{:type=> "number"}
+	%br
+	= submit_tag 'Confirm' 
