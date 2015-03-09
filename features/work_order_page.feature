@@ -13,12 +13,12 @@ Background:
 Scenario: select valid work order
   Given I am on the Work Order page
   When I fill in "work order code" with "000001"
-  And I press "enter"
+  And I press "Select Code"
   Then I should be on the Item List page for order number "000001"
 
 Scenario: select invalid work order
   Given I am on the Work Order page
   When I fill in "work order code" with "DOESNTWORK"
-  And I press "enter"
+  And I press "Select Code"
   Then I should be on Work Order
   And I should see "Invalid order number"
