@@ -9,12 +9,12 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'login' => 'login#index'
-  get 'workorderhome' => 'work_order#index'
-  post 'workorderhome' => 'work_order#check'
+  get 'work_order_home' => 'work_order#index'
+  post 'work_order_home' => 'work_order#check'
   get 'confirmation' => 'confirmation#index'
-  get 'itemlist' => 'item_list#index'
-  get 'additem' => 'work_order#add_to_work_order'
-  post 'additem' => 'work_order#add_item_confirm'
+  get 'item_list' => 'item_list#index'
+  get 'add_item' => 'work_order#add_to_work_order'
+  post 'add_item' => 'work_order#add_item_confirm'
 
 
 

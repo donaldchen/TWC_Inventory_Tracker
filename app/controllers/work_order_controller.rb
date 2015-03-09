@@ -1,10 +1,16 @@
 class WorkOrderController < ApplicationController
 	def index
-		#redirect_to itemlist_path
 	end
 
 	def check
-		redirect_to itemlist_path
+		work_order_code = params[:work_order][:WorkOrderCode]
+
+		if not work_order_code =~ /^[0-9]+$/
+			flash[:notice] = "Invalid order number"
+			redirect_to work_order_home_path
+		elsif WorkOrder.where(code: work_order_code).first
+			redirect_to item_list_path
+		end
 	end
 
 	def add_to_work_order
@@ -12,6 +18,12 @@ class WorkOrderController < ApplicationController
 	end
 
 	def add_item_confirm
-		redirect_to itemlist_path
+		redirect_to item_list_path
 	end
+
+	private 
+		def work_order_params
+    		params.require(:code).permit(:item, :quantity)
+    	end
+
 end

@@ -25,9 +25,10 @@ Given(/^the following items exist in the inventory$/) do |table|
   pending # express the regexp above with the code you wish you had
 end
 
-Given(/^the following work order with order number "(.*?)" exists$/) do |arg1, table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
+Given(/^the following work order with order number "(.*)" exists$/) do |order_number, item_table|
+  item_table.hashes.each do |item|
+    entry = WorkOrder.create(item: item['item'], quantity: item['quantity'], code: order_number)
+  end
 end
 
 Given(/^when I am on Add To Work Order for order number "(.*?)"$/) do |arg1|
