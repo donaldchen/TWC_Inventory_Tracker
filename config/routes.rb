@@ -11,9 +11,10 @@ Rails.application.routes.draw do
   get 'login' => 'login#index'
   get 'workorderhome' => 'work_order#index'
   post 'workorderhome' => 'work_order#check'
-  
   get 'confirmation' => 'confirmation#index'
   get 'itemlist' => 'item_list#index'
+  get 'additem' => 'work_order#add_to_work_order'
+  post 'additem' => 'work_order#add_item_confirm'
 
 
 
