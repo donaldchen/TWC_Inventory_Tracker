@@ -3,7 +3,6 @@ class LoginController < ApplicationController
 	        # render template
 		# TODO change route to login / POST
                 # render "index"
-                render plain: "OK"
 	end
 
 	def login
