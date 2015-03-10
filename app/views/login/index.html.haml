@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "UTF-8">
-        <title> Login Page </title>
-    </head>
-    
-    <body>
-        <header>
-            <h2> ThereWithCare</h2>
-            <h2> Inventory Tracker</h2>
-        </header>
-    
-   
-    </body>
-</html>
+%h1 Login Page
+
+%form
+  %label Email
+  %input(name: "Email", type: "text")
+  %label Password
+  %input(name: "Password", type: "password")
+  %input{:type => "submit", value => "Sign in"} 
