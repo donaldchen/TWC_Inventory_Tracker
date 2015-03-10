@@ -1,22 +1,8 @@
 %h1 Index
 
-/ = form_tag manual_store_path, :method => :get do
-/   %input{:type => "submit", :value => "Manual Store"} 
-
-/ = form_tag scanner_store_path, :method => :get do
-/   %input{:type => "submit", :value => "Scanner Store"} 
-
-/ = form_tag work_order_path, :method => :get do
-/   %input{:type => "submit", :value => "Work Order"} 
-
 %input{:type => "submit", :value => "Manual Store"} 
 %input{:type => "submit", :value => "Scanner Store"} 
-<<<<<<< HEAD
-%input{:type => "submit", :value => "Manual Checkout"} 
-%input{:type => "submit", :value => "Scanner Checkout"}
 =link_to "Logout", logout_path
-=======
-
 = form_tag work_order_home_path, :method => :get do
   %input{:type => "submit", :value => "Work Order"} 
->>>>>>> 47822ff1cb7477dd0589a4784e73e0903a08c7b1
+
