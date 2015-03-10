@@ -15,11 +15,26 @@ class WorkOrderController < ApplicationController
 	end
 
 	def add_to_work_order
+		
 
 	end
 
 	def add_item_confirm
-		redirect_to item_list_path
+		item_code = params[:item][:ItemCode]
+		quantity = params[:item][:Quantity]
+		if not Inventory.where(code: item_code).first
+			flash[:notice] = "invalid item code"
+		elsif not quantity =~ /^[0-9]+$/
+			flash[:notice] = "quantity must be numeric"
+		elsif Integer(quantity) > Inventory.where(code: item_code).first.quantity
+			flash[:notice] = "not enough items in inventory"
+		end
+
+		if flash[:notice]
+			redirect_to add_item_path
+		else
+			redirect_to item_list_path
+		end
 	end
 
 	def item_list
@@ -33,5 +48,9 @@ class WorkOrderController < ApplicationController
 	private 
 		def work_order_params
     		params.require(:code).permit(:item, :quantity)
+    	end
+
+    	def inventory_params
+    		params.permit(:item, :code, :quantity)
     	end
 end

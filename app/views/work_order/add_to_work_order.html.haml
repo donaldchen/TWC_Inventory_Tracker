@@ -1,10 +1,15 @@
 %h1 Add Item
 
-%h4 Item Code:
-= form_tag additem_path do
-	= text_field :work_order_code, 'Item Code: '
+= form_tag add_item_path do
+	= label :item, :ItemCode, 'ItemCode'
+	= text_field :item, 'ItemCode'
 	%br
 	%h4 Quantity:
-	%input{:type=> "number"}
+	= label :item, :Quantity, 'Quantity'
+	= text_field :item, 'Quantity'
 	%br
-	= submit_tag 'Confirm' 
+	= submit_tag 'add to cart' 
+
+= form_tag item_list_path, :method => :get  do
+	= submit_tag 'Go Back'
+

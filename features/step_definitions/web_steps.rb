@@ -20,9 +20,10 @@ Given(/^I am not logged in$/) do
   pending # express the regexp above with the code you wish you had
 end
 
-Given(/^the following items exist in the inventory$/) do |table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
+Given(/^the following items exist in the inventory$/) do |item_table|
+  item_table.hashes.each do |item|
+    entry = Inventory.create(item: item['item'], code: item['code'], quantity: item['quantity'])
+  end
 end
 
 Given(/^the following work order with order number "(.*)" exists$/) do |order_number, item_table|
@@ -38,7 +39,6 @@ end
 Then(/^I should see the Item List page for order number "(.*?)"$/) do |arg1|
   pending # express the regexp above with the code you wish you had
 end
-
 
 Then(/^I should see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|
   pending # express the regexp above with the code you wish you had
