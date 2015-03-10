@@ -12,11 +12,14 @@ World(WithinHelpers)
 
 
 Given(/^I am logged in$/) do
-  pending # express the regexp above with the code you wish you had
+  visit("/")
+  fill_in("email", :with => "test1@test1.com")
+  fill_in("password", :with => "test1")
+  click_button("Sign in")
 end
 
 Given(/^I am not logged in$/) do
-  pending # express the regexp above with the code you wish you had
+  # Don't do anything
 end
 
 Given(/^the following items exist in the inventory$/) do |item_table|
@@ -60,6 +63,9 @@ Given(/^I am a volunteer$/) do
   pending # express the regexp above with the code you wish you had
 end
 
+Then /^I should see "([^"]*)" button/  do |name|
+  find_button(name).should_not be_nil
+end
 
 
 
