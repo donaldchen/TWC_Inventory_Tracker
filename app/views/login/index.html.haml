@@ -1,8 +1,18 @@
-%h1 Login Page
+%h1 Index
 
-= form_tag login_path, :method => :post do
-  %label Email
-  %input{:name => "email", :type => "text"}
-  %label Password
-  %input{:name => "password", :type => "password"}
-  %input{:type => "submit", :value => "Sign in"} 
+/ = form_tag manual_store_path, :method => :get do
+/   %input{:type => "submit", :value => "Manual Store"} 
+
+/ = form_tag scanner_store_path, :method => :get do
+/   %input{:type => "submit", :value => "Scanner Store"} 
+
+/ = form_tag manual_checkout_path, :method => :get do
+/   %input{:type => "submit", :value => "Manual Checkout"} 
+
+/ = form_tag scanner_checkout_path, :method => :get do
+/   %input{:type => "submit", :value => "Scanner Checkout"} 
+
+%input{:type => "submit", :value => "Manual Store"} 
+%input{:type => "submit", :value => "Scanner Store"} 
+%input{:type => "submit", :value => "Manual Checkout"} 
+%input{:type => "submit", :value => "Scanner Checkout"} 
