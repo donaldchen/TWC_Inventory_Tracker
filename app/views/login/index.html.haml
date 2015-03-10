@@ -11,4 +11,6 @@
 
 %input{:type => "submit", :value => "Manual Store"} 
 %input{:type => "submit", :value => "Scanner Store"} 
-%input{:type => "submit", :value => "Work Order"} 
+
+= form_tag work_order_home_path, :method => :get do
+  %input{:type => "submit", :value => "Work Order"} 
