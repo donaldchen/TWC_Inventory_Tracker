@@ -10,15 +10,13 @@ class LoginController < ApplicationController
                 client = Databasedotcom::Client.new("config/databasedotcom.yml")
                 client.authenticate :username => 'sampaul@berkeley.edu', :password => 'pleasedontkillme1TfPa8Eb0NneMsYA56IWaYDvd'
                 client.materialize("Contact")
-                # contact = SFDC::Contact.find_by_email(email_address_field)
-                # actual_password = contact.Password__c
+                #contact = SFDC::Contact.find_by_email(email_address_field)
+                #password = contact.Password__c
 
-         #        if actual_password == :password:
-         #        	# GRANT ACCESS
-         #        	# redirect_to_
-         #        else:
-         #        	# DENY ACCESS
-         #        	# flash, redirect to 
+                #if password == password_field:
+                	# GRANT ACCESS
+                #else:
+                	# DENY ACCESS
 	end
 
 # Added Password field to Contact.

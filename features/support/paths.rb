@@ -14,9 +14,15 @@ module NavigationHelpers
     case page_name
 
     # edit this. this is just a placeholder to make cucumber work
-    when /^the (TWC )?login\s?page$/ then '/login'
+    when /^the (TWC )?login\s?page$/ then login_path
+    when /^the Work Order page$/ then work_order_home_path
 
-      
+    # we still need to access the specific page for a work order's item list. item_list_path(work order id)
+    when /^the Item List page for order number "(.*)"/ then item_list_path
+      # we still need to access the specific page for this work order. add_to_work_order_path(work order id)
+    when /^the Add To Work Order page for order number "(.*)"$/ then add_item_path
+
+  
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
