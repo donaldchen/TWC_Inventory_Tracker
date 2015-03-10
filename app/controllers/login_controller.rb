@@ -1,21 +1,20 @@
 class LoginController < ApplicationController
-        def index
-	        # render template
-		# TODO change route to login / POST
-                # render "index"
-	end
+    def index
+    end
 
-	def login
-                client = Databasedotcom::Client.new("config/databasedotcom.yml")
-                client.authenticate :username => 'sampaul@berkeley.edu', :password => 'pleasedontkillme1TfPa8Eb0NneMsYA56IWaYDvd'
-                client.materialize("Contact")
-                #contact = SFDC::Contact.find_by_email(email_address_field)
-                #password = contact.Password__c
-
-                #if password == password_field:
-                	# GRANT ACCESS
-                #else:
-                	# DENY ACCESS
+    def login
+        client = Databasedotcom::Client.new("config/databasedotcom.yml")
+        client.authenticate :username => 'sampaul@berkeley.edu', :password => 'pleasedontkillme1TfPa8Eb0NneMsYA56IWaYDvd'
+        client.materialize("Contact")
+        contact = SFDC::Contact.find_by_email(params[:email])
+        password = contact.Password__c
+        if password == params[:password_field]
+        	flash[:notice] = "Login Successful"
+        else
+        	flash[:notice] = "Login not Successful"
+        end
+        
+        redirect_to root
 	end
 
 # Added Password field to Contact.
