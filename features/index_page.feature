@@ -20,22 +20,15 @@ Scenario: choose scanner storage
   When I press Scanner Store
   Then I should be on Scanner Store
 
-Scenario: choose manual checkout
+Scenario: choose work order page
   Given I am logged in
   And I am on Index
-  When I press Manual Checkout
-  Then I should be on Manual Checkout
-
-Scenario: choose scanner checkout
-  Given I am logged in
-  And I am on Index
-  When I press Scanner Checkout
-  Then I should be on Scanner Checkout
+  When I press Work Order
+  Then I should be on the Work Order Page
 
 Scenario: displays storage and checkout buttons
   Given I am logged in
   And I am on Index
-  Then I should see Scanner Checkout
-  And I should see Manual Checkout
-  And I should see Scanner Store
+  Then I should see Scanner Store
   And I should see Manual Store
+  And I shoudl see Work Order
