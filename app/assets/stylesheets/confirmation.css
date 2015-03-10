@@ -22,7 +22,6 @@ body {
 
 .header {
 	text-align:center;
-	color:white;
 	/*border:1px solid black; */
 }
 
@@ -91,7 +90,7 @@ body {
 }
 
 a {
-    color:white;
+    color:black;
     text-decoration:none;
 }
 
