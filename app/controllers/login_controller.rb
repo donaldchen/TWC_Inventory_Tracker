@@ -3,6 +3,7 @@ class LoginController < ApplicationController
 
     def index
         if session[:login]
+            flash[:notice] = session[:login]
             render "index.html.haml"
         else
             render "login.html.haml"
@@ -17,6 +18,11 @@ class LoginController < ApplicationController
         	flash[:notice] = "Login not Successful"
         end
         
+        redirect_to root_path
+    end
+    
+    def logout
+        session[:login] = false
         redirect_to root_path
     end
 
