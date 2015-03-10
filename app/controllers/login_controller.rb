@@ -2,12 +2,17 @@ class LoginController < ApplicationController
     include Databasedotcom::Rails::Controller
 
     def index
+        if session[:login]
+            render "index.html.haml"
+        else
+            render "login.html.haml"
+        end
     end
 
     def login
         c = Contact.find_by_email(params[:email])
-        if c != nil
-        	flash[:notice] = c.Password__c
+        if c != nil and c.Password__c == params[:password]
+        	session[:login] = true
         else
         	flash[:notice] = "Login not Successful"
         end
@@ -15,6 +20,8 @@ class LoginController < ApplicationController
         redirect_to root_path
     end
 
+<<<<<<< HEAD
+=======
 =begin
     def login
         client = Databasedotcom::Client.new("config/databasedotcom.yml")
@@ -32,6 +39,7 @@ class LoginController < ApplicationController
 	end
 =end
 
+>>>>>>> eb502c3f0c76c5cb029b11a797b3f0d2baaa0b57
 # Added Password field to Contact.
 # Connected App:        All users may self authorize, relax ip restrictions
 end
