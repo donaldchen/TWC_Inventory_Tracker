@@ -19,7 +19,6 @@ end
 
 
 # Added Password field to Contact.
-<<<<<<< HEAD
-=======
+
 # 
->>>>>>> 400a2f6e394d242308259cca6ac2f3b314c4e9f6
+
