@@ -16,6 +16,7 @@ gem 'rake'
 gem 'database_cleaner'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 gem 'haml'
 =======
 gem 'databasedotcom'
@@ -25,6 +26,10 @@ gem 'databasedotcom-rails'
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
 >>>>>>> Added salesforce config file
+=======
+gem 'databasedotcom'
+gem 'databasedotcom-rails'
+>>>>>>> 400a2f6e394d242308259cca6ac2f3b314c4e9f6
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
