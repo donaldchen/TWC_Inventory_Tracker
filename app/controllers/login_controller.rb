@@ -1,4 +1,6 @@
 class LoginController < ApplicationController
+    include Databasedotcom::Rails::Controller
+    
     def index
     end
 
@@ -6,7 +8,7 @@ class LoginController < ApplicationController
         client = Databasedotcom::Client.new("config/databasedotcom.yml")
         client.authenticate :username => 'sampaul@berkeley.edu', :password => 'pleasedontkillme1TfPa8Eb0NneMsYA56IWaYDvd'
         client.materialize("Contact")
-        contact = SFDC::Contact.find_by_email(params[:email])
+        contact = Contact.find_by_email(params[:email])
         password = contact.Password__c
         if password == params[:password_field]
         	flash[:notice] = "Login Successful"
