@@ -8,9 +8,12 @@
     %header{:class => "header"}
       %h2 Item List
     %section{:class => "row section"}
-      %div{:class => "col-6"}
+      %div{:class => "col-4"}
         %div{:class => "btn left"}
-          = link_to 'Edit', login_path
-      %div{:class => "col-6"}
+          = link_to 'Add Item', add_item_path
+      %div{:class => "col-4"}
         %div{:class => "btn"} 
           = link_to 'Checkout', confirmation_path
+      %div{:class => "col-4"}
+        %div{:class => "btn"} 
+          = link_to 'Cancel', work_order_home_path

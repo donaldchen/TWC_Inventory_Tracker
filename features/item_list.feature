@@ -16,34 +16,33 @@ Background:
   | crayon boxes          | 005  | 3        |
   | car seat              | 006  | 3        |
 
-  #And the following work order with order number "000001" exists
-  And I am on the Item List Page
+  And the following work order with order number "000001" exists
   | item                  | quantity |
   | diapers               | 3        |
   | toothbrush            | 1        |
 
 Scenario: correct items for work order displayed
-  Given I am on the Item List Page
+  Given I am on the Item List Page for order number "000001"
   Then I should see "diapers" with quantity "3"
   And I should see "toothbrush" with quantity "1"
 
 Scenario: delete item from work order
-  Given I am on the Item List Page
+  Given I am on the Item List Page for order number "000001"
   And I press "delete" for "diapers"
   Then I should be on the Item List Page
   And I should not see "diapers" with quantity "3"
 
 Scenario: add a new item to work order
-  Given I am on the Item List Page
+  Given I am on the Item List Page for order number "000001"
   And I press "edit"
   Then I should be on Add to Work Order
  
 Scenario: confirm work order
-  Given I am on the Item List Page
+  Given I am on the Item List Page for order number "000001"
   And I press "confirm"
   Then I should be on Confirmation
 
 Scenario: cancel current job
-  Given I am on the Item List Page
+  Given I am on the Item List Page for order number "000001"
   And I press "cancel"
   Then I should be on Work Order
