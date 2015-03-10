@@ -1,3 +1,14 @@
 language: ruby
 rvm:
   - 2.1.5
+
+notifications:
+  email:
+    recipients:
+    - davidcheng@berkeley.edu
+    - jefftan274@gmail.com
+    - carlos123@berkeley.edu
+    - robinhu510@gmail.com
+    - sampaul@berkeley.edu
+    on_success: always
+    on_failure: always
