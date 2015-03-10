@@ -1,6 +1,6 @@
 %h1 Login Page
 
-%form
+= form_tag login_path, :method => :post do
   %label Email
   %input{:name => "email", :type => "text"}
   %label Password
