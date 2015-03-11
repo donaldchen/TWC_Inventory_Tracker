@@ -2,7 +2,7 @@
 
 = form_tag work_order_home_path do
 
-	= label :work_order, :WorkOrderCode, 'WorkOrderCode'
+	= label :work_order, :WorkOrderCode, 'WorkOrderCode', style: "display:none;"
 	= text_field :work_order, 'WorkOrderCode'
 
 	= submit_tag 'Select Code' 
