@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"filter":false,"title":"add_to_work_order.feature","tooltip":"/features/add_to_work_order.feature","undoManager":{"mark":-1,"position":-1,"stack":[]},"ace":{"folds":[],"scrolltop":0,"scrollleft":0,"selection":{"start":{"row":22,"column":38},"end":{"row":22,"column":68},"isBackwards":false},"options":{"guessTabSize":true,"useWrapMode":false,"wrapToView":true},"firstLineState":0},"timestamp":1426028534998,"hash":"18b5ef83d7aca70b013013c0b076a11669cbfe38"}
+=======
+{"filter":false,"title":"add_to_work_order.feature","tooltip":"/features/add_to_work_order.feature","undoManager":{"mark":-1,"position":-1,"stack":[]},"ace":{"folds":[],"scrolltop":544,"scrollleft":0,"selection":{"start":{"row":25,"column":27},"end":{"row":25,"column":27},"isBackwards":false},"options":{"guessTabSize":true,"useWrapMode":false,"wrapToView":true},"firstLineState":{"row":37,"state":"start","mode":"ace/mode/gherkin"}},"timestamp":1426027958815,"hash":"18b5ef83d7aca70b013013c0b076a11669cbfe38"}
+>>>>>>> 7770f191b3204241051f461f9e72f988957ec988
