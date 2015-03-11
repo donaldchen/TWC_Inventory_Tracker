@@ -2,6 +2,9 @@ class WorkOrderController < ApplicationController
 	def index
 	end
 
+    def item_list
+       @items = ["Hello", "Diapers", "Items"]
+    end
 	def check
 		work_order_code = params[:work_order][:WorkOrderCode]
 

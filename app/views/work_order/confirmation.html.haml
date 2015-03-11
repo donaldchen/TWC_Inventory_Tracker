@@ -1,17 +1,21 @@
 !!! 5
 %html
   %head
-    %title Confirmation Page
+    %title Confirmation page
     = stylesheet_link_tag 'confirmation'
     
   %body
     %header{:class => "header"}
       %h2 Are You Sure?
-    %section{:class => "row section"}
-      %div{:class => "col-6"}
-        %div{:class => "btn left"}
-          = link_to 'Delivered', login_path
-      %div{:class => "col-6"}
-        %div{:class => "btn"} 
-          = link_to 'Go Back', item_list_path
+    // %section{:class => "row section"}
+    //   %div{:class => "col-6"}
+    //     %div{:class => "btn left"}
+    //       = link_to 'Delivered', work_order_home_path
+    //   %div{:class => "col-6"}
+    //     %div{:class => "btn"} 
+    //       = link_to 'Go Back', item_list_path
+= form_tag work_order_home_path, :method => :get do
+  = submit_tag 'Delivered'
+= form_tag item_list_path, :method => :get do
+  = submit_tag 'Go Back'
 
