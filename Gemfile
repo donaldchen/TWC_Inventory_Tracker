@@ -16,6 +16,8 @@ gem 'rake'
 gem 'database_cleaner'
 gem 'haml'
 gem 'simplecov'
+gem 'databasedotcom'
+gem 'databasedotcom-rails'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

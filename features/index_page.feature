@@ -5,37 +5,17 @@ Feature: Index Page
 
 Scenario: not logged in
   Given I am not logged in
-  When I go to Index
-  Then I should see "Please log in"
+  When I go to the login page
+  Then I should see "Login Page"
 
-Scenario: choose manual storage
+Scenario: choose work order page
   Given I am logged in
-  And I am on Index
-  When I press Manual Store
-  Then I should be on Manual Store
-
-Scenario: choose scanner storage
-  Given I am logged in
-  And I am on Index
-  When I press Scanner Store
-  Then I should be on Scanner Store
-
-Scenario: choose manual checkout
-  Given I am logged in
-  And I am on Index
-  When I press Manual Checkout
-  Then I should be on Manual Checkout
-
-Scenario: choose scanner checkout
-  Given I am logged in
-  And I am on Index
-  When I press Scanner Checkout
-  Then I should be on Scanner Checkout
+  And I am on the login page
+  When I press "Work Order"
+  Then I should be on the Work Order page
 
 Scenario: displays storage and checkout buttons
   Given I am logged in
-  And I am on Index
-  Then I should see Scanner Checkout
-  And I should see Manual Checkout
-  And I should see Scanner Store
-  And I should see Manual Store
+  Then I should see "Scanner Store" button
+  And I should see "Manual Store" button
+  And I should see "Work Order" button
