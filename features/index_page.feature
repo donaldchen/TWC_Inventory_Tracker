@@ -10,7 +10,6 @@ Scenario: not logged in
 
 Scenario: choose work order page
   Given I am logged in
-  And I am on the login page
   When I press "Work Order"
   Then I should be on the Work Order page
 
