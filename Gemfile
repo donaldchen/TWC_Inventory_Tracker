@@ -15,6 +15,7 @@ gem 'sdoc',                 '0.4.0', group: :doc
 gem 'rake'
 gem 'database_cleaner'
 gem 'haml'
+gem 'simplecov'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
