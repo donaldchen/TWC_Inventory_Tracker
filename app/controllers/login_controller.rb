@@ -3,14 +3,17 @@ class LoginController < ApplicationController
 
     def index
         if session[:login]
-            flash[:notice] = session[:login]
-            render "index.html.haml"
+            flash[:notice] = "Login Successful"
         else
-            render "login.html.haml"
+            redirect_to login_path
         end
     end
 
     def login
+
+    end
+    
+    def verify
         c = Contact.find_by_email(params[:email])
         if c != nil and c.Password__c == params[:password]
         	session[:login] = true
@@ -20,7 +23,8 @@ class LoginController < ApplicationController
         
         redirect_to root_path
     end
-    
+        
+        
     def logout
         session[:login] = false
         redirect_to root_path
