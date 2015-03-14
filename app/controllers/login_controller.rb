@@ -2,9 +2,7 @@ class LoginController < ApplicationController
     include Databasedotcom::Rails::Controller
 
     def index
-        if session[:login]
-            flash[:notice] = "Login Successful"
-        else
+        if not session[:login]
             redirect_to login_path
         end
     end
@@ -17,6 +15,7 @@ class LoginController < ApplicationController
         c = Contact.find_by_email(params[:email])
         if c != nil and c.Password__c == params[:password]
         	session[:login] = true
+        	flash[:notice] = "Login Successful"
         else
         	flash[:notice] = "Login not Successful"
         end
@@ -27,6 +26,7 @@ class LoginController < ApplicationController
         
     def logout
         session[:login] = false
+        flash[:notice] = "Logout Successful"
         redirect_to root_path
     end
 

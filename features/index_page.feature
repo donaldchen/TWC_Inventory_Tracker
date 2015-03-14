@@ -18,3 +18,8 @@ Scenario: displays storage and checkout buttons
   Then I should see "Scanner Store" button
   And I should see "Manual Store" button
   And I should see "Work Order" button
+  
+Scenario: logout
+ Given I am logged in
+ When I press "Logout"
+ Then I should see "Logout Successful"
