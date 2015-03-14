@@ -1,16 +1,16 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/workspace/app/models/inventory.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/models/inventory.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/models/work_order.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/models/work_order.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/work_order_controller.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/controllers/work_order_controller.rb": [
         1,
         1,
         null,
@@ -71,34 +71,34 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/application_controller.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/application_helper.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/confirmation_helper.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/confirmation_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/item_list_helper.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/item_list_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/login_helper.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/login_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/helpers/work_order_helper.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/work_order_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/workspace/app/controllers/login_controller.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/controllers/login_controller.rb": [
         1,
         1,
         null,
@@ -135,11 +135,11 @@
         null,
         null
       ],
-      "/home/ubuntu/workspace/lib/sfdc_models.rb": [
+      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/lib/sfdc_models.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1426300353
+    "timestamp": 1426305725
   }
 }
