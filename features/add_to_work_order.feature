@@ -21,34 +21,26 @@ Background:
 
 Scenario: input valid code for item
   Given I am on the Add To Work Order page for order number "000001"
-  When I fill in "ItemCode" with "000"
-  And I fill in "Quantity" with "3"
-  And I press "add to cart"
+  When I add ItemCode "000" with Quantity "3" 
   Then I should be on the Item List page for order number "000001"
 
 Scenario: input invalid code for item
   Given I am on the Add To Work Order page for order number "000001"
-  When I fill in "ItemCode" with "999"
-  And I fill in "Quantity" with "4"
-  And I press "add to cart"
+  When I add ItemCode "999" with Quantity "4" 
   Then I should be on the Add To Work Order page for order number "000001"
-  And I should see "invalid item code" 
+  #And I should see "invalid item code" 
 
 Scenario: input invalid number of items
   Given I am on the Add To Work Order page for order number "000001"
-  When I fill in "ItemCode" with "000"
-  And I fill in "Quantity" with "no"
-  And I press "add to cart"
+  When I add ItemCode "000" with Quantity "no"
   Then I should be on the Add To Work Order page for order number "000001"
-  And I should see "quantity must be numeric" 
+  #And I should see "quantity must be numeric" 
 
 Scenario: checkout more items than the inventory contains
   Given I am on the Add To Work Order page for order number "000001"
-  When I fill in "ItemCode" with "000"
-  And I fill in "Quantity" with "100"
-  And I press "add to cart"
+  When I add ItemCode "000" with Quantity "100"
   Then I should be on the Add To Work Order page for order number "000001"
-  And I should see "not enough items in inventory" 
+  #And I should see "not enough items in inventory" 
 
 Scenario: return to item list
   Given I am on the Add To Work Order page for order number "000001"
