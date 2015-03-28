@@ -16,7 +16,7 @@ Scenario: choose work order page
 Scenario: displays storage and checkout buttons
   Given I am logged in
   Then I should see "Scanner Store" button
-  And I should see "Manual Store" button
+  And I should see "Store Item" button
   And I should see "Work Order" button
   
 Scenario: logout

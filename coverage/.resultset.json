@@ -1,6 +1,10 @@
 {
   "Cucumber Features": {
     "coverage": {
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/models/inventory.rb": [
+        1,
+        null
+      ],
       "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/models/work_order.rb": [
         1,
         null,
@@ -93,8 +97,52 @@
       "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/helpers/work_order_helper.rb": [
         1,
         null
+      ],
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/controllers/login_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        10,
+        6,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        6,
+        6,
+        4,
+        4,
+        null,
+        2,
+        null,
+        null,
+        6,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/lib/sfdc_models.rb": [
+        1,
+        null
       ]
     },
-    "timestamp": 1427579961
+    "timestamp": 1427584192
   }
 }
