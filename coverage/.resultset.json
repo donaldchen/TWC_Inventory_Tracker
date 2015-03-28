@@ -1,16 +1,12 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/models/inventory.rb": [
-        1,
-        null
-      ],
-      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/models/work_order.rb": [
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/models/work_order.rb": [
         1,
         null,
         null
       ],
-      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/controllers/work_order_controller.rb": [
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/controllers/work_order_controller.rb": [
         1,
         1,
         null,
@@ -71,34 +67,34 @@
         null,
         null
       ],
-      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/controllers/application_controller.rb": [
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/application_helper.rb": [
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/confirmation_helper.rb": [
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/helpers/confirmation_helper.rb": [
         1,
         null
       ],
-      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/item_list_helper.rb": [
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/helpers/item_list_helper.rb": [
         1,
         null
       ],
-      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/login_helper.rb": [
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/helpers/login_helper.rb": [
         1,
         null
       ],
-      "/Users/Donald/Documents/Academics/Spring 2015/CS169/TWC_Inventory_Tracker/app/helpers/work_order_helper.rb": [
+      "/Users/davidcheng/VMWARE_SHARED/Class_Files/CS169/TWC_Inventory_Tracker/app/helpers/work_order_helper.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1427578404
+    "timestamp": 1427579961
   }
 }

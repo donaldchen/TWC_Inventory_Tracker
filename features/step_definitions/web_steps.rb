@@ -28,6 +28,18 @@ When(/^I add ItemCode "(.*)" with Quantity "(.*)"$/)  do |item_code, quantity|
   end
 end
 
+When(/^I select WorkOrderCode "(.*)"/) do |work_order_code|
+  step 'I fill in "WorkOrderCode" with "#{work_order_code}"'
+  flash_notice = ''
+  if not WorkOrder.where(code: work_order_code).first
+    flash_notice = "Invalid work order code"
+  elsif not work_order_code =~ /^[0-9]+$/
+    flash_notice = "Invalid order number"
+    visit work_order_home_path
+  else
+    visit item_list_path
+  end
+end
 
 Given(/^I am logged in$/) do
   visit("/")
