@@ -1,8 +1,13 @@
 %h1 Index
 
-%input{:type => "submit", :value => "Manual Store"} 
+
 %input{:type => "submit", :value => "Scanner Store"} 
-= form_tag logout_path, :method => :get do
-  %input{:type => "submit", :value => "Logout"} 
+
 = form_tag work_order_home_path, :method => :get do
   %input{:type => "submit", :value => "Work Order"} 
+
+= form_tag store_item_path, :method => :get do
+	%input{:type => "submit", :value => "Store Item"} 
+
+= form_tag logout_path, :method => :get do
+  %input{:type => "submit", :value => "Logout"} 
