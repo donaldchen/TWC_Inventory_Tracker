@@ -2,6 +2,6 @@ host: login.salesforce.com
 client_secret: 2211708390722974507
 client_id: 3MVG9fMtCkV6eLhcwdd7yN9GB77TX_DPhRL3Hcrb6HhFUi8niflKYTiO6eBR1hdlJfWZrN9TnseOQ_L3sm1vy
 sobject_module: SFDC_Models
-debugging: true
+debugging: false
 username: sampaul@berkeley.edu
 password: pleasedontkillme1TfPa8Eb0NneMsYA56IWaYDvd

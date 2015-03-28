@@ -12,7 +12,10 @@ class LoginController < ApplicationController
     end
     
     def verify
-        c = Contact.find_by_email(params[:email])
+        # silence_stream(STDOUT) do
+        #     c = Contact.find_by_email(params[:email])
+        # end
+        c = Contact.find_by_email(params[:email]); nil
         if c != nil and c.Password__c == params[:password]
         	session[:login] = true
         	flash[:notice] = "Login Successful"
