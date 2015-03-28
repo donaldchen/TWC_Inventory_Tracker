@@ -16,3 +16,6 @@
 !/log/.keep
 /tmp
 .c9/
+
+# Ignore coverage files
+/coverage/*

@@ -10,6 +10,36 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+When(/^I add ItemCode "(.*)" with Quantity "(.*)"$/)  do |item_code, quantity|
+  step 'I fill in "ItemCode" with "#{item_code}"'
+  step  'I fill in "Quantity" with "#{quantity}"'
+  flash_notice = ''
+  if not Inventory.where(code: item_code).first
+    flash_notice = "invalid item code"
+  elsif not quantity =~ /^[0-9]+$/
+    flash_notice = "quantity must be numeric"
+  elsif Integer(quantity) > Inventory.where(code: item_code).first.quantity
+    flash_notice = "not enough items in inventory"
+  end
+  if flash_notice != ''
+    visit add_item_path
+  else
+    visit item_list_path
+  end
+end
+
+When(/^I select WorkOrderCode "(.*)"/) do |work_order_code|
+  step 'I fill in "WorkOrderCode" with "#{work_order_code}"'
+  flash_notice = ''
+  if not WorkOrder.where(code: work_order_code).first
+    flash_notice = "Invalid work order code"
+  elsif not work_order_code =~ /^[0-9]+$/
+    flash_notice = "Invalid order number"
+    visit work_order_home_path
+  else
+    visit item_list_path
+  end
+end
 
 Given(/^I am logged in$/) do
   visit("/")
@@ -43,10 +73,6 @@ Then(/^I should see the Item List page for order number "(.*?)"$/) do |arg1|
 end
 
 Then(/^I should see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Given(/^I press "(.*?)" for "(.*?)"$/) do |arg1, arg2|
   pending # express the regexp above with the code you wish you had
 end
 
@@ -96,7 +122,7 @@ When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-When /^(?:|I )press "([^"]*)"$/ do |button|
+When (/^(?:|I )press "([^"]*)"$/) do |button|
   click_button(button)
 end
 
