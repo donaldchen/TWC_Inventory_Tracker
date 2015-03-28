@@ -13,13 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150328211559) do
 
-  create_table "contacts", force: :cascade do |t|
-    t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "inventories", force: :cascade do |t|
     t.string   "item"
     t.string   "code"
