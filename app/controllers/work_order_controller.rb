@@ -2,24 +2,21 @@ class WorkOrderController < ApplicationController
 	def index
 	end
 
-    def item_list
-       @items = ["Hello", "Diapers", "Items"]
-    end
 	def check
 		work_order_code = params[:work_order][:WorkOrderCode]
 
 		if not work_order_code =~ /^[0-9]+$/
-			flash[:notice] = "Invalid order number"
+			flash[:notice] = "Not a numeric work order"
 			redirect_to work_order_home_path
-			#elsif WorkOrder.where(code: work_order_code).first
+		elsif not WorkOrder.where(code: work_order_code).first
+			flash[:notice] = "Invalid work order code"
+			redirect_to work_order_home_path
 		else
 			redirect_to item_list_path
 		end
 	end
 
 	def add_to_work_order
-		
-
 	end
 
 	def add_item_confirm
@@ -41,11 +38,9 @@ class WorkOrderController < ApplicationController
 	end
 
 	def item_list
-
 	end
 
 	def confirmation
-
 	end
 
 	private 

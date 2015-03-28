@@ -11,15 +11,20 @@ Background:
 
 Scenario: select valid work order
   Given I am on the Work Order page
-  When I select WorkOrderCode "000001"
+  When I fill in "WorkOrderCode" with "000001"
+  And I press "Select Code"
   Then I should be on the Item List page for order number "000001"
 
 Scenario: non-numeric work order
   Given I am on the Work Order page
-  When I select WorkOrderCode "DOESNTWORK"
+  When I fill in "WorkOrderCode" with "DOESNTWORK"
+  And I press "Select Code"
   Then I should be on the Work Order page
+  And I should see "Not a numeric work order"
 
 Scenario: select invalid work order
   Given I am on the Work Order page
-  When I select WorkOrderCode "000002"
+  When I fill in "WorkOrderCode" with "000002"
+  And I press "Select Code"
   Then I should be on the Work Order page
+  And I should see "Invalid work order code"
