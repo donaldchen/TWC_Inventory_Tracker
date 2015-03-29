@@ -7,13 +7,15 @@ class StoreItemController < ApplicationController
 		item_code = params[:item][:ItemCode]
 		quantity = params[:item][:Quantity]
 		if not Inventory.where(code: item_code).first
-			flash[:notice] = "invalid item code"
+			flash[:notice] = "Invalid Item Code"
 		elsif not quantity =~ /^[0-9]+$/
 			flash[:notice] = "quantity must be numeric"
 		end
 
 		if not flash[:notice]
-			flash[:notice] = "#{quantity} #{Inventory.where(code: item_code).first.item.pluralize} added"
+			item_name = Inventory.where(code: item_code).first.item.pluralize
+			item_name = item_name.slice(0,1).capitalize + item_name.slice(1..-1)
+			flash[:notice] = "#{quantity} #{item_name} Added"
 		end
 		redirect_to store_item_path
 	end

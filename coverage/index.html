@@ -14,26 +14,26 @@
       <img src="./assets/0.9.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-28T17:08:55-07:00">2015-03-28T17:08:55-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-28T17:19:28-07:00">2015-03-28T17:19:28-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.74%</span></span>
+    (<span class="covered_percent"><span class="green">95.24%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.23
+         1.19
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>19</b> relevant lines. 
-    <span class="green"><b>18</b> lines covered</span> and
+    <b>21</b> relevant lines. 
+    <span class="green"><b>20</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#85b5b6b27684785075e44e79ae3590574a6397ed" class="src_link" title="app/controllers/store_item_controller.rb">app/controllers/store_item_controller.rb</a></td>
-        <td class="green strong">90.91 %</td>
-        <td>21</td>
-        <td>11</td>
-        <td>10</td>
+        <td class="green strong">92.31 %</td>
+        <td>23</td>
+        <td>13</td>
+        <td>12</td>
         <td>1</td>
-        <td>1.4</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -139,19 +139,19 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="green">92.31%</span></span>
+    (<span class="covered_percent"><span class="green">93.33%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.34
+         1.26
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>2</b> files in total.
-    <b>13</b> relevant lines. 
-    <span class="green"><b>12</b> lines covered</span> and
+    <b>15</b> relevant lines. 
+    <span class="green"><b>14</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -180,12 +180,12 @@
       
       <tr>
         <td class="strong"><a href="#85b5b6b27684785075e44e79ae3590574a6397ed" class="src_link" title="app/controllers/store_item_controller.rb">app/controllers/store_item_controller.rb</a></td>
-        <td class="green strong">90.91 %</td>
-        <td>21</td>
-        <td>11</td>
-        <td>10</td>
+        <td class="green strong">92.31 %</td>
+        <td>23</td>
+        <td>13</td>
+        <td>12</td>
         <td>1</td>
-        <td>1.4</td>
+        <td>1.3</td>
       </tr>
       
     </tbody>
@@ -462,10 +462,10 @@
         <div class="source_table" id="85b5b6b27684785075e44e79ae3590574a6397ed">
   <div class="header">
     <h3>app/controllers/store_item_controller.rb</h3>
-    <h4><span class="green">90.91 %</span> covered</h4>
+    <h4><span class="green">92.31 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>13</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -530,7 +530,7 @@
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">			flash[:notice] = &quot;invalid item code&quot;</code>
+          <code class="ruby">			flash[:notice] = &quot;Invalid Item Code&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
@@ -566,34 +566,46 @@
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">			flash[:notice] = &quot;#{quantity} #{Inventory.where(code: item_code).first.item.pluralize} added&quot;</code>
+          <code class="ruby">			item_name = Inventory.where(code: item_code).first.item.pluralize</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">		end</code>
+          <code class="ruby">			item_name = item_name.slice(0,1).capitalize + item_name.slice(1..-1)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="18">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
-          <code class="ruby">		redirect_to store_item_path</code>
+          <code class="ruby">			flash[:notice] = &quot;#{quantity} #{item_name} Added&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
+          <code class="ruby">		end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
+          
+          <code class="ruby">		redirect_to store_item_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">end</code>

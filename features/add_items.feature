@@ -28,5 +28,5 @@ Feature: Add Items
   	And I fill in "Quantity" with "3"
   	And I press "Store"
   	Then I should be on the Store Item page
-  	And I should see "Invalid Item"
+  	And I should see "Invalid Item Code"
 
