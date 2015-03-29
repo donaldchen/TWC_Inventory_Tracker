@@ -1,0 +1,51 @@
+.header_box {
+	padding:20px;
+}
+
+.header_text{
+	text-align:center;
+	font-weight:800;
+	font-size:20px;
+}
+
+.error_msg{
+	text-align:center;
+	color:red;
+}
+
+input {
+	width:18em;
+	height:2em;
+}
+
+.btn_align{
+   display:block;
+   margin:0 auto;
+}
+
+.box {
+	width:400px;
+	height:300px;
+	border:1px solid black;
+	margin:0 auto;
+	padding-top:60px;
+}
+
+.field_text {
+	padding:10px 10px 5px 15px;
+	margin:0 auto;
+}
+
+.button {
+	padding-left: 10px 10px 5px 15px;
+}
+
+a{
+	text-decoration:none;
+	display:block;
+	color:blue;
+}
+
+a:hover{
+	text-decoration:underline;
+}

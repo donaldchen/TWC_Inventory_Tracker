@@ -1,8 +1,20 @@
-%h1 Login Page
 
-= form_tag login_path, :method => :post do
-  %label Email
-  %input{:name => "email", :type => "text"}
-  %label Password
-  %input{:name => "password", :type => "password"}
-  %input{:type => "submit", :value => "Sign in"} 
+%header{:class => "row"}
+  %div{:class => "col-12 header_padding"}
+    %h1{:class => "header_text"} Login Page
+
+%section{:class => "row"}
+  %div{:class => "box"}
+    = form_tag login_path, :method => :post do
+      %fieldset{:class => "field_text col-8"}
+        %label Email
+        %br
+        %input{:name => "email", :type => "text", :required => true}
+      
+      %fieldset{:class => "field_text col-8"}
+        %label Password
+        %br
+        %input{:name => "password", :type => "password", :required => true}
+
+      %fieldset{:class => "field_text button col-8"}
+        %input{:type => "submit", :value => "Sign in"} 
