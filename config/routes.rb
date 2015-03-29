@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   post 'add_item' => 'work_order#add_item_confirm'
 
   get 'store_item' => 'store_item#index'
+  post 'store_item' => 'store_item#store'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

@@ -23,6 +23,8 @@ module NavigationHelpers
       # we still need to access the specific page for this work order. add_to_work_order_path(work order id)
     when /^the Add To Work Order page for order number "(.*)"$/ then add_item_path
 
+    when /^the Store Item page$/ then store_item_path
+
   
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
