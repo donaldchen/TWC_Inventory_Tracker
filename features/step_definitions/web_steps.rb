@@ -42,11 +42,19 @@ Then(/^I should see the Item List page for order number "(.*?)"$/) do |arg1|
 end
 
 Then(/^I should see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+  find('tr', text: arg1).should have_content(arg2)
 end
 
 Then(/^I should not see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+  if page.respond_to? :should
+    page.should have_no_content(arg1)
+  else
+    assert page.has_no_content?(arg1)
+  end
+end
+
+Given(/^I press "(.*?)" for "(.*?)"$/) do |arg1, arg2|
+  find('tr', text: arg2).click_link(arg1)
 end
 
 Given(/^the following users exist:$/) do |table|

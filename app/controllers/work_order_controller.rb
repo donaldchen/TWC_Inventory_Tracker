@@ -38,8 +38,15 @@ class WorkOrderController < ApplicationController
 	end
 
 	def item_list
+		@entry = WorkOrder.all
 	end
 
+	def destroy
+  		@item = WorkOrder.find(params[:id])
+  		@item.destroy
+  		redirect_to item_list_path
+	end
+	
 	def confirmation
 	end
 

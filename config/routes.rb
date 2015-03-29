@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get 'confirmation' => 'work_order#confirmation'
   get 'item_list' => 'work_order#item_list'
+  delete '/item_list.:id' => 'work_order#destroy'
   get 'add_item' => 'work_order#add_to_work_order'
   post 'add_item' => 'work_order#add_item_confirm'
 

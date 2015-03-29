@@ -29,7 +29,7 @@ Scenario: correct items for work order displayed
 Scenario: delete item from work order
   Given I am on the Item List page for order number "000001"
   And I press "delete" for "diapers"
-  Then I should be on the Item List Page
+  Then I am on the Item List page for order number "000001"
   And I should not see "diapers" with quantity "3"
 
 Scenario: add a new item to work order

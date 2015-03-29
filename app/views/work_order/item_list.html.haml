@@ -3,31 +3,26 @@
   %head
     %title Item List
     = stylesheet_link_tag 'item_list'
-    
+
   %body
     %header{:class => "row"}
       %h2 Item Page
     %section
       %div{:class => "row"}
-        %table{:border => "1"}
+        %table#work_order{:border => "1"}
           %thead
             %tr
               %th Item
               %th Quantity
-      //     %tbody
-      // %div{:class => "row"}        
-      //   %div{:class => "col-1"}
-      //     %div{:class => "btn left"}
-      //       = link_to 'Add', add_item_path
-      //   %div{:class => "col-1"}
-      //     %div{:class => "btn"} 
-      //       = link_to 'Checkout', confirmation_path
-      //   %div{:class => "col-1"}
-      //     %div{:class => "btn"} 
-      //       = link_to 'Cancel', work_order_home_path
-= form_tag add_item_path, :method => :get do
-  = submit_tag 'Add'
-= form_tag confirmation_path, :method => :get do
-  = submit_tag 'Checkout'
-= form_tag work_order_home_path, :method => :get do
-  = submit_tag 'Cancel'
+        %tbody
+          -@entry.each do |item|
+            %tr
+              %td= item.item
+              %td= item.quantity
+              %td= link_to 'delete', item_list_path(item), :method => :delete
+    = form_tag add_item_path, :method => :get do
+      = submit_tag 'Add'
+    = form_tag confirmation_path, :method => :get do
+      = submit_tag 'Checkout'
+    = form_tag work_order_home_path, :method => :get do
+      = submit_tag 'Cancel'
