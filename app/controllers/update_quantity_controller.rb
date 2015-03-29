@@ -1,4 +1,4 @@
-class StoreItemController < ApplicationController
+class UpdateQuantityController < ApplicationController
 	def index
 
 	end
