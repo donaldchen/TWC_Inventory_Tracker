@@ -1,15 +1,16 @@
 %h1 Update Item Quantities
 %h2 Choose an item to update:
-%table#items
-  %thead
-    %tr
-      %th Item
-      %th Quantity
-  %tbody
-    - @inventory.each do |item|
-      %tr
-        %td= item.item
-        %td= item.quantity
+
+/%table#items
+/  %thead
+/    %tr
+/      %th Item
+/      %th Quantity
+/  %tbody
+/    - @inventory.each do |item|
+/      %tr
+/        %td= item.item
+/        %td= item.quantity
 
 = form_tag root_path, :method => :get  do
 	= submit_tag 'Home'

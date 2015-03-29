@@ -3,7 +3,4 @@ class UpdateQuantityController < ApplicationController
 
 	end
 
-	def update
-	end
-
 end
