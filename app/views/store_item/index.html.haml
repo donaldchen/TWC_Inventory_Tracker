@@ -1,12 +1,26 @@
-%h1 Store Item
-= form_tag store_item_path do
-	= label :item, :ItemCode, 'ItemCode'
-	= text_field :item, 'ItemCode'
-	%br
-	= label :item, :Quantity, 'Quantity'
-	= text_field :item, 'Quantity'
-	%br
-	= submit_tag 'Store' 
 
-= form_tag root_path, :method => :get  do
-	= submit_tag 'Home'
+%header{:class => "row header"}
+  %div{:class => "col-12 header_padding"}
+    %h1{:class => "header_text"}Store Item
+
+
+%div{:class => "row error_message"}
+  %div{:class => "col-12"}
+    - if flash[:notice]
+      %p{:class => "msg error"}= flash[:notice]
+
+%section{:class => "row"}
+  %div{:class => "box"}
+    = form_tag store_item_path do
+      %fieldset{:class => "field_text col-8"}
+        = label :item, :ItemCode, 'ItemCode'
+        = text_field :item, 'ItemCode'
+    
+      %fieldset{:class => "field_text col-8"}
+        = label :item, :Quantity, 'Quantity'
+        = text_field :item, 'Quantity'
+      %fieldset{:class => "col-4"}
+        = submit_tag 'Store', :class => "btn_alignment"
+    
+    = form_tag root_path, :method => :get do
+      = submit_tag 'Home', :class => "btn_alignment"

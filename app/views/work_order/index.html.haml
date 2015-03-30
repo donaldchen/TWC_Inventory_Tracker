@@ -1,5 +1,8 @@
 %h1 Work Order Page
 
+- if flash[:notice]
+	%p{:class => "error_msg"}= flash[:notice]
+
 = form_tag work_order_home_path do
 
 	= label :work_order, :WorkOrderCode, 'WorkOrderCode', style: "display:none;"

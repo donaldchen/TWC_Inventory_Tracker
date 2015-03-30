@@ -1,3 +1,32 @@
+/*
+=====================================
+Description:
+This CSS file deals with the 
+positioning and alignment of elements
+on the webpage.
+=====================================
+*/
+
+.btn_padding{
+	padding:10px;
+}
+
+
+/* 
+=====================
+Header modifications
+=====================
+*/
+
+.header {
+	background-color: #6D929B;
+	box-shadow:2px 2px 1px #888888;
+}
+
+.header_padding{
+	padding:20px;
+}
+
 .header_box {
 	padding:20px;
 }
@@ -6,29 +35,67 @@
 	text-align:center;
 	font-weight:800;
 	font-size:20px;
+	color:white;
+	font: "Open Sans";
 }
 
-.error_msg{
+/* 
+==================
+Error Message
+==================
+*/
+
+.msg{
 	text-align:center;
+}
+
+.error{
 	color:red;
 }
 
-input {
-	width:18em;
-	height:2em;
+.error_message{
+	padding:10px;
 }
 
-.btn_align{
-   display:block;
-   margin:0 auto;
+/*
+===========================
+Box resizing for different
+screen sizes
+===========================
+*/
+
+/* mobile phones */
+@media only screen
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.box {
+	  width:300px;
+	  height:300px;
+	} 
 }
 
-.box {
-	width:400px;
-	height:300px;
-	border:1px solid black;
+/* Tablet and computer screens (portrait and landscape) */
+@media only screen 
+and (min-device-width : 768px) {
+/* Styles */
+  .box {
+	  width:400px;
+	  height:300px;
+  } 
+}
+
+/*
+==========================
+Form Field Configurations
+==========================
+*/
+
+.box{
+	padding:60px 20px 20px 20px;
+	background-color:white;
 	margin:0 auto;
-	padding-top:60px;
+	margin-top:20px;
+	box-shadow:3px 3px 2px #888888;
 }
 
 .field_text {
@@ -36,16 +103,34 @@ input {
 	margin:0 auto;
 }
 
+.btn_align{
+   display:block;
+   margin:0 auto;
+}
+
 .button {
-	padding-left: 10px 10px 5px 15px;
+	padding: 10px 10px 5px 15px;
 }
 
-a{
-	text-decoration:none;
-	display:block;
-	color:blue;
+.btn_alignment {
+	display:inline-block;
+	width:8em;
 }
 
-a:hover{
-	text-decoration:underline;
+.right_align{
+	float:right;
+}
+
+.left-align{
+	float:left;
+}
+
+label{
+	margin-left:-4px;
+}
+
+input {
+	width:18em;
+	height:2em;
+	margin-left:-4px;
 }

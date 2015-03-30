@@ -1,9 +1,13 @@
-
-%header{:class => "row"}
+%header{:class => "row header"}
   %div{:class => "col-12 header_padding"}
     %h1{:class => "header_text"} Index
 
-%section
+%div{:class => "row error_message"}
+  %div{:class => "col-12"}
+    - if flash[:notice]
+      %p{:class => "msg"}= flash[:notice]
+
+%section{:class => "container"}
 
   %div{:class => "row"}
     %div{:class => "col-12 btn_padding"}

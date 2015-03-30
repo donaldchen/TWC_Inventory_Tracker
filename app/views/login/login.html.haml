@@ -1,7 +1,11 @@
-
-%header{:class => "row"}
+%header{:class => "row header"}
   %div{:class => "col-12 header_padding"}
     %h1{:class => "header_text"} Login Page
+
+%div{:class => "row error_message"}
+  %div{:class => "col-12"}
+    - if flash[:notice]
+      %p{:class => "msg error"}= flash[:notice]
 
 %section{:class => "row"}
   %div{:class => "box"}
@@ -10,7 +14,7 @@
         %label Email
         %br
         %input{:name => "email", :type => "text", :required => true}
-      
+
       %fieldset{:class => "field_text col-8"}
         %label Password
         %br

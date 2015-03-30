@@ -1,6 +1,9 @@
 %h1 Update Item Quantities
 %h2 Choose an item to update:
 
+- if flash[:notice]
+    %p{:class => "error_msg"}= flash[:notice]
+
 /%table#items
 /  %thead
 /    %tr
