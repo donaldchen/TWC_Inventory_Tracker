@@ -18,6 +18,7 @@ gem 'haml'
 gem 'simplecov'
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

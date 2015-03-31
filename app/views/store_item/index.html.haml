@@ -1,8 +1,11 @@
 
 %header{:class => "row header"}
-  %div{:class => "col-12 header_padding"}
+  %div{:class => "col-2 back_header"}
+    = form_tag root_path, :method => :get do
+      %i{:class => "fa fa-chevron-left"}
+        = submit_tag 'Home', :class => "back_btn"
+  %div{:class => "col-8 header_padding"}
     %h1{:class => "header_text"}Store Item
-
 
 %div{:class => "row error_message"}
   %div{:class => "col-12"}
@@ -19,8 +22,5 @@
       %fieldset{:class => "field_text col-8"}
         = label :item, :Quantity, 'Quantity'
         = text_field :item, 'Quantity'
-      %fieldset{:class => "col-4"}
-        = submit_tag 'Store', :class => "btn_alignment"
-    
-    = form_tag root_path, :method => :get do
-      = submit_tag 'Home', :class => "btn_alignment"
+      %fieldset{:class => "field_text col-8"}
+        = submit_tag 'Store', :class => "btn_align"

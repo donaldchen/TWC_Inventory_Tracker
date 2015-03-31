@@ -33,6 +33,10 @@ body{
 	background-color:#F5FAFA;
 }
 
+.fa-chevron-left{
+	color:white;
+}
+
 /* 
 =======================
 For sizing containers
@@ -62,7 +66,6 @@ For sizing containers
 
 .col-4 {
 	width: 33.33%;
-	border:1px solid black;
 }
 
 .col-5{

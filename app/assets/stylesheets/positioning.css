@@ -11,7 +11,6 @@ on the webpage.
 	padding:10px;
 }
 
-
 /* 
 =====================
 Header modifications
@@ -25,6 +24,10 @@ Header modifications
 
 .header_padding{
 	padding:20px;
+}
+
+.back_header{
+	padding:14px 0 0 15px;
 }
 
 .header_box {
@@ -57,6 +60,23 @@ Error Message
 	padding:10px;
 }
 
+.back_btn{
+	margin-left:-5px;
+	background-color:#6D929B;
+	font-weight:bold;
+	font-size:18px;
+	text-shadow:none !important;
+	border:none !important;
+	box-shadow:none !important;
+    width: 4em;
+	color:white;
+	font-family: "Open Sans";
+}
+
+.back_btn:hover{
+	cursor:pointer;
+}
+
 /*
 ===========================
 Box resizing for different
@@ -71,7 +91,7 @@ and (max-device-width : 480px) {
 	.box {
 	  width:300px;
 	  height:300px;
-	} 
+	}
 }
 
 /* Tablet and computer screens (portrait and landscape) */
@@ -81,7 +101,7 @@ and (min-device-width : 768px) {
   .box {
 	  width:400px;
 	  height:300px;
-  } 
+  }
 }
 
 /*
@@ -112,11 +132,6 @@ Form Field Configurations
 	padding: 10px 10px 5px 15px;
 }
 
-.btn_alignment {
-	display:inline-block;
-	width:8em;
-}
-
 .right_align{
 	float:right;
 }
@@ -133,4 +148,16 @@ input {
 	width:18em;
 	height:2em;
 	margin-left:-4px;
+
+}
+
+@media only screen
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.back_btn {
+	   display:none;
+	}
+	.fa-chevron-left{
+	   visibility:hidden;
+    }
 }
