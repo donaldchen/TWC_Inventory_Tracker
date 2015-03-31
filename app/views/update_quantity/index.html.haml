@@ -4,16 +4,21 @@
 - if flash[:notice]
     %p{:class => "error_msg"}= flash[:notice]
 
-/%table#items
-/  %thead
-/    %tr
-/      %th Item
-/      %th Quantity
-/  %tbody
-/    - @inventory.each do |item|
-/      %tr
-/        %td= item.item
-/        %td= item.quantity
+    %body
+	    %header{:class => "row"}
+	      %h2 Item Page
+	    %section
+	      %div{:class => "row"}
+	        %table#items{:border => "1"}
+	          %thead
+	            %tr
+	              %th Item
+	              %th Quantity
+	        %tbody
+	          -@items.each do |item|
+	            %tr
+	              %td= item.item
+	              %td= item.quantity
 
 = form_tag root_path, :method => :get  do
 	= submit_tag 'Home'
