@@ -194,3 +194,33 @@ input {
 	margin-left:-4px;
 
 }
+
+.nav_box{
+	width:400px;
+	margin:0 auto;
+}
+
+.nav_bar_padding{
+	margin-bottom:20px;
+}
+
+@media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ 
+	.nav_box {
+       width:300px;
+	 }
+	img {
+       width:85%;
+       height:100%;
+	 }
+}
+
+.icon_title{
+	display:block;
+	text-align:center;
+	margin:0 auto;
+}
