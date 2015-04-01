@@ -219,7 +219,8 @@ input {
 	 }
 }
 
-label{
-	display: block;
-    text-align: center;
+.icon_title{
+	display:block;
+	text-align:center;
+	margin:0 auto;
 }
