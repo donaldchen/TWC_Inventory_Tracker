@@ -1,4 +1,6 @@
 class WorkOrderController < ApplicationController
+    include Databasedotcom::Rails::Controller
+
 	def index
 	end
 
@@ -8,11 +10,11 @@ class WorkOrderController < ApplicationController
 		if not work_order_code =~ /^[0-9]+$/
 			flash[:notice] = "Not a numeric work order"
 			redirect_to work_order_home_path
-		elsif not WorkOrder.where(code: work_order_code).first
-			flash[:notice] = "Invalid work order code"
-			redirect_to work_order_home_path
+		# elsif not WorkOrder.where(code: work_order_code).first
+		# 	flash[:notice] = "Invalid work order code"
+		# 	redirect_to work_order_home_path
 		else
-			redirect_to item_list_path
+			redirect_to item_list_path(params[:work_order])
 		end
 	end
 
@@ -38,7 +40,9 @@ class WorkOrderController < ApplicationController
 	end
 
 	def item_list
-		@entry = WorkOrder.all
+		p params[:id]
+		p "ABOVE"
+		@entry = Care_Package__c.find_by_id__c(params[:id])
 	end
 
 	def destroy
