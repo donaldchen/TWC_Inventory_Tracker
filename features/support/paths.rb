@@ -25,6 +25,8 @@ module NavigationHelpers
 
     when /^the Store Item page$/ then store_item_path
 
+    when /^the Update Quantities page$/ then update_quantity_path
+
   
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
