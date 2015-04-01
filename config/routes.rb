@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get 'confirmation' => 'work_order#confirmation'
   get '/item_list/:id', to: 'work_order#item_list', as: 'item_list'
-  post '/item_list/:id', to: 'work_order#update'
+  post '/item_list/:id/:pid', to: 'work_order#update', as: 'item_list_update'
   delete '/item_list/:id/:pid', to: 'work_order#destroy', as: 'item_list_delete'
   
   
