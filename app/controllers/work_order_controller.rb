@@ -45,8 +45,8 @@ class WorkOrderController < ApplicationController
 	end
 
 	def destroy
-  		@item = WorkOrder.find(params[:id])
-  		@item.destroy
+  		@item = Program_Detail__c.find(params[:id])
+  		@item.delete
   		redirect_to item_list_path
 	end
 	
