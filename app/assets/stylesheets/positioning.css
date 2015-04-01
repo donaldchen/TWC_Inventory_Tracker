@@ -7,10 +7,6 @@ on the webpage.
 =====================================
 */
 
-.btn_padding{
-	padding:10px;
-}
-
 /* 
 =====================
 Header modifications
@@ -60,6 +56,12 @@ Error Message
 	padding:10px;
 }
 
+/*
+=========================
+Button design and layout
+=========================
+*/
+
 .back_btn{
 	margin-left:-5px;
 	background-color:#6D929B;
@@ -77,6 +79,19 @@ Error Message
 	cursor:pointer;
 }
 
+.btn_padding{
+	padding:10px;
+}
+
+.btn_align{
+   display:block;
+   margin:0 auto;
+}
+
+.button {
+	padding: 10px 10px 5px 15px;
+}
+
 /*
 ===========================
 Box resizing for different
@@ -92,12 +107,50 @@ and (max-device-width : 480px) {
 	  width:300px;
 	  height:300px;
 	}
+	.back_btn {
+	   visibility:hidden;
+	}
+	.fa-chevron-left{
+	   visibility:hidden;
+    }
 }
+
+/* Iphone 6 */
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ .box {
+	  width:300px;
+	  height:300px;
+	}
+	.back_btn {
+	   visibility:hidden;
+	}
+	.fa-chevron-left{
+	   visibility:hidden;
+    }}
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ .box {
+	  width:300px;
+	  height:300px;
+	}
+	.back_btn {
+	   visibility:hidden;
+	}
+	.fa-chevron-left{
+	   visibility:hidden;
+    }}
 
 /* Tablet and computer screens (portrait and landscape) */
 @media only screen 
 and (min-device-width : 768px) {
-/* Styles */
   .box {
 	  width:400px;
 	  height:300px;
@@ -123,15 +176,6 @@ Form Field Configurations
 	margin:0 auto;
 }
 
-.btn_align{
-   display:block;
-   margin:0 auto;
-}
-
-.button {
-	padding: 10px 10px 5px 15px;
-}
-
 .right_align{
 	float:right;
 }
@@ -149,15 +193,4 @@ input {
 	height:2em;
 	margin-left:-4px;
 
-}
-
-@media only screen
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-	.back_btn {
-	   display:none;
-	}
-	.fa-chevron-left{
-	   visibility:hidden;
-    }
 }
