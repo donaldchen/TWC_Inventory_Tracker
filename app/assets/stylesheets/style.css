@@ -74,6 +74,7 @@ For sizing containers
 
 .col-6 {
 	width:50%;
+	background-color:gray;
 }
 
 .col-7 {
@@ -98,4 +99,14 @@ For sizing containers
 
 .col-12{
 	width:100%;
+}
+
+img{
+	width:90%;
+	height:30%;
+}
+
+.center-block{
+	text-align:center;
+	display:block;
 }

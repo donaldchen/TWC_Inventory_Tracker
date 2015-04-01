@@ -7,28 +7,16 @@
     - if flash[:notice]
       %p{:class => "msg"}= flash[:notice]
 
-%section{:class => "container"}
-
+%section{:class => "nav_box"}
   %div{:class => "row"}
-    %div{:class => "col-12 btn_padding"}
-      %input{:type => "submit", :value => "Scanner Store", :class => "btn_align"} 
-
+    %div{:class => "col-6 nav_bar_padding"}
+      = link_to image_tag( 'scanner_store.png'), "#", :class => "center-block img-responsive"
+      %label{:class => "label"} Scanner Store
+    %div{:class => "col-6 nav_bar_padding"}
+      = link_to image_tag( 'work_order.png'), work_order_home_path, :class => "center-block img-responsive"
+      %label{:class => "label"} Work Order
   %div{:class => "row"}
-    %div{:class => "col-12 btn_padding"}
-      = form_tag work_order_home_path, :method => :get do
-        %input{:type => "submit", :value => "Work Order", :class => "btn_align"} 
-
-  %div{:class => "row"}
-    %div{:class => "col-12 btn_padding"}
-      = form_tag store_item_path, :method => :get do
-        %input{:type => "submit", :value => "Store Item", :class => "btn_align"}
-
-  %div{:class => "row"}
-    %div{:class => "col-12 btn_padding"}
-      = form_tag update_quantity_path, :method => :get do
-        %input{:type => "submit", :value => "Update Item Quantities", :class => "btn_align"} 
-
-  %div{:class => "row"}
-    %div{:class => "col-12 btn_padding"}
-      = form_tag logout_path, :method => :get do
-        %input{:type => "submit", :value => "Logout", :class => "btn_align"} 
+    %div{:class => "col-6"}
+      = link_to image_tag( 'store_item.png'), item_list_path, :class => "center-block img-responsive"
+    %div{:class => "col-6"}
+      = link_to image_tag( 'update_quantity.png'), update_quantity_path, :class => "center-block img-responsive" 
