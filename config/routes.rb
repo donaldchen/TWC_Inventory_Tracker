@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   post 'store_item' => 'store_item#store'
 
   get 'update_quantity' => 'update_quantity#index'
+  #get 'update_item/:id' => 'update_quantity#update_item'
+  match 'update_item/:id' => 'update_quantity#update_item', via: :get, as: :update_item
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
