@@ -4,16 +4,16 @@ Feature: Get work order
   So I obtain the list of items to get for the care package
 
 Background:
-  Given the following work order with order number "000001" exists
+  Given the following work order with order number "123" exists
   | item                  | quantity |
-  | diapers               | 3        |
-  | toothbrush            | 1        |
+  | Bananas               | 5.0      |
+  | Gas Card              | 1.0      |
 
 Scenario: select valid work order
   Given I am on the Work Order page
-  When I fill in "WorkOrderCode" with "000001"
+  When I fill in "WorkOrderCode" with "123"
   And I press "Select Code"
-  Then I should be on the Item List page for order number "000001"
+  Then I should be on the Item List page for order number "123"
 
 Scenario: non-numeric work order
   Given I am on the Work Order page
