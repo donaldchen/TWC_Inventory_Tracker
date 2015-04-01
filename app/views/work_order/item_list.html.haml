@@ -20,8 +20,8 @@
                 %td= item.Program_Item__c
                 %td
                   %input{type: "text", :value => item.Quantity__c}
-                %td= link_to 'update', "#", :method => delete
-                %td= link_to 'delete', item_list_path(item), :method => :delete
+                %td= link_to 'update', item_list_update_path({:pid => item.Id, :id => @entry.id__c}), :method => :post
+                %td= link_to 'delete', item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), :method => :delete
     = form_tag add_item_path, :method => :get do
       = submit_tag 'Add'
     = form_tag confirmation_path, :method => :get do

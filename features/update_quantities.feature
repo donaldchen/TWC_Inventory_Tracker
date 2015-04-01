@@ -6,7 +6,7 @@ Feature: Update Quantities
   Background:
     Given the following items exist in the inventory
     | item                  | code | quantity |
-    | diapers               | 000  | 3        |
+    | diapers               | 000  | 5        |
     | toothbrush            | 001  | 3        |
     | hand soap             | 002  | 3        |
     | towel                 | 003  | 3        |
@@ -17,10 +17,11 @@ Feature: Update Quantities
   Scenario: Update item quantity
   	When I am on the Update Quantities page
   	And I press "diapers"
+  	And I should see "5"
   	Then I should be on the Update Item page for "diapers"
-  	When I fill in "CorrectQuantity" with 7
+  	When I fill in "CorrectQuantity" with "7"
   	And I press "update"
   	Then I should be on the Update Quantities page
-  	And the number of "diapers" should be "5"
+  	And I should see "7"
 
 
