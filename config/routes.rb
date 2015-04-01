@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   post 'work_order_home' => 'work_order#check'
 
   get 'confirmation' => 'work_order#confirmation'
-  match 'item_list/:id', to: 'work_order#item_list', via: :get, as: :item_list
-  match 'item_list/:id' => 'work_order#destroy', via: :post, as: :item_list
+  get '/item_list/:id', to: 'work_order#item_list', as: 'item_list'
+  delete '/item_list.:id' => 'work_order#destroy'
   get 'add_item' => 'work_order#add_to_work_order'
   post 'add_item' => 'work_order#add_item_confirm'
 

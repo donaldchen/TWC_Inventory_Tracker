@@ -14,7 +14,7 @@ class WorkOrderController < ApplicationController
 		# 	flash[:notice] = "Invalid work order code"
 		# 	redirect_to work_order_home_path
 		else
-			redirect_to item_list_path(params[:work_order])
+			redirect_to item_list_path(work_order_code)
 		end
 	end
 
@@ -40,9 +40,8 @@ class WorkOrderController < ApplicationController
 	end
 
 	def item_list
-		p params[:id]
-		p "ABOVE"
 		@entry = Care_Package__c.find_by_id__c(params[:id])
+		@list_details = Program_Detail__c.find_all_by_Care_Package__c(@entry.Id)
 	end
 
 	def destroy

@@ -15,7 +15,7 @@
               %th Item
               %th Quantity
         %tbody
-          -Program_Detail__c.find_by_Care_Package__c(@entry.id).each do |item|
+          - @list_details.each do |item|
             %tr
               %td= item.Program_Item__c
               %td= item.Quantity__c
