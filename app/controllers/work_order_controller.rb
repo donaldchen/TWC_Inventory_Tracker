@@ -24,19 +24,24 @@ class WorkOrderController < ApplicationController
 	def add_item_confirm
 		item_code = params[:item][:ItemCode]
 		quantity = params[:item][:Quantity]
-		if not Inventory.where(code: item_code).first
-			flash[:notice] = "invalid item code"
-		elsif not quantity =~ /^[0-9]+$/
-			flash[:notice] = "quantity must be numeric"
-		elsif Integer(quantity) > Inventory.where(code: item_code).first.quantity
-			flash[:notice] = "not enough items in inventory"
-		end
+		# if not Inventory.where(code: item_code).first
+		# 	flash[:notice] = "invalid item code"
+		# elsif not quantity =~ /^[0-9]+$/
+		# 	flash[:notice] = "quantity must be numeric"
+		# elsif Integer(quantity) > Inventory.where(code: item_code).first.quantity
+		# 	flash[:notice] = "not enough items in inventory"
+		# end
 
 		if flash[:notice]
 			redirect_to add_item_path
 		else
 			# add functionality
-			
+			program_detail = Program_Detail__c.new
+			program_detail.Care_Package__c = Care_Package__c.find_by_id__c(params[:id]).Id
+			program_detail.Name = item_code
+			program_detail.Quantity__c = quantity
+			program_detail.Program_Item__c = Item__c.find_by_Code__c(item_code).Name
+			program_detail.save
 			redirect_to item_list_path
 		end
 	end
