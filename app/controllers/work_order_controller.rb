@@ -42,6 +42,7 @@ class WorkOrderController < ApplicationController
 	def item_list
 		@entry = Care_Package__c.find_by_id__c(params[:id])
 		@list_details = Program_Detail__c.find_all_by_Care_Package__c(@entry.Id)
+		print @list_details
 	end
 
 	def destroy
