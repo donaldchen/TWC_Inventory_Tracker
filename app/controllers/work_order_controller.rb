@@ -35,6 +35,8 @@ class WorkOrderController < ApplicationController
 		if flash[:notice]
 			redirect_to add_item_path
 		else
+			# add functionality
+			
 			redirect_to item_list_path
 		end
 	end
