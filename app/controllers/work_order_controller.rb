@@ -10,7 +10,7 @@ class WorkOrderController < ApplicationController
 		if not work_order_code =~ /^[0-9]+$/
 			flash[:notice] = "Not a numeric work order"
 			redirect_to work_order_home_path
-		elsif not WorkOrder.where(code: work_order_code).first
+		elsif Care_Package__c.find_by_id__c(work_order_code) == nil
 		 	flash[:notice] = "Invalid work order code"
 		 	redirect_to work_order_home_path
 		else
