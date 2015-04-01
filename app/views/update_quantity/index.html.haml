@@ -2,23 +2,22 @@
 %h2 Choose an item to update:
 
 - if flash[:notice]
-    %p{:class => "error_msg"}= flash[:notice]
+  %p{:class => "error_msg"}= flash[:notice]
 
     %body
-	    %header{:class => "row"}
-	      %h2 Item Page
-	    %section
-	      %div{:class => "row"}
-	        %table#items{:border => "1"}
-	          %thead
-	            %tr
-	              %th Item
-	              %th Quantity
-	        %tbody
-	          -@items.each do |item|
-	            %tr
-	              %td= item.item
-	              %td= item.quantity
+      %header{:class => "row"}
+        %h2 Item Page
+      %section
+        %div{:class => "row"}
+          %table#items{:border => "1"}
+            %thead
+              %tr
+                %th Item
+                %th Quantity
+          %tbody
+            -@items.each do |item|
+              %tr
+                %td= item.item
+                %td= item.quantity
 
-= form_tag root_path, :method => :get  do
-	= submit_tag 'Home'
+= form_tag root_path, :method => :get  do= submit_tag 'Home'
