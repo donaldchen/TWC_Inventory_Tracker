@@ -15,10 +15,10 @@
               %th Item
               %th Quantity
         %tbody
-          -@entry.each do |item|
+          - @list_details.each do |item|
             %tr
-              %td= item.item
-              %td= item.quantity
+              %td= item.Program_Item__c
+              %td= item.Quantity__c
               %td= link_to 'delete', item_list_path(item), :method => :delete
     = form_tag add_item_path, :method => :get do
       = submit_tag 'Add'
