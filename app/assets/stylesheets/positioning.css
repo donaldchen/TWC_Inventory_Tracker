@@ -93,78 +93,14 @@ Button design and layout
 }
 
 /*
-===========================
-Box resizing for different
-screen sizes
-===========================
-*/
-
-/* mobile phones */
-@media only screen
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-	.box {
-	  width:300px;
-	  height:300px;
-	}
-	.back_btn {
-	   visibility:hidden;
-	}
-	.fa-chevron-left{
-	   visibility:hidden;
-    }
-}
-
-/* Iphone 6 */
-@media only screen 
-    and (min-device-width : 375px) 
-    and (max-device-width : 667px) 
-    and (orientation : landscape) 
-    and (-webkit-min-device-pixel-ratio : 2)
-{ .box {
-	  width:300px;
-	  height:300px;
-	}
-	.back_btn {
-	   visibility:hidden;
-	}
-	.fa-chevron-left{
-	   visibility:hidden;
-    }}
-
-@media only screen 
-    and (min-device-width : 375px) 
-    and (max-device-width : 667px) 
-    and (orientation : portrait) 
-    and (-webkit-min-device-pixel-ratio : 2)
-{ .box {
-	  width:300px;
-	  height:300px;
-	}
-	.back_btn {
-	   visibility:hidden;
-	}
-	.fa-chevron-left{
-	   visibility:hidden;
-    }}
-
-/* Tablet and computer screens (portrait and landscape) */
-@media only screen 
-and (min-device-width : 768px) {
-  .box {
-	  width:400px;
-	  height:300px;
-  }
-}
-
-/*
 ==========================
 Form Field Configurations
 ==========================
 */
 
 .box{
-	padding:60px 20px 20px 20px;
+	width:400px;
+	padding:60px 40px 80px 40px;
 	background-color:white;
 	margin:0 auto;
 	margin-top:20px;
@@ -200,27 +136,26 @@ input {
 	margin:0 auto;
 }
 
-.nav_bar_padding{
+.nav_bar_horizontal_padding{
+	padding: 20px;
+	background-color:white;
 	margin-bottom:20px;
 }
-
-@media only screen 
-    and (min-device-width : 320px) 
-    and (max-device-width : 667px) 
-    and (orientation : portrait) 
-    and (-webkit-min-device-pixel-ratio : 2)
-{ 
-	.nav_box {
-       width:300px;
-	 }
-	img {
-       width:85%;
-       height:100%;
-	 }
+.nav_bar_vertical_padding{
+	margin-right:20px;
 }
 
 .icon_title{
 	display:block;
 	text-align:center;
 	margin:0 auto;
+}
+
+a {
+	display:block;
+	text-align:center;
+}
+
+.grid_box:hover{
+	cursor:pointer;
 }

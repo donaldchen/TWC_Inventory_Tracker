@@ -1,19 +1,20 @@
-
-- if flash[:notice]
-	%p= flash[:notice]
-  
 %h1 Add Item
 
+
+- if flash[:notice]
+  %p{:class => "error_msg"}= flash[:notice]
+
 = form_tag add_item_path do
-	= label :item, :ItemCode, 'ItemCode'
-	= text_field :item, 'ItemCode'
-	%br
-	%h4 Quantity:
-	= label :item, :Quantity, 'Quantity'
-	= text_field :item, 'Quantity'
-	%br
-	= submit_tag 'add to cart' 
+  = label :item, :ItemCode, 'ItemCode'
+  = text_field :item, 'ItemCode'
+  %br
+	
+  %h4 Quantity:
+  = label :item, :Quantity, 'Quantity'
+  = text_field :item, 'Quantity'
+  %br
+  = submit_tag 'add to cart' 
 
 = form_tag item_list_path, :method => :get  do
-	= submit_tag 'Go Back'
+  = submit_tag 'Go Back'
 

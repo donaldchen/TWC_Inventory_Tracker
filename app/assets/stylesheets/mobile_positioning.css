@@ -1,0 +1,20 @@
+@media only screen 
+    and (max-device-width : 480px)
+    {
+        .box{
+           width:300px;
+           padding:60px 20px 60px 20px;
+        }
+        
+        .nav_box{
+            width:300px;
+        }
+        
+    }
+
+/* Iphone */
+@media only screen 
+and (max-device-width : 320px) 
+ {
+
+ } 
