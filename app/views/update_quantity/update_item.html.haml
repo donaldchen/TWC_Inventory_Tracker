@@ -1,0 +1,10 @@
+%h1 Update Item Page
+%h1 @item.item
+%p previous quantity: @item.quantity
+
+= form_tag update_quantity_path do
+
+	= label :item, :quantity, 'CorrectQuantity'
+	= text_field :item, 'quantity'
+
+	= submit_tag 'Update'

@@ -43,12 +43,23 @@ class WorkOrderController < ApplicationController
 	def item_list
 		@entry = Care_Package__c.find_by_id__c(params[:id])
 		@list_details = Program_Detail__c.find_all_by_Care_Package__c(@entry.Id)
+		print @list_details
 	end
 
 	def destroy
   		@item = Program_Detail__c.find(params[:pid])
   		@item.delete
   		redirect_to item_list_path(params[:id])
+	end
+
+	def update
+		item_code = params[:pid]
+		quantity = params[:newvalue]
+		p quantity
+		program_detail = Program_Detail__c.find(params[:pid])
+		program_detail.Quantity__c = quantity
+		program_detail.save
+		redirect_to item_list_path(params[:id])
 	end
 	
 	def confirmation

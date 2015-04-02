@@ -27,6 +27,8 @@ module NavigationHelpers
 
     when /^the Update Quantities page$/ then update_quantity_path
 
+    when /^the Update Item page for "(.*)"$/ then update_item_path(Inventory.where(item: $1).first.code)
+
   
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
