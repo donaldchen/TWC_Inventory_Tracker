@@ -53,9 +53,10 @@ class WorkOrderController < ApplicationController
 	end
 
 	def update
-		item_code = params[:item][:ItemCode]
-		quantity = params[:item][:Quantity]
-		program_detail = Item__c.find_by_Code__c(item_code)
+		item_code = params[:pid]
+		quantity = params[:newvalue]
+		p quantity
+		program_detail = Program_Detail__c.find(params[:pid])
 		program_detail.Quantity__c = quantity
 		program_detail.save
 		redirect_to item_list_path(params[:id])
