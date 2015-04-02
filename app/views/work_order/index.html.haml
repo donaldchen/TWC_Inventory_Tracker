@@ -1,12 +1,18 @@
-%h1 Work Order Page
+%header{:class => "row header"}
+  %div{:class => "col-12 header_padding"}
+    %h1{:class => "header_text"} Work Order Page
 
-- if flash[:notice]
-	%p{:class => "error_msg"}= flash[:notice]
+%div{:class => "row error_message"}
+  %div{:class => "col-12"}
+    - if flash[:notice]
+      %p{:class => "msg error"}= flash[:notice]
 
-= form_tag work_order_home_path do
-
-	= label :work_order, :WorkOrderCode, 'WorkOrderCode', style: "display:none;"
-	= text_field :work_order, 'WorkOrderCode'
-
-	= submit_tag 'Select Code'
+%section{:class => "row"}
+  %div{:class => "box"}
+    = form_tag work_order_home_path do
+      %fieldset{:class => "field_text col-8"}
+        = label :work_order, :WorkOrderCode, 'Work Order'
+        = text_field :work_order, 'WorkOrderCode'
+      %fieldset{:class => "field_text button col-8"}
+        = submit_tag 'Select Code'
 

@@ -8,6 +8,8 @@ Rails.application.config.assets.precompile += %w( reset.css )
 Rails.application.config.assets.precompile += %w( style.css )
 Rails.application.config.assets.precompile += %w( positioning.css )
 Rails.application.config.assets.precompile += %w( table_design.css )
+Rails.application.config.assets.precompile += %w( mobile_positioning.css )
+Rails.application.config.assets.precompile += %w( events.js )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
