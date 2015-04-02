@@ -15,13 +15,17 @@
               %th Item
               %th Quantity
           %tbody
+            - counter = 0
             - @list_details.each do |item|
               %tr
+                
                 %td= item.Program_Item__c
                 %td
-                  %input{type: "text", :value => item.Quantity__c}
+                  %input{id: "value" + counter.to_s , type: "text", :value => item.Quantity__c}
+                  
                 %td= link_to 'update', item_list_update_path({:pid => item.Id, :id => @entry.id__c}), :method => :post
                 %td= link_to 'delete', item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), :method => :delete
+                - counter += 1
     = form_tag add_item_path({:id => @entry.id__c}), :method => :get do
       = submit_tag 'Add'
     = form_tag confirmation_path, :method => :get do
