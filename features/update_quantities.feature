@@ -14,14 +14,20 @@ Feature: Update Quantities
     | crayon boxes          | 005  | 3        |
     | car seat              | 006  | 3        |
 
-  Scenario: Update item quantity
   	When I am on the Update Quantities page
     And I should see "5"
   	And I follow "diapers"
   	Then I should be on the Update Item page for "diapers"
-  	When I fill in "CorrectQuantity" with "7"
+
+  Scenario: Update item quantity correctly
+    When I fill in "CorrectQuantity" with "7"
   	And I press "Update"
   	Then I should be on the Update Quantities page
   	And I should see "7"
+
+  Scenario: Update item with non-numeric quantity
+    When I fill in "CorrectQuantity" with "blah"
+    And I press "Update"
+    Then I should be on the Update Item page for "diapers"
 
 
