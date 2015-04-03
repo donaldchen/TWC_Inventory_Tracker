@@ -18,10 +18,10 @@ module NavigationHelpers
     when /^the Work Order page$/ then work_order_home_path
 
     # we still need to access the specific page for a work order's item list. item_list_path(work order id)
-    when /^the Item List page for order number "(.*)"/ then item_list_path($1)
+    when /^the Item List page for order number "(.*)"$/ then item_list_path($1)
     when /^the Confirmation page for order number "(.*)"/ then confirmation_path
       # we still need to access the specific page for this work order. add_to_work_order_path(work order id)
-    when /^the Add To Work Order page for order number "(.*)"$/ then add_item_path
+    when /^the Add To Work Order page for order number "(.*)"$/ then add_item_path($1)
 
     when /^the Store Item page$/ then store_item_path
 
