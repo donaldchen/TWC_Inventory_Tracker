@@ -1,14 +1,8 @@
 .box_outline{
-    width:500px;
+    width:800px;
     background-color:white;
     margin:0 auto;
     margin-top:20px;
-}
-
-table, th, td{
-    border:1px solid black;
-    border-collapse: collapse;
-    border-spacing: 0;
 }
 
 table {
@@ -19,4 +13,22 @@ table {
 th {
     height: 40px;
     padding-top:10px;
+}
+
+
+.item{
+    text-align:center;
+}
+
+.quantity{
+    display:inline-block;
+    margin:0 auto;
+    text-align:center;
+    width:50%;
+}
+
+.update_btn{
+    display:inline-block;
+    width:50%;
+    float:right;
 }
