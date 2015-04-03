@@ -7,14 +7,9 @@ Background:
   #Given I am logged in
   #And the following items exist in the inventory
   Given the following items exist in the inventory
-  | item                  | code | quantity |
-  | diapers               | 000  | 3        |
-  | toothbrush            | 001  | 3        |
-  | hand soap             | 002  | 3        |
-  | towel                 | 003  | 3        |
-  | tissue box            | 004  | 3        |
-  | crayon boxes          | 005  | 3        |
-  | car seat              | 006  | 3        |
+  | item                  | code       | quantity |
+  | Gas Card              | 000049587  | 1        |
+  | Bananas               | 000001235  | 5        |
 
   And the following work order with order number "000001" exists
   | item                  | quantity |
