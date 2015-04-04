@@ -12,13 +12,13 @@ Background:
   | test2                 | 13372      | 1337     |
   | test3                 | 13373      | 1337     |
 
-  And the following work order with order number "1337" exists
+  And the following work order with order number "999" exists
   | item                  | quantity |
   | test1                 | 1        |
   | test2                 | 1        |
 
 Scenario: input invalid item code
-  Given I am on the Item List page for order number "1337"
+  Given I am on the Item List page for order number "999"
   And I press "Add"
   And I fill in "ItemCode" with "000"
   And I fill in "Quantity" with "3"
@@ -26,22 +26,24 @@ Scenario: input invalid item code
   Then I should see "invalid item code"
 
 Scenario: input invalid number of items
-  Given I am on the Add To Work Order page for order number "1337"
+  Given I am on the Add To Work Order page for order number "999"
   When I fill in "ItemCode" with "000001235"
   And I fill in "Quantity" with "no"
   And I press "add to cart"
-  Then I should be on the Add To Work Order page for order number "1337"
+  Then I should be on the Add To Work Order page for order number "999"
   And I should see "quantity must be numeric" 
 
-Scenario: checkout more items than the inventory contains
-  Given I am on the Add To Work Order page for order number "1337"
+Scenario: successfully add item to work order
+  Given I am on the Add To Work Order page for order number "999"
   When I fill in "ItemCode" with "000001235"
-  And I fill in "Quantity" with "100"
+  And I fill in "Quantity" with "10"
   And I press "add to cart"
-  Then I should be on the Add To Work Order page for order number "1337"
-  And I should see "not enough items in inventory" 
+  Then I should be on the Item List page for order number "999"
+  And I should see "Bananas" with quantity "10"
+  And I follow "delete"
+
 
 Scenario: return to item list
-  Given I am on the Add To Work Order page for order number "1337"
+  Given I am on the Add To Work Order page for order number "999"
   When I press "Go Back"
-  Then I should be on the Item List page for order number "1337"
+  Then I should be on the Item List page for order number "999"
