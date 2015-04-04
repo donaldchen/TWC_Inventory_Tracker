@@ -1,7 +1,7 @@
 host: login.salesforce.com
-client_secret: 2211708390722974507
-client_id: 3MVG9fMtCkV6eLhcwdd7yN9GB77TX_DPhRL3Hcrb6HhFUi8niflKYTiO6eBR1hdlJfWZrN9TnseOQ_L3sm1vy
+client_secret: 5934656462821809054
+client_id: 3MVG9xOCXq4ID1uFbdgU4Qdni_UqKd2sZLdz1hVcy4nLc.wVzfja5RjMQ4gY3XTCUIwxRHSrUKDlkLXTcD.9A
 sobject_module: SFDC_Models
 debugging: false
-username: sampaul@berkeley.edu
-password: pleasedontkillme1TfPa8Eb0NneMsYA56IWaYDvd
+username: leisurely@berkeley.edu
+password: pleasedontkillme1AHa7lYKA04CtRfaYdOgNdxMa

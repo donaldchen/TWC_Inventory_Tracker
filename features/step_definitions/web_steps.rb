@@ -33,13 +33,16 @@ Given(/^the following work order with order number "(.*)" exists$/) do |order_nu
   end
 end
 
-Given(/^when I am on Add To Work Order for order number "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given(/^ I am on the Add To Work Order for order number "(.*?)"$/) do |arg1|
+  # visit("/work_order_home")
+  # fill_in("work_order", :with => "123")
+  # click_button("Select Code")
+  # click_button("Add")
 end
 
-Then(/^I should see the Item List page for order number "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
+# Then(/^I should be on the Item List page for order number "(.*?)"$/) do |arg1|
+#   pending # express the regexp above with the code you wish you had
+# end
 
 Then(/^I should see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|
   find('tr', text: arg1).should have_content(arg2)
