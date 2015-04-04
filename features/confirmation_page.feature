@@ -27,6 +27,6 @@ Scenario: yes, confirm delivery
   Then I should be on the Work Order page
 
 Scenario: no, don't confirm delivery
-  Given I am on the Confirmation page for order number "000001"
+  Given I am on the Confirmation page for order number "1337"
   And I press "Go Back"
-  Then I should be on the Item List page for order number "000001"
+  Then I should be on the Item List page for order number "1337"
