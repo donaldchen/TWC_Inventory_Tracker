@@ -44,6 +44,14 @@ end
 #   pending # express the regexp above with the code you wish you had
 # end
 
+When /^(?:|I )fill in "([^"]*)" with quantity "([^"]*)"$/ do |field, value|
+  fill_in(field, :with => value, :match => :first)
+end
+
+When(/^I press the Update button$/) do
+  first('.item').click()
+end
+
 Then(/^I should see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|
   find('tr', text: arg1).find_by_id('item_newvalue').value.to_i.should equal(arg2.to_i)
 end

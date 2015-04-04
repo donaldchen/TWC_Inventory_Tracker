@@ -49,7 +49,6 @@ class WorkOrderController < ApplicationController
 	def item_list
 		@entry = Care_Package__c.find_by_id__c(params[:id])
 		@list_details = Program_Detail__c.find_all_by_Care_Package__c(@entry.Id)
-		print @list_details
 	end
 
 	def destroy
@@ -61,11 +60,16 @@ class WorkOrderController < ApplicationController
 	def update
 		item_code = params[:item][:pid]
 		quantity = params[:item][:newvalue]
-		p quantity
 		program_detail = Program_Detail__c.find(item_code)
-		program_detail.Quantity__c = quantity
-		program_detail.save
-		flash[:notice] = "Successfully Updated"
+		inventory_count = Item__c.find_by_Code__c(program_detail.Name).Quantity__c
+		p inventory_count
+		if inventory_count.to_i >= quantity.to_i
+			program_detail.Quantity__c = quantity
+			program_detail.save
+			flash[:notice] = "Successfully Updated"
+		else
+			flash[:notice] = "Update unsuccessful, not enough in inventory."
+		end
 		redirect_to item_list_path(params[:id])
 	end
 	
