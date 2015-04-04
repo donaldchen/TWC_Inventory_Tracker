@@ -10,8 +10,9 @@ class UpdateQuantityController < ApplicationController
 
 	def update
 		correct_quantity = params[:item][:quantity]
+		code = params[:item][:ItemCode]
 		if not correct_quantity.to_s =~ /^[0-9]+$/
-			flash[:notice] = "Quantity must"
+			flash[:notice] = "Quantity must be a number"
 			redirect_to update_item_path(flash[:code])
 		else
 			@item = Inventory.where(code: flash[:code]).first
@@ -20,5 +21,4 @@ class UpdateQuantityController < ApplicationController
 			redirect_to update_quantity_path
 		end
 	end
-
 end
