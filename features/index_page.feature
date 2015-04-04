@@ -10,14 +10,14 @@ Scenario: not logged in
 
 Scenario: choose work order page
   Given I am logged in
-  When I press "Work Order"
+  When I follow "Work Order"
   Then I should be on the Work Order page
 
 Scenario: displays storage and checkout buttons
   Given I am logged in
-  Then I should see "Scanner Store" button
-  And I should see "Store Item" button
-  And I should see "Work Order" button
+  Then I should see "Scanner Store" link
+  And I should see "Store Item" link
+  And I should see "Work Order" link
   
 Scenario: logout
  Given I am logged in
