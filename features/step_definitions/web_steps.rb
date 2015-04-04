@@ -66,8 +66,8 @@ Given(/^I am a volunteer$/) do
   pending # express the regexp above with the code you wish you had
 end
 
-Then /^I should see "([^"]*)" button/  do |name|
-  find_button(name).should_not be_nil
+Then /^I should see "([^"]*)" link/  do |name|
+  find_link(name).should_not be_nil
 end
 
 
@@ -103,7 +103,7 @@ When (/^(?:|I )press "([^"]*)"$/) do |button|
   click_button(button)
 end
 
-When /^(?:|I )follow "([^"]*)"$/ do |link|
+When (/^(?:|I )follow "([^"]*)"$/) do |link|
   click_link(link)
 end
 
