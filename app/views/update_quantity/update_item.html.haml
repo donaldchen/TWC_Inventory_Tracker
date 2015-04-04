@@ -6,5 +6,6 @@
 
 	= label :item, :quantity, 'CorrectQuantity'
 	= text_field :item, 'quantity'
+	= text_field :item, :id, :value => flash[:code], :type => "hidden"
 
 	= submit_tag 'Update'
