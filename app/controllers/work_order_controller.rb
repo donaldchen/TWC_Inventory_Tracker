@@ -31,9 +31,10 @@ class WorkOrderController < ApplicationController
 		elsif not quantity =~ /^[0-9]+$/
 			flash[:notice] = "quantity must be numeric"
 			redirect_to add_item_path(params[:id])
-		elsif quantity.to_i > Inventory.where(code: item_code).first.quantity
-			flash[:notice] = "not enough items in inventory"
-			redirect_to add_item_path(params[:id])
+		# inventory = Inventory.where(code: item_code).first.quantity
+		# elsif quantity.to_i > inventory.to_i
+		# 	flash[:notice] = "not enough items in inventory"
+		# 	redirect_to add_item_path(params[:id])
 		else
 			# add functionality
 			program_detail = Program_Detail__c.new
