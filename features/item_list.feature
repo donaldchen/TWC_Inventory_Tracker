@@ -39,6 +39,14 @@ Scenario: add valid item
   Then I should see "test1" with quantity "1"
   And I should see "test2" with quantity "1"
   And I should see "test3" with quantity "3"
+
+Scenario: update quantities
+  Given I am on the Item List page for order number "1337"
+  When I fill in "item_newvalue" with quantity "10"
+  And I press the Update button
+  And I should see "test1" with quantity "10"
+  And I fill in "item_newvalue" with quantity "1"
+  And I press the Update button
   
 Scenario: delete item from work order
   Given I am on the Item List page for order number "1337"
@@ -54,3 +62,7 @@ Scenario: cancel current job
   Given I am on the Item List page for order number "123"
   And I press "Cancel"
   Then I should be on the Work Order page
+
+Scenario: special instructions displayed
+  Given I am on the Item List page for order number "1337"
+  Then I should see "Treat with careful swag."
