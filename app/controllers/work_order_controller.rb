@@ -63,7 +63,7 @@ class WorkOrderController < ApplicationController
 		quantity = params[:item][:newvalue]
 		program_detail = Program_Detail__c.find(item_code)
 		# inventory_count = Item__c.find_by_Code__c(program_detail.Name).Quantity__c
-
+		
 		program_detail.save
 
 		# if inventory_count.to_i >= quantity.to_i
