@@ -1,5 +1,4 @@
 class StoreItemController < ApplicationController
-    include Databasedotcom::Rails::Controller
 	def index
 
 	end
@@ -7,19 +6,18 @@ class StoreItemController < ApplicationController
 	def store
 		item_code = params[:item][:ItemCode]
 		quantity = params[:item][:Quantity]
-		if not Item__c.find_by_Code__c(item_code)
+		if not Inventory.where(code: item_code).first
 			flash[:notice] = "Invalid Item Code"
 		elsif not quantity =~ /^[0-9]+$/
 			flash[:notice] = "quantity must be numeric"
 		end
 
 		if not flash[:notice]
-			item = Item__c.find_by_Code__c(item_code)
-			orig = item.Quantity__c.to_i
-			item_name = item.Name.pluralize
+			item = Inventory.where(code: item_code).first
+			orig = item.quantity
+			item_name = Inventory.where(code: item_code).first.item.pluralize
 			item_name = item_name.slice(0,1).capitalize + item_name.slice(1..-1)
-			item.Quantity__c = (orig + quantity.to_i).to_s
-			item.save
+			item.update(quantity: orig.to_i + quantity.to_i)
 			flash[:notice] = "#{quantity} #{item_name} Added"
 		end
 		redirect_to store_item_path
