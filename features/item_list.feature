@@ -46,9 +46,9 @@ Scenario: delete item from work order
   Then I should not see "test3" with quantity "3"
  
 Scenario: confirm work order
-  Given I am on the Item List page for order number "000001"
+  Given I am on the Item List page for order number "1337"
   And I press "Checkout"
-  Then I should be on the Confirmation page for order number "000001"
+  Then I should be on the Confirmation page for order number "1337"
 
 Scenario: cancel current job
   Given I am on the Item List page for order number "123"
