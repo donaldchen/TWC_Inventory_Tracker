@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'work_order_home' => 'work_order#index'
   post 'work_order_home' => 'work_order#check'
 
-  get 'confirmation' => 'work_order#confirmation'
+  get 'confirmation/:id', to: 'work_order#confirmation', as: 'confirmation'
   get '/item_list/:id', to: 'work_order#item_list', as: 'item_list'
 
   post '/item_list/:id/', to: 'work_order#update', as: 'item_list_update'

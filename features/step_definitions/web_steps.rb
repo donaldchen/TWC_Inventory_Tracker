@@ -45,7 +45,7 @@ end
 # end
 
 Then(/^I should see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|
-  find('tr', text: arg1).should have_content(arg2)
+  find('tr', text: arg1).find_by_id('item_newvalue').value.to_i.should equal(arg2.to_i)
 end
 
 Then(/^I should not see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|

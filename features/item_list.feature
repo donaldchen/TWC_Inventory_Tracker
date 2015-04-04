@@ -7,42 +7,50 @@ Background:
   #Given I am logged in
   #And the following items exist in the inventory
   Given the following items exist in the inventory
-  | item                  | code | quantity |
-  | diapers               | 000  | 3        |
-  | toothbrush            | 001  | 3        |
-  | hand soap             | 002  | 3        |
-  | towel                 | 003  | 3        |
-  | tissue box            | 004  | 3        |
-  | crayon boxes          | 005  | 3        |
-  | car seat              | 006  | 3        |
+  | item                  | code       | quantity |
+  | test1                 | 13371      | 1337     |
+  | test2                 | 13372      | 1337     |
+  | test3                 | 13373      | 1337     |
 
-  And the following work order with order number "000001" exists
+  And the following work order with order number "1337" exists
   | item                  | quantity |
-  | diapers               | 3        |
-  | toothbrush            | 1        |
+  | test1                 | 1        |
+  | test2                 | 1        |
 
 Scenario: correct items for work order displayed
-  Given I am on the Item List page for order number "000001"
-  Then I should see "diapers" with quantity "3"
-  And I should see "toothbrush" with quantity "1"
-
-Scenario: delete item from work order
-  Given I am on the Item List page for order number "000001"
-  And I press "delete" for "diapers"
-  Then I am on the Item List page for order number "000001"
-  And I should not see "diapers" with quantity "3"
-
-Scenario: add a new item to work order
-  Given I am on the Item List page for order number "000001"
+  Given I am on the Item List page for order number "1337"
+  Then I should see "test1" with quantity "1"
+  And I should see "test2" with quantity "1"
+  
+Scenario: fail to add item
+  Given I am on the Item List page for order number "1337"
   And I press "Add"
-  Then I should be on the Add To Work Order page for order number "000001"
+  And I fill in "ItemCode" with "000"
+  And I fill in "Quantity" with "3"
+  And I press "add to cart"
+  Then I should see "invalid item code"
+
+Scenario: add valid item
+  Given I am on the Item List page for order number "1337"
+  And I press "Add"
+  And I fill in "ItemCode" with "13373"
+  And I fill in "Quantity" with "3"
+  And I press "add to cart"
+  Then I should see "test1" with quantity "1"
+  And I should see "test2" with quantity "1"
+  And I should see "test3" with quantity "3"
+  
+Scenario: delete item from work order
+  Given I am on the Item List page for order number "1337"
+  And I press "delete" for "test3"
+  Then I should not see "test3" with quantity "3"
  
 Scenario: confirm work order
-  Given I am on the Item List page for order number "000001"
+  Given I am on the Item List page for order number "1337"
   And I press "Checkout"
-  Then I should be on the Confirmation page for order number "000001"
+  Then I should be on the Confirmation page for order number "1337"
 
 Scenario: cancel current job
-  Given I am on the Item List page for order number "000001"
+  Given I am on the Item List page for order number "123"
   And I press "Cancel"
   Then I should be on the Work Order page
