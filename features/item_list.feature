@@ -51,6 +51,6 @@ Scenario: confirm work order
   Then I should be on the Confirmation page for order number "000001"
 
 Scenario: cancel current job
-  Given I am on the Item List page for order number "000001"
+  Given I am on the Item List page for order number "123"
   And I press "Cancel"
   Then I should be on the Work Order page
