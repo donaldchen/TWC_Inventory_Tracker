@@ -62,15 +62,17 @@ class WorkOrderController < ApplicationController
 		item_code = params[:item][:pid]
 		quantity = params[:item][:newvalue]
 		program_detail = Program_Detail__c.find(item_code)
-		inventory_count = Item__c.find_by_Code__c(program_detail.Name).Quantity__c
-		p inventory_count
-		if inventory_count.to_i >= quantity.to_i
-			program_detail.Quantity__c = quantity
-			program_detail.save
-			flash[:notice] = "Successfully Updated"
-		else
-			flash[:notice] = "Update unsuccessful, not enough in inventory."
-		end
+		# inventory_count = Item__c.find_by_Code__c(program_detail.Name).Quantity__c
+
+		program_detail.save
+
+		# if inventory_count.to_i >= quantity.to_i
+		# 	program_detail.Quantity__c = quantity
+		# 	program_detail.save
+		# 	flash[:notice] = "Successfully Updated"
+		# else
+		# 	flash[:notice] = "Update unsuccessful, not enough in inventory."
+		# end
 		redirect_to item_list_path(params[:id])
 	end
 	
