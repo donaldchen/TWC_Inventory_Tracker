@@ -64,7 +64,9 @@ class WorkOrderController < ApplicationController
 		program_detail = Program_Detail__c.find(item_code)
 		# inventory_count = Item__c.find_by_Code__c(program_detail.Name).Quantity__c
 		
+		program_detail.Quantity__c = quantity
 		program_detail.save
+		flash[:notice] = "Successfully Updated"
 
 		# if inventory_count.to_i >= quantity.to_i
 		# 	program_detail.Quantity__c = quantity
