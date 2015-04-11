@@ -1,6 +1,5 @@
 %h1 Add Item
 
-
 - if flash[:notice]
   %p{:class => "error_msg"}= flash[:notice]
 
@@ -8,7 +7,7 @@
   = label :item, :ItemCode, 'ItemCode'
   = text_field :item, 'ItemCode'
   %br
-	
+
   %h4 Quantity:
   = label :item, :Quantity, 'Quantity'
   = text_field :item, 'Quantity'

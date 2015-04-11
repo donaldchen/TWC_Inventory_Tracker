@@ -1,0 +1,29 @@
+.pop_up {
+    width: 400px;
+    height: 300px;
+    background-color:white;
+    position: absolute;
+    top:-60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    visibility:hidden;
+}
+
+.overlay {
+    background-color: gray;
+    bottom: 0;
+    display: none;
+    left: 0;
+    opacity: 0.5;
+    filter: alpha(opacity = 50); /* IE7 & 8 */
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.add_header{
+    padding:20px;
+    text-align:center;
+}

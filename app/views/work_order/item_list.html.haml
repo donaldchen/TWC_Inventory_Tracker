@@ -1,33 +1,60 @@
+%div{:class => "overlay"}
+
 %header{:class => "row header"}
   %div{:class => "col-12 header_padding"}
     %h1{:class => "header_text"} Item Page
-%p= flash[:notice]
-%p= @entry.Special_Instructions__c
+
 %div{:class => "box_outline"}    
   %section{:class => "row"}
     %div{:class => "col-12"}
       %table#work_order
         %thead
           %tr
-            %th Item
+            %th{:class => "adjust_width"} Item
             %th{:class => "row"}
               %div{:class => "col-6"}
                 Quantity
               %div{:class => "col-6"}
                 Update  
-            %th Delete
+            %th{:class => "adjust_width"} Delete
         %tbody
           - @list_details.each do |item|
             %tr
-              %td{:class => "item"}= item.Program_Item__c
+              %td{:class => "item"}
+                = item.Program_Item__c
+                %p{:class => "hidden_quantity"}= item.Quantity__c
               %td
                 = form_tag item_list_update_path, :method => :post do
                   = text_field :item, :newvalue, :value => item.Quantity__c, :class => "quantity"
                   = text_field :item, :pid, :value => item.Id, :type => "hidden"
                   = submit_tag 'Update', :class => "update_btn"
-              %td= link_to 'delete', item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), :method => :delete
+              %td= link_to image_tag('delete_button.png', :class => "delete_img"), item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), :method => :delete
+              // %td= link_to 'delete', item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), :method => :delete
+
+// %div{:class => "pop_up"}
+//   %div{:class => "row"}
+//     %div{:class => "col-12"}
+//       %h1{:class => "add_header"} Add Item
+//   %div{:class => "row error_message"}
+//     %div{:class => "col-12"}
+//       - if flash[:notice]
+//         %p{:class => "msg error"}= flash[:notice]
+//   %section{:class => "row"}
+//     %div{:class => "col-12"}
+//       = form_tag add_item_path({:id => @entry.id__c}), :id => "modal_values" do
+//         %fieldset{:class => "field_text col-8"}
+//           = label :item, :ItemCode, 'ItemCode'
+//           = text_field :item, 'ItemCode'
+
+//         %fieldset{:class => "field_text col-8"}
+//           = label :item, :Quantity, 'Quantity'
+//           = text_field :item, 'Quantity'
+//         %fieldset{:class => "field_text col-8"}
+//           = submit_tag 'Add Item', :id => "modal_submit"
 
 %section
-  = button_to("Add", add_item_path({:id => @entry.id__c}), :method => :get,)
+  = button_to("Add", add_item_path({:id => @entry.id__c}), :method => :get, :id => "add_item")
   = button_to("Checkout", confirmation_path(@entry.id__c), :method => :get,)
   = button_to("Cancel", work_order_home_path, :method => :get,)
+
+%div{:class => "result"}

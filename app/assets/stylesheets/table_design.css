@@ -13,10 +13,10 @@ table {
 th {
     height: 40px;
     padding-top:10px;
+    font-weight:bold;
 }
 
-
-.item{
+.item {
     text-align:center;
 }
 
@@ -31,4 +31,13 @@ th {
     display:inline-block;
     width:50%;
     float:right;
+}
+
+.delete_img{
+    width:9%;
+    height:9%;
+}
+
+.adjust_width{
+    width:25%;
 }

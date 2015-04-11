@@ -159,3 +159,7 @@ a {
 .grid_box:hover{
 	cursor:pointer;
 }
+
+.hidden_quantity{
+	visibility:hidden;
+}
