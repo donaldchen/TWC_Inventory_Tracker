@@ -29,10 +29,21 @@ Given(/^I make a new Work Order$/) do
       rand_num = rand(100000).to_s
       id = Care_Package__c.find_by_id__c(rand_num)
     end
+    id = rand_num
+    @care_package = Care_Package__c.create(:id__c => id, :Name => "individual item")
+    visit(item_list_path(id))
+end
 
-    @care_package = Care_Package__c.new(id)
-    #@care_package.Id = id
-    #@care_package.save
+Given(/^I make a new Work Order with used id$/) do 
+    rand_num = 1337.to_s
+    id = Care_Package__c.find_by_id__c(rand_num)
+    while id != nil do
+      rand_num = 91235.to_s
+      id = Care_Package__c.find_by_id__c(rand_num)
+    end
+    id = rand_num
+    @care_package = Care_Package__c.create(:id__c => id, :Name => "individual item")
+    visit(item_list_path(id))
 end
 
 Given(/^I delete Work Order with id "(.*)"$/) do |id|

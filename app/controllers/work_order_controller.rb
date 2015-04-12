@@ -84,14 +84,13 @@ class WorkOrderController < ApplicationController
 	def new
 		rand_num = rand(100000).to_s
 		id = Care_Package__c.find_by_id__c(rand_num)
-		while id != nil do
-			rand_num = rand(100000).to_s
-			id = Care_Package__c.find_by_id__c(rand_num)
-		end
-
-		@care_package = Care_Package__c.new
-		@care_package.Id = id
-		@care_package.save
+	    while id != nil do
+	      rand_num = rand(100000).to_s
+	      id = Care_Package__c.find_by_id__c(rand_num)
+	    end
+	    id = rand_num
+	    @care_package = Care_Package__c.create(:id__c => id, :Name => "individual item")
+	    redirect_to item_list_path(id)
 	end
 
 

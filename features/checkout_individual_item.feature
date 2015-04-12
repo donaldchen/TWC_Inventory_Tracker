@@ -30,3 +30,15 @@ Feature: Checkout Individual Item
   	When I fill in "ItemCode" with "13371"
   	And I fill in "Quantity" with "1"
   	And I press "Store"
+
+  Scenario: Create new work order with used id
+  	Given I am on the Work Order page
+  	And I make a new Work Order with used id
+  	Then I should be on the Item List page for order number "91235"
+
+  Scenario: Refresh Salesforce state
+  	And I delete Work Order with id "91235"
+  	Then I go to the Store Item page
+  	When I fill in "ItemCode" with "13371"
+  	And I fill in "Quantity" with "1"
+  	And I press "Store"
