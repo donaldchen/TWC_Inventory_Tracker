@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'logout' => 'login#logout'
   get 'work_order_home' => 'work_order#index'
   post 'work_order_home' => 'work_order#check'
+  get 'new_work_order' => 'work_order#new'
 
   get 'confirmation/:id', to: 'work_order#confirmation', as: 'confirmation'
   get '/item_list/:id', to: 'work_order#item_list', as: 'item_list'
@@ -29,6 +30,8 @@ Rails.application.routes.draw do
   get 'update_quantity' => 'update_quantity#index'
   post 'update_quantity' => 'update_quantity#update'
   match 'update_item/:id' => 'update_quantity#update_item', via: :get, as: :update_item
+
+
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
