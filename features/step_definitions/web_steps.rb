@@ -2,6 +2,8 @@ require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
+include Databasedotcom::Rails::Controller
+
 module WithinHelpers
   def with_scope(locator)
     locator ? within(*selector_for(locator)) { yield } : yield
@@ -21,19 +23,19 @@ Given(/^I am not logged in$/) do
 end
 
 Given(/^I make a new Work Order$/) do
-    rand_num = 91235
+    rand_num = 91235.to_s
     id = Care_Package__c.find_by_id__c(rand_num)
-    while id is not nil
-      rand_num = rand(10000)
+    while id != nil do
+      rand_num = rand(100000).to_s
       id = Care_Package__c.find_by_id__c(rand_num)
     end
 
-    @care_package = Care_Package__c.new
-    Care_Package_c.id = id
-    @care_package.save
+    @care_package = Care_Package__c.new(id)
+    #@care_package.Id = id
+    #@care_package.save
 end
 
-Given(/^I delete Work Order with order number "(.*)"$/) do |id|
+Given(/^I delete Work Order with id "(.*)"$/) do |id|
   @care_package = Care_Package__c.find_by_id__c(id)
   @care_package.delete
 end

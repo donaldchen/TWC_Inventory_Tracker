@@ -82,15 +82,15 @@ class WorkOrderController < ApplicationController
 	end
 
 	def new
-		rand_num = rand(10000)
+		rand_num = rand(100000).to_s
 		id = Care_Package__c.find_by_id__c(rand_num)
-		while id is not nil
-			rand_num = rand(10000)
+		while id != nil do
+			rand_num = rand(100000).to_s
 			id = Care_Package__c.find_by_id__c(rand_num)
 		end
 
 		@care_package = Care_Package__c.new
-		Care_Package_c.id = id
+		@care_package.Id = id
 		@care_package.save
 	end
 
