@@ -4,6 +4,7 @@ Feature: Get work order
   So I obtain the list of items to get for the care package
 
 Background:
+  Given I am logged in
   Given the following work order with order number "123" exists
   | item                  | quantity |
   | Bananas               | 5.0      |

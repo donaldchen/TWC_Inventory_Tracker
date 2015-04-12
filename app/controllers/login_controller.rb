@@ -1,5 +1,6 @@
 class LoginController < ApplicationController
     include Databasedotcom::Rails::Controller
+    skip_before_filter :check_login
 
     def index
         if not session[:login]
