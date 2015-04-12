@@ -83,6 +83,10 @@ Then(/^I should not see "(.*?)" with quantity "(.*?)"$/) do |arg1, arg2|
 end
 
 Given(/^I press "(.*?)" for "(.*?)"$/) do |arg1, arg2|
+  find('tr', text: arg2).click_button(arg1)
+end
+
+Given(/^I press the "(.*?)" for "(.*?)"$/) do |arg1, arg2|
   find('tr', text: arg2).click_link(arg1)
 end
 
