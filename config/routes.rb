@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'logout' => 'login#logout'
   get 'work_order_home' => 'work_order#index'
   post 'work_order_home' => 'work_order#check'
-  get 'new_work_order' => 'work_order#new'
+  post 'new_work_order' => 'work_order#new'
 
   get 'confirmation/:id', to: 'work_order#confirmation', as: 'confirmation'
   get '/item_list/:id', to: 'work_order#item_list', as: 'item_list'
