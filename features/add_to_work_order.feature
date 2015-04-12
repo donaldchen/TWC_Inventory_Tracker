@@ -4,8 +4,7 @@ Feature: add to work order
   So that I can edit the work order when situations change
   
 Background:
-  #Given I am logged in
-  #And the following items exist in the inventory
+  Given I am logged in
   Given the following items exist in the inventory
   | item                  | code       | quantity |
   | test1                 | 13371      | 1337     |

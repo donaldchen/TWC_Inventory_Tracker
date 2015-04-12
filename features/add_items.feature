@@ -4,6 +4,7 @@ Feature: Add Items
   So I can keep track of the quantity of each item.
 
   Background:
+    Given I am logged in
   	Given the following items exist in the inventory
 	| item                  | code | quantity |
 	| diapers               | 000  | 3        |

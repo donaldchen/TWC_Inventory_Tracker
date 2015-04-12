@@ -5,7 +5,7 @@ Feature: confirmation
 
 Background:
 
-  #Given I am logged in
+  Given I am logged in
   Given the following items exist in the inventory
   | item                  | code | quantity |
   | diapers               | 000  | 3        |

@@ -4,6 +4,7 @@ Feature: Update Quantities
   So I can synchronize the physical inventory with the database
 
   Background:
+    Given I am logged in
     Given the following items exist in the inventory
     | item                  | code | quantity |
     | diapers               | 000  | 5        |
