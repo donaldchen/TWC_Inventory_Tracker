@@ -20,6 +20,7 @@
                 Update  
             %th{:class => "adjust_width"} Delete
         %tbody
+          - counter = 0
           - @list_details.each do |item|
             %tr
               %td{:class => "item"}
@@ -27,10 +28,11 @@
                 %p{:class => "hidden_quantity"}= item.Quantity__c
               %td
                 = form_tag item_list_update_path, :method => :post do
-                  = text_field :item, :newvalue, :value => item.Quantity__c, :class => "quantity"
+                  = text_field :item, "newvalue" + counter.to_s, :value => item.Quantity__c, :class => "quantity"
                   = text_field :item, :pid, :value => item.Id, :type => "hidden"
                   = submit_tag 'Update', :class => "update_btn"
               %td= link_to image_tag('delete_button.png', :class => "delete_img"), item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), :method => :delete
+              - counter += 1
               // %td= link_to 'delete', item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), :method => :delete
 
 // %div{:class => "pop_up"}
