@@ -92,6 +92,10 @@ Given(/^I press the "(.*?)" for "(.*?)"$/) do |arg1, arg2|
   find('tr', text: arg2).click_link(arg1)
 end
 
+When(/^I fill in "(.*?)" for "(.*?)" with "(.*?)"$/) do |field, item, value|
+  find('tr', text: item).fill_in(field, :with => value)
+end
+
 Given(/^the following users exist:$/) do |table|
   # table is a Cucumber::Ast::Table
   # express the regexp above with the code you wish you had

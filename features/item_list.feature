@@ -33,10 +33,10 @@ Scenario: add valid item
 
 Scenario: update quantities
   Given I am on the Item List page for order number "1337"
-  When I fill in "item_newvalue1" with "10"
+  When I fill in "item_newvalue" for "test1" with "10"
   And I press "Update" for "test1"
   And I should see "test1" with quantity "10"
-  And I fill in "item_newvalue1" with quantity "1"
+  And I fill in "item_newvalue" for "test1" with "1"
   And I press "Update" for "test1"
 
 Scenario: delete item from work order

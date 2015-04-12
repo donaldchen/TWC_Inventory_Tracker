@@ -39,7 +39,7 @@ Scenario: successfully add item to work order
   And I press "add to cart"
   Then I should be on the Item List page for order number "999"
   And I should see "Bananas" with quantity "10"
-  And I follow "delete"
+  And I press the "Delete button" for "Bananas"
 
 
 Scenario: return to item list
