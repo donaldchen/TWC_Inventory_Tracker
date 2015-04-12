@@ -6,7 +6,7 @@
 
 %p= @entry.Special_Instructions__c
 
-%div{:class => "box_outline"}    
+%div{:class => "box_outline"}
   %section{:class => "row"}
     %div{:class => "col-12"}
       %table#work_order
@@ -31,10 +31,8 @@
                   = text_field :item, "newvalue" + counter.to_s, :value => item.Quantity__c, :class => "quantity"
                   = text_field :item, :pid, :value => item.Id, :type => "hidden"
                   = submit_tag 'Update', :class => "update_btn"
-
-              %td= link_to image_tag('delete_button.png', :class => "delete_img"),
-  item_list_delete_path({:pid => item.Id, :id => @entry.id__c}),
-  :method => :delete, :id => "delete"
+              %td= link_to image_tag('delete_button.png', :class => "delete_img"), item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), :method => :delete
+              - counter += 1
 
               // %td= link_to 'delete', item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), :method => :delete
 

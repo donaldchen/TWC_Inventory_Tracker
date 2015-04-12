@@ -34,14 +34,14 @@ Scenario: add valid item
 Scenario: update quantities
   Given I am on the Item List page for order number "1337"
   When I fill in "item_newvalue1" with "10"
-  And I press "Update" for "item_newvalue1"
+  And I press "Update" for "test1"
   And I should see "test1" with quantity "10"
   And I fill in "item_newvalue1" with quantity "1"
-  And I press "Update" for "item_newvalue1"
+  And I press "Update" for "test1"
 
 Scenario: delete item from work order
   Given I am on the Item List page for order number "1337"
-  And I press "delete" for "test3"
+  And I press the "Delete button" for "test3"
   Then I should not see "test3" with quantity "3"
  
 Scenario: confirm work order
