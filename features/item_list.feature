@@ -36,7 +36,7 @@ Scenario: update quantities
   When I fill in "item_newvalue1" with "10"
   And I press "Update"
   And I should see "test1" with quantity "10"
-  And I fill in "item_newvalue" with quantity "1"
+  And I fill in "item_newvalue1" with quantity "1"
   And I press the Update button
   
 Scenario: delete item from work order
