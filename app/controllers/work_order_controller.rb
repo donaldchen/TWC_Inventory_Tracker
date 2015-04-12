@@ -81,6 +81,20 @@ class WorkOrderController < ApplicationController
 	def confirmation
 	end
 
+	def new
+		rand_num = rand(10000)
+		id = Care_Package__c.find_by_id__c(rand_num)
+		while id is not nil
+			rand_num = rand(10000)
+			id = Care_Package__c.find_by_id__c(rand_num)
+		end
+
+		@care_package = Care_Package__c.new
+		Care_Package_c.id = id
+		@care_package.save
+	end
+
+
 	private 
 		def work_order_params
     		params.require(:code).permit(:item, :quantity)

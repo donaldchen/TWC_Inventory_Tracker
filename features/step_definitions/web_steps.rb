@@ -20,6 +20,24 @@ Given(/^I am not logged in$/) do
   # Don't do anything
 end
 
+Given(/^I make a new Work Order$/) do
+    rand_num = 91235
+    id = Care_Package__c.find_by_id__c(rand_num)
+    while id is not nil
+      rand_num = rand(10000)
+      id = Care_Package__c.find_by_id__c(rand_num)
+    end
+
+    @care_package = Care_Package__c.new
+    Care_Package_c.id = id
+    @care_package.save
+end
+
+Given(/^I delete Work Order with order number "(.*)"$/) do |id|
+  @care_package = Care_Package__c.find_by_id__c(id)
+  @care_package.delete
+end
+
 Given(/^the following items exist in the inventory$/) do |item_table|
   item_table.hashes.each do |item|
     entry = Inventory.create(item: item['item'], code: item['code'], quantity: item['quantity'])
