@@ -47,11 +47,11 @@ and (max-device-width : 375px)
      {
         .box{
            width:300px;
-           padding:0px 0px 0px 0px;
+           padding:60px 20px 60px 20px;
         }
         
         .nav_box{
-            width:20px;
+            width:300px;
         }
         
         .box_outline{
@@ -60,5 +60,9 @@ and (max-device-width : 375px)
         
         .delete_img{
             width:20%;
+        }
+        .col-6{
+            width:46%;
+            display:inline-block;
         }
 }
