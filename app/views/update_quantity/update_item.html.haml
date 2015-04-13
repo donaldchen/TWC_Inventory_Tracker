@@ -1,11 +1,11 @@
 %h1 Update Item Page
-%h1 @item.item
-%p previous quantity: @item.quantity
+%h1 -@item.Name
+%p previous quantity: -@item.Quantity__c
 
 = form_tag update_quantity_path do
 
 	= label :item, :quantity, 'CorrectQuantity'
-	= text_field :item, 'quantity'
+	= text_field :item, 'Quantity__c'
 	= text_field :item, :id, :value => flash[:code], :type => "hidden"
 
 	= submit_tag 'Update'

@@ -17,5 +17,5 @@
       %tbody
         -@items.each do |item|
           %tr
-            %td= link_to "#{item.item}", update_item_path(item.code)
-            %td= item.quantity
+            %td= link_to "#{item.Name}", update_item_path(item.Code__c)
+            %td= item.Quantity__c
