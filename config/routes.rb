@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   post '/item_list/:id/', to: 'work_order#update', as: 'item_list_update'
   delete '/item_list/:id/:pid', to: 'work_order#destroy', as: 'item_list_delete'
   
-  get '/item_list_add/:id/', to: 'work_order#add_to_work_order', as: 'add_item'
+  get '/item_list_add/:id/(:qr)', to: 'work_order#add_to_work_order', as: 'add_item'
   post '/item_list_add/:id/', to: 'work_order#add_item_confirm'
 
   get 'store_item(/:qr)' => 'store_item#index'

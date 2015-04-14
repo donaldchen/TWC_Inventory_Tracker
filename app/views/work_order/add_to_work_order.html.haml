@@ -5,7 +5,7 @@
 
 = form_tag add_item_path do
   = label :item, :ItemCode, 'ItemCode'
-  = text_field :item, 'ItemCode'
+  = text_field :item, 'ItemCode', :value => params[:qr].to_s
   %br
 
   %h4 Quantity:
