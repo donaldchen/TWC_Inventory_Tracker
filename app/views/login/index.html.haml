@@ -23,7 +23,7 @@
       = link_to image_tag( 'update_quantity.png'), update_quantity_path, :class => "img-responsive", :id => "Update Quantity"
       %label{:class => "icon_title"} Update Items
   %div{:class => "row"}
-    = link_to "pic2shop://scan?callback=<%=https%3A%2F%2Fnameless-oasis-9470.herokuapp.com%2Fstore_item%2FEAN%>" do
+    = link_to "pic2shop://scan?callback=https%3A%2F%2Fnameless-oasis-9470.herokuapp.com%2Fstore_item%2FEAN%>" do
       Store Item Using Scanner
 = form_tag logout_path, :method => :get do
   %input{:type => "submit", :value => "Logout", :class => "btn_align"} 
