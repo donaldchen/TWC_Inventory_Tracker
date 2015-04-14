@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get '/item_list_add/:id/', to: 'work_order#add_to_work_order', as: 'add_item'
   post '/item_list_add/:id/', to: 'work_order#add_item_confirm'
 
-  get 'store_item' => 'store_item#index'
+  get 'store_item(/:id)' => 'store_item#index'
   post 'store_item' => 'store_item#store'
 
   get 'update_quantity' => 'update_quantity#index'

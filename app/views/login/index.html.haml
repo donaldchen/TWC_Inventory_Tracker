@@ -18,9 +18,12 @@
     %div{:class => "col-6 grid_box nav_bar_horizontal_padding nav_bar_vertical_padding"}
       = link_to image_tag( 'store_item.png'), store_item_path, :class => "img-responsive", :id => "Store Item"
       %label{:class => "icon_title"} Add Item
+    %section{:class => "row"}
     %div{:class => "col-6 grid_box nav_bar_horizontal_padding"}
       = link_to image_tag( 'update_quantity.png'), update_quantity_path, :class => "img-responsive", :id => "Update Quantity"
       %label{:class => "icon_title"} Update Items
-
+  %div{:class => "row"}
+    = link_to "pic2shop://scan?callback=<%=https%3A%2F%2Fnameless-oasis-9470.herokuapp.com%2Fstore_item%2FEAN%>" do
+      Store Item Using Scanner
 = form_tag logout_path, :method => :get do
   %input{:type => "submit", :value => "Logout", :class => "btn_align"} 

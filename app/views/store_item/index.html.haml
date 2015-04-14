@@ -17,15 +17,10 @@
     = form_tag store_item_path do
       %fieldset{:class => "field_text col-8"}
         = label :item, :ItemCode, 'ItemCode'
-        = text_field :item, 'ItemCode'
+        = text_field :item, 'ItemCode', :value => params[:id].to_s
     
       %fieldset{:class => "field_text col-8"}
         = label :item, :Quantity, 'Quantity'
         = text_field :item, 'Quantity'
       %fieldset{:class => "field_text col-8"}
         = submit_tag 'Store', :class => "btn_align"
-
-%section{:class => "row"}
-  %div{:class => "box"}
-    = link_to "pic2shop://scan?callback=<%= URI.encode('' << https://nameless-oasis-9470.herokuapp.com/ << 'scans/find/EAN')%>" do
-      Use Scanner
