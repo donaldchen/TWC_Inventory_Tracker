@@ -24,3 +24,8 @@
         = text_field :item, 'Quantity'
       %fieldset{:class => "field_text col-8"}
         = submit_tag 'Store', :class => "btn_align"
+
+%section{:class => "row"}
+  %div{:class => "box"}
+    = link_to "pic2shop://scan?callback=<%= URI.encode('' << https://nameless-oasis-9470.herokuapp.com/ << 'scans/find/EAN')%>" do
+      Use Scanner
