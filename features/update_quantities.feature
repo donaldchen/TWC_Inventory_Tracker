@@ -7,13 +7,13 @@ Feature: Update Quantities
     Given I am logged in
     Given the following items exist in the inventory
     | item                  | code       | quantity |
-    | diapers               | 000001236  | 5        |
+    | Blankets              | 000001237  | 55       |
     | gas card              | 000049587  | 100      |
 
 
   	When I am on the Update Quantities page
-    And I follow "Diapers"
-    Then I should be on the Update Item page for "000001236"
+    And I follow "Blankets"
+    Then I should be on the Update Item page for "000001237"
 
   Scenario: Update item quantity correctly
     When I fill in "CorrectQuantity" with "7"
@@ -24,13 +24,13 @@ Feature: Update Quantities
   Scenario: Update item with non-numeric quantity
     When I fill in "CorrectQuantity" with "blah"
     And I press "Update"
-    Then I should be on the Update Item page for "000001236"
+    Then I should be on the Update Item page for "000001237"
 
   Scenario: Refresh Salesforce state
-    When I fill in "CorrectQuantity" with "5"
+    When I fill in "CorrectQuantity" with "55"
     And I press "Update"
     Then I should be on the Update Quantities page
-    And I should see "5"
+    And I should see "55"
 
 
 

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post 'new_work_order' => 'work_order#new'
 
   get 'confirmation/:id', to: 'work_order#confirmation', as: 'confirmation'
+  post 'deliver/:id', to: 'work_order#deliver', as: 'deliver'
   get '/item_list/:id', to: 'work_order#item_list', as: 'item_list'
 
   post '/item_list/:id/', to: 'work_order#update', as: 'item_list_update'

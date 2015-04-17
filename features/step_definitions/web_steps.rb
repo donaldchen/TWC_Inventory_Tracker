@@ -22,6 +22,22 @@ Given(/^I am not logged in$/) do
   # Don't do anything
 end
 
+Given(/^the following closed work order with order number "(.*)" exists$/) do |code| 
+  # Don't do anything. This depends on what is in our Salesforce trial database.
+end
+
+Given(/I reopen order number "(.*)"/) do |code|
+  @care_package = Care_Package__c.find_by_id__c(code)
+  @care_package.Status__c = "Open"
+  @care_package.save
+end
+
+Given(/I set the quantity of item with code "(.*)" to "(.*)"$/) do |code, quantity|
+  @item = Item__c.find_by_Code__c(code)
+  @item.Quantity__c = quantity
+  @item.save
+end
+
 Given(/^I make a new Work Order$/) do
     rand_num = 91235.to_s
     id = Care_Package__c.find_by_id__c(rand_num)
