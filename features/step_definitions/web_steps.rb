@@ -22,7 +22,12 @@ Given(/^I am not logged in$/) do
   # Don't do anything
 end
 
-Given(/I should be able to use the scanner$/) do
+Given(/I should be able to use the scanner for work order "(.*)"/) do |code|
+  url = "pic2shop://scan?callback=https://nameless-oasis-9470.herokuapp.com/item_list_add/" + code + "/"
+  page.should have_link("Add Using Scanner", :href => url)   
+end
+
+Given(/I should be able to use the store item scanner$/) do 
   page.should have_link("Scanner Store", :href => "pic2shop://scan?callback=https://nameless-oasis-9470.herokuapp.com/store_item/")
 end
 

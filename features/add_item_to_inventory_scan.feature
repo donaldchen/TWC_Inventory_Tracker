@@ -7,4 +7,4 @@ Background:
 	Given I am logged in
 
 Scenario: Access the scanner from the index page
-  Then I should be able to use the scanner
+  Then I should be able to use the store item scanner
