@@ -6,19 +6,14 @@ Feature: Update Quantities
   Background:
     Given I am logged in
     Given the following items exist in the inventory
-    | item                  | code | quantity |
-    | diapers               | 000  | 5        |
-    | toothbrush            | 001  | 3        |
-    | hand soap             | 002  | 3        |
-    | towel                 | 003  | 3        |
-    | tissue box            | 004  | 3        |
-    | crayon boxes          | 005  | 3        |
-    | car seat              | 006  | 3        |
+    | item                  | code       | quantity |
+    | diapers               | 000001236  | 5        |
+    | gas card              | 000049587  | 100      |
+
 
   	When I am on the Update Quantities page
-    And I should see "5"
-  	And I follow "diapers"
-  	Then I should be on the Update Item page for "diapers"
+    And I follow "Diapers"
+    Then I should be on the Update Item page for "000001236"
 
   Scenario: Update item quantity correctly
     When I fill in "CorrectQuantity" with "7"
@@ -29,6 +24,14 @@ Feature: Update Quantities
   Scenario: Update item with non-numeric quantity
     When I fill in "CorrectQuantity" with "blah"
     And I press "Update"
-    Then I should be on the Update Item page for "diapers"
+    Then I should be on the Update Item page for "000001236"
+
+  Scenario: Refresh Salesforce state
+    When I fill in "CorrectQuantity" with "5"
+    And I press "Update"
+    Then I should be on the Update Quantities page
+    And I should see "5"
+
+
 
 

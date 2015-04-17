@@ -5,9 +5,7 @@ class UpdateQuantityController < ApplicationController
 	end
 
 	def update_item
-		# @item = Inventory.where(code: params[:id]).first
 		@item = Item__c.find_by_Code__c(params[:id])
-		flash[:code] = @item.Code__c
 	end
 
 	def update
