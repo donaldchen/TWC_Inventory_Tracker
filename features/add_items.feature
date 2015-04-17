@@ -6,26 +6,22 @@ Feature: Add Items
   Background:
     Given I am logged in
   	Given the following items exist in the inventory
-	| item                  | code | quantity |
-	| diapers               | 000  | 3        |
-	| toothbrush            | 001  | 3        |
-	| hand soap             | 002  | 3        |
-	| towel                 | 003  | 3        |
-	| tissue box            | 004  | 3        |
-	| crayon boxes          | 005  | 3        |
-	| car seat              | 006  | 3        |
+	| item                  | code   | quantity  |
+	| test1                 | 13371  | 1345      |
+	| bananas               | 000001235   | 15        |
+
 
   	Given I am on the Store Item page
 
   Scenario: add valid item
-  	When I fill in "ItemCode" with "000"
+  	When I fill in "ItemCode" with "000001235"
   	And I fill in "Quantity" with "3"
   	And I press "Store"
   	Then I should be on the Store Item page
-  	And I should see "3 Diapers Added"
+  	And I should see "3 Bananas Added"
 
   Scenario: add invalid item
-  	When I fill in "ItemCode" with "007"
+  	When I fill in "ItemCode" with "13958619328756"
   	And I fill in "Quantity" with "3"
   	And I press "Store"
   	Then I should be on the Store Item page
