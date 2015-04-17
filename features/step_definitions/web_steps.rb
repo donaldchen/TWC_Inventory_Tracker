@@ -22,6 +22,10 @@ Given(/^I am not logged in$/) do
   # Don't do anything
 end
 
+Given(/I should be able to use the scanner$/) do
+  page.should have_link("Scanner Store", :href => "pic2shop://scan?callback=https://nameless-oasis-9470.herokuapp.com/store_item/")
+end
+
 Given(/^the following closed work order with order number "(.*)" exists$/) do |code| 
   # Don't do anything. This depends on what is in our Salesforce trial database.
 end
