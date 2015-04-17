@@ -13,6 +13,9 @@ class WorkOrderController < ApplicationController
 		elsif Care_Package__c.find_by_id__c(work_order_code) == nil
 		 	flash[:notice] = "Invalid work order code"
 		 	redirect_to work_order_home_path
+		elsif Care_Package__c.find_by_id__c(work_order_code).Status__c == "Closed"
+			flash[:notice] = "Care Package has closed"
+			redirect_to work_order_home_path
 		else
 			redirect_to item_list_path(work_order_code)
 		end
@@ -79,6 +82,33 @@ class WorkOrderController < ApplicationController
 	end
 	
 	def confirmation
+		@entry = Care_Package__c.find_by_id__c(params[:id])
+		@list_details = Program_Detail__c.find_all_by_Care_Package__c(@entry.Id)
+
+		canTakeOut = true
+		for elem in @list_details
+			currItem = Item__c.find_by_Code__c(elem.Name)
+			numInventory = currItem.Quantity__c.to_i
+			if elem.Quantity__c > numInventory
+				canTakeOut = false
+				break
+			end
+		end
+		if canTakeOut
+			for elem in @list_details
+				currItem = Item__c.find_by_Code__c(elem.Name)
+				numInventory = currItem.Quantity__c.to_i
+				currItem.Quantity__c = (numInventory - elem.Quantity__c).to_s
+				currItem.save
+			end
+			@entry.Status__c = "Closed"
+			@entry.save
+		else
+			flash[:notice] = "Not enough items in inventory."
+		end
+
+		# Add functionality to check if care package has status open or closed.
+		# 
 	end
 
 	def new
