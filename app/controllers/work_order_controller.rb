@@ -5,7 +5,7 @@ class WorkOrderController < ApplicationController
 	end
 
 	def check
-		work_order_code = params[:work_order][:WorkOrderCode]
+		work_order_code = params[:work_order][:id__c]
 
 		if not work_order_code =~ /^[0-9]+$/
 			flash[:notice] = "Not a numeric work order"
@@ -82,29 +82,44 @@ class WorkOrderController < ApplicationController
 	end
 	
 	def confirmation
+		@care_package = Care_Package__c.find_by_id__c(params[:id])
+	end
+
+	def deliver
 		@entry = Care_Package__c.find_by_id__c(params[:id])
 		@list_details = Program_Detail__c.find_all_by_Care_Package__c(@entry.Id)
 
-		canTakeOut = true
-		for elem in @list_details
-			currItem = Item__c.find_by_Code__c(elem.Name)
-			numInventory = currItem.Quantity__c.to_i
-			if elem.Quantity__c > numInventory
-				canTakeOut = false
-				break
-			end
-		end
-		if canTakeOut
+		if @entry.Status__c == "Open"
+			canTakeOut = true
 			for elem in @list_details
-				currItem = Item__c.find_by_Code__c(elem.Name)
-				numInventory = currItem.Quantity__c.to_i
-				currItem.Quantity__c = (numInventory - elem.Quantity__c).to_s
-				currItem.save
+				@currItem = Item__c.find_by_Name(elem.Name)
+				numInventory = @currItem.Quantity__c.to_i
+				if elem.Quantity__c > numInventory
+					canTakeOut = false
+					break
+				end
 			end
-			@entry.Status__c = "Closed"
-			@entry.save
+			if canTakeOut
+				for elem in @list_details
+					@currItem = Item__c.find_by_Name(elem.Name)
+					numInventory = @currItem.Quantity__c.to_i
+					@currItem.Quantity__c = (numInventory - elem.Quantity__c).to_s
+					@currItem.save
+				end
+				@entry.Status__c = "Closed"
+				@entry.save
+			else
+				flash[:notice] = "Not enough items in inventory."
+			end
 		else
-			flash[:notice] = "Not enough items in inventory."
+			flash[:notice] = "The Care Package is already closed"
+		end
+
+		if flash[:notice]
+			redirect_to confirmation_path(@entry.id__c)
+		else
+			flash[:notice] = "Delivery Confirmed"
+			redirect_to work_order_home_path
 		end
 	end
 
