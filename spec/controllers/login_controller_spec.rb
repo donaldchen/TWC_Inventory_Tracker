@@ -15,25 +15,25 @@ RSpec.describe LoginController, type: :controller do
 	end
 
 	describe "POST #verify" do
-		it "succesfully rejects email not in database" do
-			post :verify, {email: "EAKHFELAKHGKLEAGKLEHGLKEAHG", password: nil}, {}
-			expect(flash[:notice]).to eq "Login not Successful"
-		end
+		# it "succesfully rejects email not in database" do
+		# 	post :verify, {email: "EAKHFELAKHGKLEAGKLEHGLKEAHG", password: nil}, {}
+		# 	expect(flash[:notice]).to eq "Login not Successful"
+		# end
 
-		it "successfully signs in with valid email, non-valid password" do
-			post :verify, {email: "test1@test1.com", password: "False"}, {}
-			expect(flash[:notice]).to eq "Login not Successful"
-		end
+		# it "successfully signs in with valid email, non-valid password" do
+		# 	post :verify, {email: "test1@test1.com", password: "False"}, {}
+		# 	expect(flash[:notice]).to eq "Login not Successful"
+		# end
 
-		it "successfully signs in with valid email, valid password" do
-			post :verify, {email: "test1@test1.com", password: "test1"}, {}
-			expect(flash[:notice]).to eq "Login Successful"
-		end
+		# it "successfully signs in with valid email, valid password" do
+		# 	post :verify, {email: "test1@test1.com", password: "test1"}, {}
+		# 	expect(flash[:notice]).to eq "Login Successful"
+		# end
 
-		it "successfully redirects after verify" do
-			post :verify, {email: "test1@test1.com", password: "test1"}, {}
-			response.should redirect_to root_path
-		end
+		# it "successfully redirects after verify" do
+		# 	post :verify, {email: "test1@test1.com", password: "test1"}, {}
+		# 	response.should redirect_to root_path
+		# end
 	end
 
 	describe "GET #logout" do
