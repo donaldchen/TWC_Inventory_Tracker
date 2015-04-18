@@ -61,7 +61,7 @@
 
 %section
   = button_to("Add", add_item_path({:id => @entry.id__c}), :method => :get, :id => "add_item")
-  = link_to "pic2shop://scan?callback=https://nameless-oasis-9470.herokuapp.com/item_list_add/" + @entry.id__c + "/" do
+  = link_to "pic2shop://scan?callback=https://twcinventorytracker.herokuapp.com/item_list_add/" + @entry.id__c + "/" do
     Add Using Scanner
   = button_to("Checkout", confirmation_path(@entry.id__c), :method => :get,)
   = button_to("Cancel", work_order_home_path, :method => :get,)
