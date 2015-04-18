@@ -106,9 +106,6 @@ class WorkOrderController < ApplicationController
 		else
 			flash[:notice] = "Not enough items in inventory."
 		end
-
-		# Add functionality to check if care package has status open or closed.
-		# 
 	end
 
 	def new
