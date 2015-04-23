@@ -6,9 +6,9 @@ Feature: admin_login
 Background:
   
   Given the following non-admin users exist:
-  | user_name					                | password      | admin?
-  | test1@test1.com                          	| test1  		| N
-  | testadmin@testadmin.com                     | testadmin     | Y
+  | user_name					                | password      | admin?   |
+  | test1@test1.com                   | test1  		    | N        |
+  | testadmin@testadmin.com           | testadmin     | Y        |
   
   Given I am on the login page
   

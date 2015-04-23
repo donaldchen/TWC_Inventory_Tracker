@@ -5,10 +5,10 @@ Feature: Analytics - Inventory Overview
   
 Background:
   Given the following items exist in the inventory
-	  | item                  | code         | quantity  | price
-	  | test1                 | 13371        | 1347      | 1
-	  | test2                 | 13372        | 1332      | 2
-	  | bananas               | 000001235    | 15        | 5
+	  | item                  | code         | quantity  | price  |
+	  | test1                 | 13371        | 1347      | 1      |
+	  | test2                 | 13372        | 1332      | 2      |
+	  | bananas               | 000001235    | 15        | 5      |
   Given I am logged in as admin
   Given I am on the Analytics Inventory Overview Page
   
