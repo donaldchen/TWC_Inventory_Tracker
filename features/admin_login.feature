@@ -1,6 +1,6 @@
 Feature: admin_login
   As an administrator at There With Care
-  I want to login with adminstrator priveleges
+  I want to login with administrator privileges
   So that I can carry out administrative tasks
   
 Background:
