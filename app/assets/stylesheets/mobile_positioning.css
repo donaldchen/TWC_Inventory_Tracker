@@ -18,6 +18,15 @@ and (max-device-width : 768px)
         .delete_img{
             width:20%;
         }
+        
+        .back_arrow{
+	        width:25%;
+	        height:25%;
+	        color:white;
+	        padding-top:10px;
+	        float:left;
+	        margin-left:20px;
+        }
     }
 
 @media only screen 
@@ -39,6 +48,15 @@ and (max-device-width : 480px)
         
         .delete_img{
             width:20%;
+        }
+        
+        .back_arrow{
+	        width:25%;
+	        height:25%;
+	        color:white;
+	        padding-top:10px;
+	        float:left;
+	        margin-left:20px;
         }
 }
 
@@ -62,6 +80,16 @@ and (max-device-width : 375px)
         .delete_img{
             width:20%;
         }
+        
+        .back_arrow{
+	        width:45%;
+	        height:45%;
+	        color:white;
+	        padding-top:15px;
+	        float:left;
+	        margin-left:20px;
+        }
+        
         .col-6{
             width:46%;
             display:inline-block;
