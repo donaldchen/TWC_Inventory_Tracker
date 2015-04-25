@@ -17,6 +17,11 @@ class LoginController < ApplicationController
         if c != nil and c.Password__c == params[:password]
         	session[:login] = true
         	flash[:notice] = "Login Successful"
+        	if (c.admin__c)
+                session[:admin] = true
+            else
+                session[:admin] = false
+            end
         else
         	flash[:notice] = "Login not Successful"
         end

@@ -23,3 +23,6 @@
       %label{:class => "icon_title"} Update Items
 = form_tag logout_path, :method => :get do
   %input{:type => "submit", :value => "Logout", :class => "btn_align"} 
+- if session[:admin]
+  = form_tag analytics_path, :method => :get do
+    %input{:type => "submit", :value => "Analytics", :class => "btn_align"}
