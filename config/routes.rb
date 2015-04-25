@@ -31,6 +31,11 @@ Rails.application.routes.draw do
   get 'update_quantity' => 'update_quantity#index'
   post 'update_quantity' => 'update_quantity#update'
   match 'update_item/:id' => 'update_quantity#update_item', via: :get, as: :update_item
+  
+  get 'analytics' => 'analytics#index'
+  get 'analytics/overview' => 'analytics#overview'
+  get 'analytics/history' => 'analytics#history'
+  get 'analytics/trajectory' => 'analytics#trajectory'
 
 
 
