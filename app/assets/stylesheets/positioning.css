@@ -167,3 +167,12 @@ a {
 .align_center{
 	text-align:center;
 }
+
+.back_arrow{
+	width:15%;
+	height:15%;
+	color:white;
+	padding-top:10px;
+	float:left;
+	margin-left:20px;
+}
