@@ -66,6 +66,7 @@ For sizing containers
 
 .col-4 {
 	width: 33.33%;
+	border:1px solid black;
 }
 
 .col-5{
@@ -104,3 +105,9 @@ img{
 	width:80%;
 	height:80%;
 }
+
+.icon_btns{
+	width:30%;
+	height:30%;
+}
+
