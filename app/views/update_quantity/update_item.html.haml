@@ -1,11 +1,21 @@
-%h1 Update Item Page
-%h1 #{@item.Name}
-%p previous quantity: #{@item.Quantity__c}
+%header{:class => "row header"}
+  %div{:class => "col-12 header_padding"}
+    %h1{:class => "header_text"} Update Item Page
 
-= form_tag update_quantity_path do
+%div{:class => "box"}
+  
+  %div{:class => "row"}
+    %div{:class => "col-12"}
+      %h2{:class => "align_center"} #{@item.Name}
+  
+  %div{:class => "row"}
+    %div{:class => "col-12"}
+      %h2{:class => "align_center"} previous quantity: #{@item.Quantity__c}
 
-	= label :item, :Quantity__c, 'CorrectQuantity'
-	= text_field :item, 'Quantity__c'
-	= text_field :item, :id, :value => @item.Code__c, :type => "hidden"
-
-	= submit_tag 'Update'
+  = form_tag update_quantity_path do
+    %fieldset{:class => "field_text col-8"}
+      = label :item, :Quantity__c, 'CorrectQuantity'
+      = text_field :item, 'Quantity__c'
+      = text_field :item, :id, :value => @item.Code__c, :type => "hidden"
+    %fieldset{:class => "field_text col-8"}
+      = submit_tag 'Update'

@@ -41,3 +41,16 @@ th {
 .adjust_width{
     width:25%;
 }
+
+.align_quantity{
+    display:block;
+    text-align:center;
+}
+
+.padding{
+    padding-bottom:10px;
+}
+
+.hi:hover{
+    background-color:#E0E0E0;
+}
