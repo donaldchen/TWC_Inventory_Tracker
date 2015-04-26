@@ -42,12 +42,12 @@ class AnalyticsController < ApplicationController
         history.each do |h|
             if prev_date == nil
                 prev_date = h.CreatedDate.beginning_of_day
-                date = Date.new(h.CreatedDate.beginning_of_day)
+                date = DateEntry.new(h.CreatedDate.beginning_of_day)
             elsif (prev_date <=> h.CreatedDate.beginning_of_day) != 0
                 prev_date = h.CreatedDate.beginning_of_day
                 date.calcStart
                 @dates << date
-                date = Date.new(h.CreatedDate.beginning_of_day)
+                date = DateEntry.new(h.CreatedDate.beginning_of_day)
             end
             name = itemnames[h.ParentId]
             date.update(name, h.OldValue.to_i, h.NewValue.to_i)
@@ -59,7 +59,7 @@ class AnalyticsController < ApplicationController
         end
     end
     
-    class Date
+    class DateEntry
         attr_accessor :d, :items
         @d
         @items

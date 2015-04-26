@@ -1,0 +1,29 @@
+.datetable{
+    width: 85%;
+}
+
+.datetable th, td{
+    text-align: center;
+}
+
+.datelabel{
+    width: 15%;
+    border-right: 5px solid black;
+}
+
+.datelabel label{
+    position: absolute;
+    top: calc(50% - 0.5em);
+    font-size: 1.5em;
+    left: 1%;
+}
+
+.dateentry{
+    background-color: #b0c4de;
+    border-radius: 30px;
+    border: 5px solid black;
+    display: flex;
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
