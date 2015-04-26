@@ -7,10 +7,12 @@
 
 %section{:class => "nav_box"}
   %div{:class => "row"}
-    %div{:class => "col-6 grid_box nav_bar_horizontal_padding"}
+
+    %div{:class => "col-6"}
       = link_to image_tag('no.png'), item_list_path(params[:id]), :class => "img-responsive", :id => "Not Delivered"
       %label{:class => "icon_title"} Not Delivered
-    %div{:class => "col-6 grid_box nav_bar_horizontal_padding nav_bar_vertical_padding"}
+
+    %div{:class => "col-6"}
       =link_to image_tag('yes.png'), deliver_path(@care_package.id__c), :class => "img-responsive", :id => "Delivered"
       %label{:class => "icon_title"} Delivered
 // = form_tag deliver_path(@care_package.id__c), :method => :post do

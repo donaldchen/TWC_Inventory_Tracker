@@ -14,10 +14,10 @@
   %div{:class => "box"}
     = form_tag add_item_path do
       %fieldset{:class => "field_text col-8"}
-        = label :item, :ItemCode, 'ItemCode'
-        = text_field :item, 'ItemCode', :value => params[:qr].to_s
+        = label :item, :ItemCode, 'ItemCode', :class => "bold"
+        = text_field :item, 'ItemCode', :value => params[:qr].to_s, :required => "true"
       %fieldset{:class => "field_text col-8"}
-        = label :item, :Quantity, 'Quantity'
-        = text_field :item, 'Quantity'
+        = label :item, :Quantity, 'Quantity', :class => "bold"
+        = text_field :item, 'Quantity', :required => "true"
       %fieldset{:class => "field_text col-8"}
         = submit_tag 'Store', :class => "btn_align"

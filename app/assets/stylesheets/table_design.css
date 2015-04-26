@@ -23,7 +23,7 @@ th {
 .quantity{
     display:inline-block;
     text-align:center;
-    width:50%;
+    width:20%;
 }
 
 .update_btn{
@@ -43,18 +43,23 @@ th {
 
 .align_quantity{
     display:block;
-    text-align:center;
+    text-align:left;
 }
 
 .padding{
     padding-bottom:10px;
 }
 
-.hi:hover{
-    background-color:#E0E0E0;
-}
-
 .wrapper{
     border:1px solid black;
     width:100px;
+}
+
+.select_item{
+    text-align:left;
+}
+
+.select_item:hover{
+    color:#1199c3;
+    text-decoration:underline;
 }

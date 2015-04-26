@@ -43,7 +43,7 @@ and (max-device-width : 480px)
         
         .box_outline{
             width:400px;
-            border:1px solid black;
+            /*border:1px solid black;*/
         }
         
         .delete_img{

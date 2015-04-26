@@ -16,7 +16,6 @@ Header modifications
 .header {
 	background-color:#FFFFFF;
 	box-shadow:2px 2px 1px #888888;
-	/*#6D929B;*/
 }
 
 .header_padding{
@@ -170,6 +169,8 @@ input {
 a {
 	display:block;
     text-align:center;
+    text-decoration:none;
+    color:#307699;
 }
 
 .padding a {
@@ -188,6 +189,7 @@ a {
 
 .align_center{
 	text-align:center;
+	padding-bottom:10px;
 }
 
 .back_arrow{
@@ -201,4 +203,9 @@ a {
 
 .btn_row{
 	padding:40px;
+}
+
+.bold{
+	font-weight:600;
+	color:#6e6e6e;
 }

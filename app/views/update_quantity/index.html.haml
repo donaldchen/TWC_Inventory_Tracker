@@ -10,10 +10,10 @@
     %table#items{:border => "1"}
       %thead
         %tr
-          %th= link_to 'Item', update_quantity_path(:order => :name)
-          %th= link_to 'Quantity', update_quantity_path(:order => :quantity)
+          %th= link_to 'Item', update_quantity_path(:order => :name), :class => "select_item"
+          %th= link_to 'Quantity', update_quantity_path(:order => :quantity), :class => "select_item"
       %tbody
         -@items.each do |item|
-          %tr{:class => "hi"}
-            %td{:class => "padding"}= link_to "#{item.Name}", update_item_path(item.Code__c)
+          %tr
+            %td{:class => "padding"}= link_to "#{item.Name}", update_item_path(item.Code__c), :class => "select_item"
             %td{:class => "align_quantity padding"}= item.Quantity__c

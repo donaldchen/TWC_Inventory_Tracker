@@ -31,11 +31,8 @@ body{
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: linear;
 	 background-color: #f3f6dd;
+     font-family: Arial;
 } 
-
-.fa-chevron-left{
-	color:white;
-}
 
 /* 
 =======================
