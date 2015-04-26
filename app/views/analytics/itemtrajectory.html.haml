@@ -6,4 +6,16 @@
   %div{:class => "col-8 header_padding"}
     %h1{:class => "header_text"}Inventory Trajectories
 
-= params[:name]
+%section{:class => "row"}
+  %div{:class => "col-12 box_outline"}
+    %h1= "Trajectory for " + params[:name]
+    %table#items{:border => "1"}
+      %thead
+        %tr
+          %th Day
+          %th Month
+      %tbody
+        %tr{:class => "hi"}
+          %td{:class => "padding"}= @Day
+          %td{:class => "padding"}= @Month
+        
