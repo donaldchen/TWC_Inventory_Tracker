@@ -1,3 +1,4 @@
+%div{:class => "strip"}
 %header{:class => "row header"}
   %div{:class => "col-2"}
     = link_to image_tag('back_btn.png', :class => "back_arrow"), root_path, :id => "back_btn"
@@ -13,11 +14,11 @@
   %div{:class => "box"}
     = form_tag store_item_path do
       %fieldset{:class => "field_text col-8"}
-        = label :item, :ItemCode, 'ItemCode'
+        = label :item, :ItemCode, 'Item Code'
         = text_field :item, 'ItemCode', :value => params[:qr].to_s
     
       %fieldset{:class => "field_text col-8"}
         = label :item, :Quantity, 'Quantity'
         = text_field :item, 'Quantity'
-      %fieldset{:class => "field_text col-8"}
-        = submit_tag 'Store', :class => "btn_align"
+      %fieldset{:class => "field_text button col-8"}
+        %input{:type => "submit", :value => "Store"}

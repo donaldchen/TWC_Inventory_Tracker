@@ -30,8 +30,8 @@ body{
     -webkit-animation-duration: 0.1s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: linear;
-	 background-color:#F5FAFA;
-}
+	 background-color: #f3f6dd;
+} 
 
 .fa-chevron-left{
 	color:white;
@@ -116,3 +116,13 @@ img{
 	height:30%;
 }
 
+.strip{
+	height:10px;
+	background-color: #c5debf;
+}
+
+.logo{
+	width:11%;
+	height:11%;
+	margin-left:10px;
+}

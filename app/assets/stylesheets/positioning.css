@@ -14,13 +14,17 @@ Header modifications
 */
 
 .header {
-	background-color: #57C60F;
+	background-color:#FFFFFF;
 	box-shadow:2px 2px 1px #888888;
 	/*#6D929B;*/
 }
 
 .header_padding{
 	padding:20px;
+}
+
+.header_with_pic{
+	padding:5px 0 5px 0;
 }
 
 .back_header{
@@ -35,8 +39,12 @@ Header modifications
 	text-align:center;
 	font-weight:800;
 	font-size:20px;
-	color:white;
 	font: "Open Sans";
+	color:#6e6e6e;
+}
+
+.padd{
+	padding-bottom:20px;
 }
 
 /* 
@@ -93,6 +101,12 @@ Button design and layout
 	padding: 10px 10px 5px 15px;
 }
 
+input[type="submit"]{
+	border-radius:5px;
+	background-color:#eda53d;
+	color:white;
+	box-shadow: none;
+}
 /*
 ==========================
 Form Field Configurations
@@ -155,7 +169,12 @@ input {
 
 a {
 	display:block;
-	text-align:center;
+    text-align:center;
+}
+
+.padding a {
+	display:block;
+    text-align:left;
 }
 
 .grid_box:hover{

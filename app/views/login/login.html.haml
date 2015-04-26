@@ -1,6 +1,7 @@
+%div{:class => "strip"}
 %header{:class => "row header"}
-  %div{:class => "col-12 header_padding"}
-    %h1{:class => "header_text"} Login Page
+  %div{:class => "col-12 header_with_pic"}
+    =image_tag "twc_logo.png", :class => "logo"
 
 %div{:class => "row error_message"}
   %div{:class => "col-12"}
@@ -9,6 +10,7 @@
 
 %section{:class => "row"}
   %div{:class => "box"}
+    %h1{:class => "header_text padd"} Login
     = form_tag login_path, :method => :post do
       %fieldset{:class => "field_text col-8"}
         %label Email
@@ -21,4 +23,4 @@
         %input{:name => "password", :type => "password", :required => true}
 
       %fieldset{:class => "field_text button col-8"}
-        %input{:type => "submit", :value => "Sign in"} 
+        %input{:type => "submit", :value => "Login"} 

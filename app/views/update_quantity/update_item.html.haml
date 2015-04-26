@@ -1,9 +1,11 @@
+%div{:class => "strip"}
 %header{:class => "row header"}
-  %div{:class => "col-12 header_padding"}
-    %h1{:class => "header_text"} Update Item Page
+  %div{:class => "col-2"}
+    = link_to image_tag('back_btn.png', :class => "back_arrow"), root_path, :id => "back_btn"
+  %div{:class => "col-8 header_padding"}
+    %h1{:class => "header_text"}Update Item
 
 %div{:class => "box"}
-  
   %div{:class => "row"}
     %div{:class => "col-12"}
       %h2{:class => "align_center"} #{@item.Name}
@@ -14,7 +16,7 @@
 
   = form_tag update_quantity_path do
     %fieldset{:class => "field_text col-8"}
-      = label :item, :Quantity__c, 'Correct Quantity'
+      = label :item, :Quantity__c, 'New Quantity'
       = text_field :item, 'Quantity__c'
       = text_field :item, :id, :value => @item.Code__c, :type => "hidden"
     %fieldset{:class => "field_text col-8"}
