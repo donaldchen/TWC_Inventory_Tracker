@@ -29,6 +29,64 @@ class AnalyticsController < ApplicationController
     end
     
     def history
+        history = Item__History.all
+        history.sort! { |a,b| a.CreatedDate <=> b.CreatedDate }
+        history.reverse!
+        items = Item__c.all
+        itemnames = Hash.new
+        items.each do |i|
+            itemnames[i.Id] = i.Name
+        end
+        @dates = []
+        prev_date = nil
+        date = nil
+        history.each do |h|
+            if prev_date == nil
+                prev_date = h.CreatedDate.beginning_of_day
+                date = Date.new(h.CreatedDate.beginning_of_day)
+            elsif (prev_date <=> h.CreatedDate.beginning_of_day) != 0
+                prev_date = h.CreatedDate.beginning_of_day
+                date.calcStart
+                @dates << date
+                date = Date.new(h.CreatedDate.beginning_of_day)
+            end
+            name = itemnames[h.ParentId]
+            date.update(name, h.OldValue.to_i, h.NewValue.to_i)
+            
+        end
+        if date != nil
+            date.calcStart
+            @dates << date
+        end
+    end
+    
+    class Date
+        attr_accessor :d, :items
+        @d
+        @items
+        def initialize(date)
+            @items = {}
+            @d = date
+        end
+        
+        def update(name, ovalue, nvalue)
+            if not @items.has_key? name
+                @items[name] = [0, 0, 0, nvalue]
+            end
+            diff = nvalue - ovalue
+            if diff > 0
+                @items[name][0] += diff
+            else
+                @items[name][1] -= diff
+            end
+        end
+        
+        def calcStart
+            @items.each do |k, v|
+                v[2] = v[3] - v[0] + v[1]
+            end
+        end
+        
     end
     
     def trajectory

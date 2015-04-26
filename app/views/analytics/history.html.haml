@@ -1,1 +1,23 @@
 HISTORY
+%br
+-@dates.each do |d|
+  %br
+  = d.d
+  %table
+    %thead
+      %tr
+        %th= "Item"
+        %th= "Quantity Added"
+        %th= "Quantity Subtracted"
+        %th= "Starting Amount"
+        %th= "Ending Amount"
+    %tbody
+      -d.items.each do |k, v|
+        %tr
+          %td= k
+          %td= v[0]
+          %td= v[1]
+          %td= v[2]
+          %td= v[3]
+    
+ 
