@@ -9,8 +9,8 @@
     %table#items{:border => "1"}
       %thead
         %tr
-          %th Item
-          %th Quantity
+          %th= link_to 'Item', update_quantity_path(:order => :name)
+          %th= link_to 'Quantity', update_quantity_path(:order => :quantity)
       %tbody
         -@items.each do |item|
           %tr{:class => "hi"}

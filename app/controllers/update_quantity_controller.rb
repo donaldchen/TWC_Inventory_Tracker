@@ -2,6 +2,11 @@ class UpdateQuantityController < ApplicationController
 	include Databasedotcom::Rails::Controller
 	def index
 		@items = Item__c.all
+        if (params[:order] == "name")
+            @items.sort! { |a,b| a.Name <=> b.Name }
+        elsif (params[:order] == "quantity")
+            @items.sort! { |a,b| a.Quantity__c.to_i <=> b.Quantity__c.to_i}
+        end
 	end
 
 	def update_item
