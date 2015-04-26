@@ -15,6 +15,7 @@ class AnalyticsController < ApplicationController
     def overview
         if (params[:order])
             @items = Item__c.all
+            lol = Item__History.all
             if (params[:order] == "name")
                 @items.sort! { |a,b| a.Name <=> b.Name }
             elsif (params[:order] == "quantity")
@@ -31,6 +32,10 @@ class AnalyticsController < ApplicationController
     end
     
     def trajectory
+        @items = Item__c.all
+    end
+
+    def itemtrajectory
     end
 
 end
