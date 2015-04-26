@@ -15,6 +15,7 @@ class AnalyticsController < ApplicationController
     def overview
         if (params[:order])
             @items = Item__c.all
+            lol = Item__History.all
             if (params[:order] == "name")
                 @items.sort! { |a,b| a.Name <=> b.Name }
             elsif (params[:order] == "quantity")
@@ -89,6 +90,22 @@ class AnalyticsController < ApplicationController
     end
     
     def trajectory
+        @items = Item__c.all
+    end
+
+    def itemtrajectory
+        @history = Item__History.find_all_by_ParentId(params[:id])
+        @Day = 0
+        @Month = 0
+        @time = Time.now
+        @history.each do |entry|
+            if @time - entry.CreatedDate < 86400
+                @Day += entry.NewValue.to_i - entry.OldValue.to_i
+                @Month += entry.NewValue.to_i - entry.OldValue.to_i
+            elsif @time - entry.CreatedDate < 2592000
+                @Month += entry.NewValue.to_i - entry.OldValue.to_i
+            end
+        end
     end
 
 end

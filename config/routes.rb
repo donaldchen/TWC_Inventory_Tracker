@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   get 'analytics/overview' => 'analytics#overview'
   get 'analytics/history' => 'analytics#history'
   get 'analytics/trajectory' => 'analytics#trajectory'
+  get 'analytics/trajectory/:id/:name' => 'analytics#itemtrajectory', as: 'itemtrajectory'
 
 
 
