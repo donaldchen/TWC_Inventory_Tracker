@@ -10,11 +10,11 @@
   
   %div{:class => "row"}
     %div{:class => "col-12"}
-      %h2{:class => "align_center"} previous quantity: #{@item.Quantity__c}
+      %h2{:class => "align_center"} Previous Quantity: #{@item.Quantity__c}
 
   = form_tag update_quantity_path do
     %fieldset{:class => "field_text col-8"}
-      = label :item, :Quantity__c, 'CorrectQuantity'
+      = label :item, :Quantity__c, 'Correct Quantity'
       = text_field :item, 'Quantity__c'
       = text_field :item, :id, :value => @item.Code__c, :type => "hidden"
     %fieldset{:class => "field_text col-8"}

@@ -5,12 +5,10 @@
     = link_to image_tag('back_btn.png', :class => "back_arrow"), work_order_home_path, :id => "back_btn"
   %div{:class => "col-8 header_padding"}
     %h1{:class => "header_text"}Item Page
-  // %div{:class => "col-12 header_padding"}
-  //   %h1{:class => "header_text"} Item Page
 
 %p= @entry.Special_Instructions__c
 
-%div{:class => "row"}
+%div{:class => "container"}
   %section{:class => "row"}
     %div{:class => "col-12"}
       %table#work_order
@@ -32,14 +30,14 @@
                 %p{:class => "hidden_quantity"}= item.Quantity__c
               %td
                 = form_tag item_list_update_path, :method => :post do
-                  = text_field :item, :newvalue, :value => item.Quantity__c, :class => "quantity"
+                  = text_field :item, :newvalue, :value => item.Quantity__c,:class => "quantity"
                   = text_field :item, :pid, :value => item.Id, :type => "hidden"
                   = submit_tag 'Update', :class => "update_btn"
               %td= link_to image_tag('delete_button.png', 
               :class => "delete_img"), item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), 
               :method => :delete
 
-%section{:class => "row"}
+%section{:class => "row btn_row"}
   %div{:class => "col-4"}
     = link_to image_tag('add_item.png', :class => "icon_btns"), add_item_path({:id => @entry.id__c}), :id => "Store Item"
     %label{:class => "icon_title"} Add

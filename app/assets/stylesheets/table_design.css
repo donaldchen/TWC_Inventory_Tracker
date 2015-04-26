@@ -22,7 +22,6 @@ th {
 
 .quantity{
     display:inline-block;
-    margin:0 auto;
     text-align:center;
     width:50%;
 }
@@ -53,4 +52,9 @@ th {
 
 .hi:hover{
     background-color:#E0E0E0;
+}
+
+.wrapper{
+    border:1px solid black;
+    width:100px;
 }

@@ -1,19 +1,22 @@
-%h1 Add Item
+%header{:class => "row header"}
+  %div{:class => "col-2"}
+    = link_to image_tag('back_btn.png', :class => "back_arrow"), item_list_path, :id => "back_btn"
+  %div{:class => "col-8 header_padding"}
+    %h1{:class => "header_text"}Add Item
 
-- if flash[:notice]
-  %p{:class => "error_msg"}= flash[:notice]
+%div{:class => "row error_message"}
+  %div{:class => "col-12"}
+    - if flash[:notice]
+      %p{:class => "msg"}= flash[:notice]
 
-= form_tag add_item_path do
-  = label :item, :ItemCode, 'ItemCode'
-  = text_field :item, 'ItemCode', :value => params[:qr].to_s
-  %br
-
-  %h4 Quantity:
-  = label :item, :Quantity, 'Quantity'
-  = text_field :item, 'Quantity'
-  %br
-  = submit_tag 'add to cart' 
-
-= form_tag item_list_path, :method => :get  do
-  = submit_tag 'Go Back'
-
+%section{:class => "row"}
+  %div{:class => "box"}
+    = form_tag add_item_path do
+      %fieldset{:class => "field_text col-8"}
+        = label :item, :ItemCode, 'ItemCode'
+        = text_field :item, 'ItemCode', :value => params[:qr].to_s
+      %fieldset{:class => "field_text col-8"}
+        = label :item, :Quantity, 'Quantity'
+        = text_field :item, 'Quantity'
+      %fieldset{:class => "field_text col-8"}
+        = submit_tag 'Store', :class => "btn_align"

@@ -1,21 +1,19 @@
-!!! 5
-%html
-  %head
-    %title Confirmation page
-    = stylesheet_link_tag 'confirmation'
-    
-  %body
-    %header{:class => "header"}
-      %h2 Are You Sure?
-    // %section{:class => "row section"}
-    //   %div{:class => "col-6"}
-    //     %div{:class => "btn left"}
-    //       = link_to 'Delivered', work_order_home_path
-    //   %div{:class => "col-6"}
-    //     %div{:class => "btn"} 
-    //       = link_to 'Go Back', item_list_path
-= form_tag deliver_path(@care_package.id__c), :method => :post do
-  = submit_tag 'Delivered'
-= form_tag item_list_path(params[:id]), :method => :get do
-  = submit_tag 'Go Back'
+%header{:class => "row header"}
+  %div{:class => "col-2"}
+    = link_to image_tag('back_btn.png', :class => "back_arrow"), root_path, :id => "back_btn"
+  %div{:class => "col-8 header_padding"}
+    %h1{:class => "header_text"} Confirmation
+
+%section{:class => "nav_box"}
+  %div{:class => "row"}
+    %div{:class => "col-6 grid_box nav_bar_horizontal_padding"}
+      = link_to image_tag('no.png'), item_list_path(params[:id]), :class => "img-responsive", :id => "Not Delivered"
+      %label{:class => "icon_title"} Not Delivered
+    %div{:class => "col-6 grid_box nav_bar_horizontal_padding nav_bar_vertical_padding"}
+      =link_to image_tag('yes.png'), deliver_path(@care_package.id__c), :class => "img-responsive", :id => "Delivered"
+      %label{:class => "icon_title"} Delivered
+// = form_tag deliver_path(@care_package.id__c), :method => :post do
+//   = submit_tag 'Delivered'
+// = form_tag item_list_path(params[:id]), :method => :get do
+//   = submit_tag 'Go Back'
 

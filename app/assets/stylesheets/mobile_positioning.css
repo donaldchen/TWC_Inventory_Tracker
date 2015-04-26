@@ -20,8 +20,8 @@ and (max-device-width : 768px)
         }
         
         .back_arrow{
-	        width:25%;
-	        height:25%;
+	        width:35%;
+	        height:35%;
 	        color:white;
 	        padding-top:10px;
 	        float:left;
@@ -51,8 +51,8 @@ and (max-device-width : 480px)
         }
         
         .back_arrow{
-	        width:25%;
-	        height:25%;
+	        width:35%;
+	        height:35%;
 	        color:white;
 	        padding-top:10px;
 	        float:left;
@@ -82,10 +82,10 @@ and (max-device-width : 375px)
         }
         
         .back_arrow{
-	        width:45%;
-	        height:45%;
+	        width:35%;
+	        height:35%;
 	        color:white;
-	        padding-top:15px;
+	        padding-top:18px;
 	        float:left;
 	        margin-left:20px;
         }
@@ -107,6 +107,11 @@ and (max-device-width : 375px)
         
         .col-2{
 	        width:16.66%;
+        }
+        
+        .icon_btns{
+            width:50%;
+            height:50%;
         }
 }
 /*@media only screen and (min-device-width: 413px) and (max-device-width: 415px) { iPhone6+ Styles }*/
@@ -133,17 +138,17 @@ and (max-device-width: 376px)
         }
         
         .back_arrow{
-	        width:45%;
-	        height:45%;
+	        width:35%;
+	        height:35%;
 	        color:white;
-	        padding-top:15px;
+	        padding-top:18px;
 	        float:left;
 	        margin-left:20px;
         }
         
         .col-8{
-	        width:85.66%;
-	        border:1px solid black;
+	        width:95.66%;
+	        /*border:1px solid black;*/
         }
 
         .col-6{

@@ -13,7 +13,7 @@
   %div{:class => "box"}
     = form_tag work_order_home_path do
       %fieldset{:class => "field_text col-8"}
-        = label :work_order, :id__c, 'WorkOrderCode'
+        = label :work_order, :id__c, 'Work Order Code'
         = text_field :work_order, 'id__c'
       %fieldset{:class => "field_text button col-8"}
         = submit_tag 'Select Code'
