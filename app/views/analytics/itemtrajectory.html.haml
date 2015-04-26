@@ -1,6 +1,6 @@
 %header{:class => "row header"}
   %div{:class => "col-2 back_header"}
-    = form_tag analytics_path, :method => :get do
+    = form_tag analytics_trajectory_path, :method => :get do
       %i{:class => "fa fa-chevron-left"}
         = submit_tag 'Back', :class => "back_btn"
   %div{:class => "col-8 header_padding"}
@@ -8,11 +8,14 @@
 
 %section{:class => "row"}
   %div{:class => "col-12 box_outline"}
+    %h1= "Trajectory for " + params[:name]
     %table#items{:border => "1"}
       %thead
         %tr
-          %th Trajectory for the Item
+          %th Day
+          %th Month
       %tbody
-        -@items.each do |item|
-          %tr{:class => "hi"}
-            %td{:class => "padding"}= link_to item.Name, itemtrajectory_path(:id => item.Id, :name => item.Name)
+        %tr{:class => "hi"}
+          %td{:class => "padding"}= @Day
+          %td{:class => "padding"}= @Month
+        

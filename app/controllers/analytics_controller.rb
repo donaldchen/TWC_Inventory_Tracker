@@ -15,6 +15,7 @@ class AnalyticsController < ApplicationController
     def overview
         if (params[:order])
             @items = Item__c.all
+            lol = Item__History.all
             if (params[:order] == "name")
                 @items.sort! { |a,b| a.Name <=> b.Name }
             elsif (params[:order] == "quantity")
@@ -42,12 +43,12 @@ class AnalyticsController < ApplicationController
         history.each do |h|
             if prev_date == nil
                 prev_date = h.CreatedDate.beginning_of_day
-                date = Date.new(h.CreatedDate.beginning_of_day)
+                date = DateEntry.new(h.CreatedDate.beginning_of_day)
             elsif (prev_date <=> h.CreatedDate.beginning_of_day) != 0
                 prev_date = h.CreatedDate.beginning_of_day
                 date.calcStart
                 @dates << date
-                date = Date.new(h.CreatedDate.beginning_of_day)
+                date = DateEntry.new(h.CreatedDate.beginning_of_day)
             end
             name = itemnames[h.ParentId]
             date.update(name, h.OldValue.to_i, h.NewValue.to_i)
@@ -59,7 +60,7 @@ class AnalyticsController < ApplicationController
         end
     end
     
-    class Date
+    class DateEntry
         attr_accessor :d, :items
         @d
         @items
@@ -89,6 +90,22 @@ class AnalyticsController < ApplicationController
     end
     
     def trajectory
+        @items = Item__c.all
+    end
+
+    def itemtrajectory
+        @history = Item__History.find_all_by_ParentId(params[:id])
+        @Day = 0
+        @Month = 0
+        @time = Time.now
+        @history.each do |entry|
+            if @time - entry.CreatedDate < 86400
+                @Day += entry.NewValue.to_i - entry.OldValue.to_i
+                @Month += entry.NewValue.to_i - entry.OldValue.to_i
+            elsif @time - entry.CreatedDate < 2592000
+                @Month += entry.NewValue.to_i - entry.OldValue.to_i
+            end
+        end
     end
 
 end
