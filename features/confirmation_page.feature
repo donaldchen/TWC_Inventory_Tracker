@@ -22,12 +22,12 @@ Background:
 
 Scenario: yes, confirm delivery
   Given I am on the Confirmation page for order number "000001"
-  And I press "Delivered"
+  And I follow "Delivered"
   Then I should be on the Work Order page
 
 Scenario: no, don't confirm delivery
   Given I am on the Confirmation page for order number "1337"
-  And I press "Go Back"
+  And I follow "Not Delivered"
   Then I should be on the Item List page for order number "1337"
 
 Scenario: refresh Salesforce state

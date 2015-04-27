@@ -21,7 +21,7 @@ Scenario: login with invalid email
   Given I am on the login page
   When I fill in "email" with "d.chen72@gmail.com"
   And I fill in "password" with "imnotsara"
-  And I press "Sign in"
+  And I press "Login"
   And I should see "Login not Successful"
 
 Scenario: login with invalid password
@@ -29,7 +29,7 @@ Scenario: login with invalid password
   Given I am on the login page
   When I fill in "email" with "test1@test1.com"
   And I fill in "password" with "imcool"
-  And I press "Sign in"
+  And I press "Login"
   And I should see "Login not Successful"
 
 Scenario: login success
@@ -37,7 +37,7 @@ Scenario: login success
   Given I am on the login page
   When I fill in "email" with "test1@test1.com"
   And I fill in "password" with "test1"
-  And I press "Sign in"
+  And I press "Login"
   Then I should see "Login Successful"
 
 
