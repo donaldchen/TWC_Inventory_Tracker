@@ -29,36 +29,37 @@ and (max-device-width : 768px)
         }
     }
 
-@media only screen 
-and (max-device-width : 480px)
-    {
-        .box{
-           width:300px;
-           padding:60px 20px 60px 20px;
-        }
+/*@media only screen */
+/*and (max-device-width : 480px)*/
+/*    {*/
+/*        .box{*/
+/*           width:300px;*/
+/*           padding:60px 20px 60px 20px;*/
+/*        }*/
         
-        .nav_box{
-            width:300px;
-        }
+/*        .nav_box{*/
+/*            width:300px;*/
+/*        }*/
         
-        .box_outline{
-            width:400px;
-            /*border:1px solid black;*/
-        }
+        /*.box_outline{*/
+            /*width:400px;*/
+        /*    width:600px;*/
+        /*    border:1px solid black;*/
+        /*}*/
         
-        .delete_img{
-            width:20%;
-        }
+/*        .delete_img{*/
+/*            width:20%;*/
+/*        }*/
         
-        .back_arrow{
-	        width:35%;
-	        height:35%;
-	        color:white;
-	        padding-top:10px;
-	        float:left;
-	        margin-left:20px;
-        }
-}
+/*        .back_arrow{*/
+/*	        width:35%;*/
+/*	        height:35%;*/
+/*	        color:white;*/
+/*	        padding-top:10px;*/
+/*	        float:left;*/
+/*	        margin-left:20px;*/
+/*        }*/
+/*}*/
 
 
 @media only screen 
@@ -74,7 +75,8 @@ and (max-device-width : 375px)
         }
         
         .box_outline{
-            width:240px;
+            width:400px;
+            padding-left:0px;
         }
         
         .delete_img{

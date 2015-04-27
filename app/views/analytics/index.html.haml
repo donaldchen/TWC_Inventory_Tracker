@@ -1,3 +1,16 @@
-= link_to "History", analytics_history_path
-= link_to "Overview", analytics_overview_path
-= link_to "Trajectory", analytics_trajectory_path
+%div{:class => "strip"}
+%header{:class => "row header"}
+  %div{:class => "col-2"}
+    = link_to image_tag('back_btn.png', :class => "back_arrow"), root_path, :id => "back_btn"
+  %div{:class => "col-8 header_padding"}
+    %h1{:class => "header_text"} Analytics
+
+%div{:class => "row"}
+  = link_to "History", analytics_history_path, :class => "analytics_box"
+
+%div{:class => "row"}
+  = link_to "Overview", analytics_overview_path, :class => "analytics_box"
+
+%div{:class => "row"}
+  = link_to "Trajectory", analytics_trajectory_path, :class => "analytics_box"
+    

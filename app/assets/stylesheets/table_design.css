@@ -2,18 +2,24 @@
     width:800px;
     background-color:white;
     margin:0 auto;
-    margin-top:20px;
+    margin-top:40px;
+    padding:10px 15px 0 15px;
 }
 
 table {
     table-layout: fixed; /* Makes columns equal width */
     width: 100%;
+    border-collapse: collapse;
 }
 
 th {
     height: 40px;
     padding-top:10px;
     font-weight:bold;
+}
+
+td{
+    padding-bottom:10px;
 }
 
 .item {
@@ -41,10 +47,14 @@ th {
     width:25%;
 }
 
-.align_quantity{
-    display:block;
-    text-align:left;
+.gray{
+    color:#6e6e6e;
 }
+
+/*.align_quantity{*/
+/*    display:block;*/
+/*    text-align:left;*/
+/*}*/
 
 .padding{
     padding-bottom:10px;
@@ -53,10 +63,6 @@ th {
 .wrapper{
     border:1px solid black;
     width:100px;
-}
-
-.select_item{
-    text-align:left;
 }
 
 .select_item:hover{

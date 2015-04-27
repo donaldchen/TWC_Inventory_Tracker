@@ -32,7 +32,7 @@ body{
     -webkit-animation-timing-function: linear;
 	 background-color: #f3f6dd;
      font-family: Arial;
-} 
+}
 
 /* 
 =======================
@@ -43,6 +43,11 @@ For sizing containers
 	width:100%;
 	display:flex;
 	margin:0 auto;
+}
+
+.row_box{
+	width:400px;
+	border:1px solid black;
 }
 
 .container{
@@ -68,6 +73,8 @@ For sizing containers
 
 .col-4 {
 	width: 33.33%;
+	display:inline-block;
+	border:1px solid black;
 }
 
 .col-5{

@@ -1,19 +1,17 @@
+%div{:class => "strip"}
 %header{:class => "row header"}
-  %div{:class => "col-2 back_header"}
-    = form_tag analytics_trajectory_path, :method => :get do
-      %i{:class => "fa fa-chevron-left"}
-        = submit_tag 'Back', :class => "back_btn"
+  %div{:class => "col-2"}
+    = link_to image_tag('back_btn.png', :class => "back_arrow"), root_path, :id => "back_btn"
   %div{:class => "col-8 header_padding"}
-    %h1{:class => "header_text"}Inventory Trajectories
+    %h1{:class => "header_text"}= params[:name]
 
 %section{:class => "row"}
   %div{:class => "col-12 box_outline"}
-    %h1= "Trajectory for " + params[:name]
     %table#items{:border => "1"}
       %thead
         %tr
-          %th Day
-          %th Month
+          %th{:class => "gray"} Day
+          %th{:class => "gray"} Month
       %tbody
         %tr{:class => "hi"}
           %td{:class => "padding"}= @Day

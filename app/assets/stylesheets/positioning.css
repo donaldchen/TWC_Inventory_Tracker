@@ -175,7 +175,6 @@ a {
 
 .padding a {
 	display:block;
-    text-align:left;
 }
 
 .grid_box:hover{
@@ -208,4 +207,29 @@ a {
 .bold{
 	font-weight:600;
 	color:#6e6e6e;
+}
+
+.padd_analytics {
+	padding-bottom:10px;
+}
+
+.analytics_box{
+	height:100px;
+	width:300px;
+	margin:0 auto;
+	margin-top:20px;
+	background-color:white;
+	padding-top:40px;
+	font-weight:800;
+	
+	
+}
+
+.analytics_box:hover{
+	background-color:#F0F0F0;
+}
+
+.small{
+	padding:10px 0 10px 0;
+	font-weight:400;
 }
