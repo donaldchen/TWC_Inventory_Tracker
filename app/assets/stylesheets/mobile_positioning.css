@@ -29,37 +29,37 @@ and (max-device-width : 768px)
         }
     }
 
-/*@media only screen */
-/*and (max-device-width : 480px)*/
-/*    {*/
-/*        .box{*/
-/*           width:300px;*/
-/*           padding:60px 20px 60px 20px;*/
-/*        }*/
+@media only screen 
+and (max-device-width : 480px)
+    {
+        .box{
+           width:300px;
+           padding:60px 20px 60px 20px;
+        }
         
-/*        .nav_box{*/
-/*            width:300px;*/
-/*        }*/
+        .nav_box{
+            width:300px;
+        }
         
-        /*.box_outline{*/
-            /*width:400px;*/
-        /*    width:600px;*/
-        /*    border:1px solid black;*/
-        /*}*/
+        .box_outline{
+            width:400px;
+            width:600px;
+            border:1px solid black;
+        }
         
-/*        .delete_img{*/
-/*            width:20%;*/
-/*        }*/
+        .delete_img{
+            width:20%;
+        }
         
-/*        .back_arrow{*/
-/*	        width:35%;*/
-/*	        height:35%;*/
-/*	        color:white;*/
-/*	        padding-top:10px;*/
-/*	        float:left;*/
-/*	        margin-left:20px;*/
-/*        }*/
-/*}*/
+        .back_arrow{
+	        width:35%;
+	        height:35%;
+	        color:white;
+	        padding-top:10px;
+	        float:left;
+	        margin-left:20px;
+        }
+}
 
 
 @media only screen 
@@ -92,6 +92,17 @@ and (max-device-width : 375px)
 	        margin-left:20px;
         }
         
+        
+        .outer_box{
+            width:400px;
+            margin:0 auto;
+        }
+        
+        .btns{
+            display:block;
+            margin:0 auto;
+            margin-top:20px;
+        }
         /*.col-8{*/
 	       /* width:85.66%;*/
 	       /* border:1px solid black;*/
@@ -115,6 +126,7 @@ and (max-device-width : 375px)
             width:50%;
             height:50%;
         }
+
 }
 /*@media only screen and (min-device-width: 413px) and (max-device-width: 415px) { iPhone6+ Styles }*/
 /*iPhone6 Styles */

@@ -38,11 +38,6 @@ td{
     float:right;
 }
 
-.delete_img{
-    width:9%;
-    height:9%;
-}
-
 .adjust_width{
     width:25%;
 }
@@ -50,11 +45,6 @@ td{
 .gray{
     color:#6e6e6e;
 }
-
-/*.align_quantity{*/
-/*    display:block;*/
-/*    text-align:left;*/
-/*}*/
 
 .padding{
     padding-bottom:10px;

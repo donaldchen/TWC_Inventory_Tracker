@@ -1,0 +1,56 @@
+/*==================================
+Generic resizing of width
+and height for all the images
+====================================
+*/
+img{
+	width:80%;
+	height:80%;
+}
+
+/* 
+=========================
+
+=========================
+*/
+
+.icon_btns{
+	width:30%;
+	height:30%;
+}
+
+.icon_title{
+	display:block;
+	text-align:center;
+	margin:0 auto;
+}
+
+.logo{
+	width:11%;
+	height:11%;
+	margin-left:10px;
+}
+
+.grid_box:hover{
+	cursor:pointer;
+	box-shadow:3px 3px 2px #888888;
+}
+
+.btns:hover{
+	cursor:pointer;
+	box-shadow:3px 3px 2px #888888;
+}
+
+.back_arrow{
+	width:10%;
+	height:10%;
+	color:white;
+	padding-top:15px;
+	float:left;
+	margin-left:20px;
+}
+
+.delete_img{
+    width:9%;
+    height:9%;
+}

@@ -160,12 +160,6 @@ input {
 	margin-right:20px;
 }
 
-.icon_title{
-	display:block;
-	text-align:center;
-	margin:0 auto;
-}
-
 a {
 	display:block;
     text-align:center;
@@ -177,10 +171,7 @@ a {
 	display:block;
 }
 
-.grid_box:hover{
-	cursor:pointer;
-	box-shadow:3px 3px 2px #888888;
-}
+
 
 .hidden_quantity{
 	visibility:hidden;
@@ -189,15 +180,6 @@ a {
 .align_center{
 	text-align:center;
 	padding-bottom:10px;
-}
-
-.back_arrow{
-	width:10%;
-	height:10%;
-	color:white;
-	padding-top:15px;
-	float:left;
-	margin-left:20px;
 }
 
 .btn_row{

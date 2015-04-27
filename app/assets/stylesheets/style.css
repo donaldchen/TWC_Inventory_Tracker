@@ -47,7 +47,6 @@ For sizing containers
 
 .row_box{
 	width:400px;
-	border:1px solid black;
 }
 
 .container{
@@ -74,7 +73,6 @@ For sizing containers
 .col-4 {
 	width: 33.33%;
 	display:inline-block;
-	border:1px solid black;
 }
 
 .col-5{
@@ -110,23 +108,41 @@ For sizing containers
 	width:100%;
 }
 
-img{
-	width:80%;
-	height:80%;
-}
 
-.icon_btns{
-	width:30%;
-	height:30%;
-}
+
+
+
+
+
 
 .strip{
 	height:10px;
 	background-color: #c5debf;
 }
 
-.logo{
-	width:11%;
-	height:11%;
-	margin-left:10px;
+
+.btns{
+	/*border:1px solid black;*/
+	width:200px;
+	height:100px;
+	display:inline-block;
+	margin:0;
+	background-color:white;
+	margin-right:6px;
+	padding-top:20px;
+}
+
+.outer_box{
+	/*border:1px solid black;*/
+	padding-top:40px;
+	padding-left:10px;
+	padding-right:10px;
+	width:650px;
+	margin:0 auto;
+	margin-top:40px;
+
+}
+
+.left{
+	margin-left:1.5px;
 }

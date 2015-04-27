@@ -8,6 +8,15 @@ $(document).ready(function(){
       window.location = anchorId;
     }
     
+    $('.btns').bind('click', getAnchorId);
+    
+    /* Grabs the href from the div when clicked 
+       and redirects to new page.*/
+    function getAnchorId() {
+      var anchorId = $(this).children('a').attr('href');
+      window.location = anchorId;
+    }
+    
     // $('#add_item').bind('click', pop_up_page);
 
     // function pop_up_page(){

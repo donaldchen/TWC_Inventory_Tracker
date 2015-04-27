@@ -12,6 +12,7 @@ Rails.application.config.assets.precompile += %w( pop_up_screen.css )
 Rails.application.config.assets.precompile += %w( mobile_positioning.css )
 Rails.application.config.assets.precompile += %w( events.js )
 Rails.application.config.assets.precompile += %w( analytics.css)
+Rails.application.config.assets.precompile += %w( image_positioning.css )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
