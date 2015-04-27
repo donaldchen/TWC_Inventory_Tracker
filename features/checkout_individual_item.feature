@@ -18,16 +18,16 @@ Feature: Checkout Individual Item
 
   Scenario: Checkout one item
     Given I am on the Item List page for order number "91235"
-    And I press "Add"
+    And I follow "Store Item"
     And I fill in "ItemCode" with "13371"
   	And I fill in "Quantity" with "3"
-  	And I press "add to cart"
+  	And I press "Store"
   	Then I should see "test1" with quantity "1"
 
   Scenario: Refresh Salesforce state
   	And I delete Work Order with id "91235"
   	Then I go to the Store Item page
-  	When I fill in "ItemCode" with "13371"
+  	When I fill in "Item Code" with "13371"
   	And I fill in "Quantity" with "1"
   	And I press "Store"
 
@@ -39,6 +39,6 @@ Feature: Checkout Individual Item
   Scenario: Refresh Salesforce state
   	And I delete Work Order with id "91235"
   	Then I go to the Store Item page
-  	When I fill in "ItemCode" with "13371"
+  	When I fill in "Item Code" with "13371"
   	And I fill in "Quantity" with "1"
   	And I press "Store"

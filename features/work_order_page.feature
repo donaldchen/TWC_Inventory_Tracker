@@ -14,27 +14,27 @@ Background:
 
 Scenario: select valid work order
   Given I am on the Work Order page
-  When I fill in "WorkOrderCode" with "123"
+  When I fill in "Work Order Code" with "123"
   And I press "Select Code"
   Then I should be on the Item List page for order number "123"
 
 Scenario: select closed work order
   Given I am on the Work Order page
-  When I fill in "WorkOrderCode" with "6235876"
+  When I fill in "Work Order Code" with "6235876"
   And I press "Select Code"
   Then I should be on the Work Order page
   And I should see "Care Package has closed"
 
 Scenario: non-numeric work order
   Given I am on the Work Order page
-  When I fill in "WorkOrderCode" with "DOESNTWORK"
+  When I fill in "Work Order Code" with "DOESNTWORK"
   And I press "Select Code"
   Then I should be on the Work Order page
   And I should see "Not a numeric work order"
 
 Scenario: select invalid work order
   Given I am on the Work Order page
-  When I fill in "WorkOrderCode" with "000002"
+  When I fill in "Work Order Code" with "000002"
   And I press "Select Code"
   Then I should be on the Work Order page
   And I should see "Invalid work order code"

@@ -15,7 +15,7 @@ Given(/^I am logged in$/) do
   visit("/")
   fill_in("email", :with => "test1@test1.com")
   fill_in("password", :with => "test1")
-  click_button("Sign in")
+  click_button("Login")
 end
 
 Given(/^I am not logged in$/) do

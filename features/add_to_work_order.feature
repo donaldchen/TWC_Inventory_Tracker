@@ -18,17 +18,17 @@ Background:
 
 Scenario: input invalid item code
   Given I am on the Item List page for order number "999"
-  And I press "Add"
+  And I follow "Store Item"
   And I fill in "ItemCode" with "000"
   And I fill in "Quantity" with "3"
-  And I press "add to cart"
+  And I press "Store"
   Then I should see "invalid item code"
 
 Scenario: input invalid number of items
   Given I am on the Add To Work Order page for order number "999"
   When I fill in "ItemCode" with "000001235"
   And I fill in "Quantity" with "no"
-  And I press "add to cart"
+  And I press "Store"
   Then I should be on the Add To Work Order page for order number "999"
   And I should see "quantity must be numeric" 
 
@@ -36,7 +36,7 @@ Scenario: successfully add item to work order
   Given I am on the Add To Work Order page for order number "999"
   When I fill in "ItemCode" with "000001235"
   And I fill in "Quantity" with "10"
-  And I press "add to cart"
+  And I press "Store"
   Then I should be on the Item List page for order number "999"
   And I should see "Bananas" with quantity "10"
   And I press the "Delete button" for "Bananas"
@@ -44,5 +44,5 @@ Scenario: successfully add item to work order
 
 Scenario: return to item list
   Given I am on the Add To Work Order page for order number "999"
-  When I press "Go Back"
+  When I follow "back_btn"
   Then I should be on the Item List page for order number "999"

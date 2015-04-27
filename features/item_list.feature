@@ -23,10 +23,10 @@ Scenario: correct items for work order displayed
 
 Scenario: add valid item
   Given I am on the Item List page for order number "1337"
-  And I press "Add"
+  And I follow "Store Item"
   And I fill in "ItemCode" with "13373"
   And I fill in "Quantity" with "3"
-  And I press "add to cart"
+  And I press "Store"
   Then I should see "test1" with quantity "1"
   And I should see "test2" with quantity "1"
   And I should see "test3" with quantity "3"
@@ -46,12 +46,12 @@ Scenario: delete item from work order
  
 Scenario: confirm work order
   Given I am on the Item List page for order number "1337"
-  And I press "Checkout"
+  And I follow "Checkout"
   Then I should be on the Confirmation page for order number "1337"
 
 Scenario: cancel current job
   Given I am on the Item List page for order number "123"
-  And I press "Cancel"
+  And I follow "back_btn"
   Then I should be on the Work Order page
 
 Scenario: special instructions displayed

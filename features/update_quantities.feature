@@ -16,18 +16,18 @@ Feature: Update Quantities
     Then I should be on the Update Item page for "000001237"
 
   Scenario: Update item quantity correctly
-    When I fill in "CorrectQuantity" with "7"
+    When I fill in "New Quantity" with "7"
   	And I press "Update"
   	Then I should be on the Update Quantities page
   	And I should see "7"
 
   Scenario: Update item with non-numeric quantity
-    When I fill in "CorrectQuantity" with "blah"
+    When I fill in "New Quantity" with "blah"
     And I press "Update"
     Then I should be on the Update Item page for "000001237"
 
   Scenario: Refresh Salesforce state
-    When I fill in "CorrectQuantity" with "55"
+    When I fill in "New Quantity" with "55"
     And I press "Update"
     Then I should be on the Update Quantities page
     And I should see "55"

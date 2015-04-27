@@ -6,7 +6,7 @@ Feature: Index Page
 Scenario: not logged in
   Given I am not logged in
   When I go to the login page
-  Then I should see "Login Page"
+  Then I should see "Login"
 
 Scenario: choose work order page
   Given I am logged in

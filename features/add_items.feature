@@ -13,14 +13,14 @@ Feature: Add Items
   	Given I am on the Store Item page
 
   Scenario: add valid item
-  	When I fill in "ItemCode" with "000001235"
+  	When I fill in "Item Code" with "000001235"
   	And I fill in "Quantity" with "3"
   	And I press "Store"
   	Then I should be on the Store Item page
   	And I should see "3 Bananas Added"
 
   Scenario: add invalid item
-  	When I fill in "ItemCode" with "13958619328756"
+  	When I fill in "Item Code" with "13958619328756"
   	And I fill in "Quantity" with "3"
   	And I press "Store"
   	Then I should be on the Store Item page
@@ -30,7 +30,7 @@ Feature: Add Items
     When I am on the Update Quantities page
     And I follow "test1"
     Then I should be on the Update Item page for "13371"
-    When I fill in "CorrectQuantity" with "1345"
+    When I fill in "New Quantity" with "1345"
     And I press "Update"
     Then I should be on the Update Quantities page
 

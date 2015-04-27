@@ -6,7 +6,7 @@ Feature: Add Item to Work Order (Scan)
 Background:
 	Given I am logged in
 	Given I am on the Work Order page
-  	When I fill in "WorkOrderCode" with "123"
+  	When I fill in "Work Order Code" with "123"
   	And I press "Select Code"
   	Then I should be on the Item List page for order number "123"
 
