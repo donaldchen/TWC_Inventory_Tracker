@@ -167,7 +167,7 @@ and (max-device-width: 376px)
 
         .col-6{
             width:46%;
-            display:inline-block;
+            /*display:inline-block;*/
             /*border:1px solid black;*/
         }
         
