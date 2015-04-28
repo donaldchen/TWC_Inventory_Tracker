@@ -75,8 +75,7 @@ and (max-device-width : 375px)
         }
         
         .box_outline{
-            width:400px;
-            padding-left:0px;
+            width:240px;
         }
         
         .delete_img{
