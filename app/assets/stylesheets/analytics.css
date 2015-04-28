@@ -27,3 +27,23 @@
     position: relative;
     left: 5%;
 }
+
+@media only screen 
+and (max-device-width : 800px)
+  {
+    .datelabel{
+        width: auto;
+        border-right: 0px solid black;
+    }
+    
+    .datelabel label{
+        position: relative;
+        left: 10%;
+        font-size: 1em;
+    }
+    
+    .datetable {
+        width: 100%;
+    }
+    
+  }
