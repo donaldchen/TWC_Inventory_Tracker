@@ -144,7 +144,7 @@ and (max-device-width: 376px)
         }
         
         .box_outline{
-            width:240px;
+            width:10%;
         }
         
         .delete_img{
@@ -166,8 +166,8 @@ and (max-device-width: 376px)
         }
 
         .col-6{
-            width:30%;
-            /*display:inline-block;*/
+            width:46%;
+            /display:inline-block;
             /*border:1px solid black;*/
         }
         
