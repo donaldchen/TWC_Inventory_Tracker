@@ -127,4 +127,9 @@ and (max-device-width : 375px)
             height:50%;
         }
 
+        .col-6{
+            width:46%;
+            display:inline-block;
+        }
+
 }
