@@ -109,12 +109,6 @@ For sizing containers
 }
 
 
-
-
-
-
-
-
 .strip{
 	height:10px;
 	background-color: #c5debf;
@@ -133,13 +127,9 @@ For sizing containers
 }
 
 .outer_box{
-	/*border:1px solid black;*/
-	padding-top:40px;
-	padding-left:10px;
-	padding-right:10px;
-	width:650px;
+	width:51%;
 	margin:0 auto;
-	margin-top:40px;
+	margin-top:5%;
 
 }
 

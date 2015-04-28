@@ -1,0 +1,19 @@
+/* 
+=======================
+For sizing containers
+=======================
+*/
+
+.row_box{
+	width:400px;
+}
+
+.box{
+	width:400px;
+	padding:40px;
+	background-color:white;
+	margin:0 auto;
+	margin-top:20px;
+	box-shadow:3px 3px 2px #888888;
+}
+

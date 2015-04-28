@@ -5,15 +5,17 @@
   %div{:class => "col-8 header_padding"}
     %h1{:class => "header_text"}Update Items
 
-%section{:class => "row"}
-  %div{:class => "col-12 box_outline"}
-    %table#items{:border => "1"}
-      %thead
-        %tr
-          %th= link_to 'Item', update_quantity_path(:order => :name), :class => "select_item"
-          %th= link_to 'Quantity', update_quantity_path(:order => :quantity), :class => "select_item"
-      %tbody
-        -@items.each do |item|
+
+%div{:class => "box_outline"}
+  %section{:class => "row"}
+    %div{:class => "col-12"}
+      %table#items{:border => "1"}
+        %thead
           %tr
-            %td{:class => "padding"}= link_to "#{item.Name}", update_item_path(item.Code__c), :class => "select_item"
-            %td{:class => "align_quantity padding"}= item.Quantity__c
+            %th= link_to 'Item', update_quantity_path(:order => :name), :class => "select_item"
+            %th= link_to 'Quantity', update_quantity_path(:order => :quantity), :class => "select_item"
+        %tbody
+          -@items.each do |item|
+            %tr
+              %td{:class => "padding"}= link_to "#{item.Name}", update_item_path(item.Code__c), :class => "select_item"
+              %td{:class => "align_quantity padding"}= item.Quantity__c

@@ -42,13 +42,16 @@ and (max-device-width : 480px)
         }
         
         .box_outline{
-            width:400px;
-            width:600px;
-            border:1px solid black;
+            width:100%;
         }
         
         .delete_img{
             width:20%;
+        }
+        
+        .logo{
+            height:30%;
+            width:30%;
         }
         
         .back_arrow{
@@ -93,8 +96,13 @@ and (max-device-width : 375px)
         
         
         .outer_box{
-            width:400px;
+            width:300px;
             margin:0 auto;
+        }
+        
+        .logo{
+            height:30%;
+            width:30%;
         }
         
         .btns{
@@ -102,15 +110,10 @@ and (max-device-width : 375px)
             margin:0 auto;
             margin-top:20px;
         }
-        /*.col-8{*/
-	       /* width:85.66%;*/
-	       /* border:1px solid black;*/
-        /*}*/
-
-        /*.col-6{*/
-        /*    width:46%;*/
-        /*    display:inline-block;*/
-        /*}*/
+        
+        .box_outline{
+            width:100%;
+        }
         
         .col-4{
             width:32.6%;
@@ -119,11 +122,6 @@ and (max-device-width : 375px)
         
         .col-2{
 	        width:16.66%;
-        }
-        
-        .icon_btns{
-            width:50%;
-            height:50%;
         }
 
         .col-6{

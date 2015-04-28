@@ -26,12 +26,12 @@ Header modifications
 	padding:5px 0 5px 0;
 }
 
-.back_header{
-	padding:14px 0 0 15px;
-}
+/*.back_header{*/
+/*	padding:14px 0 0 15px;*/
+/*}*/
 
 .header_box {
-	padding:20px;
+	padding:5%;
 }
 
 .header_text{
@@ -43,7 +43,7 @@ Header modifications
 }
 
 .padd{
-	padding-bottom:20px;
+	padding-bottom:5%;
 }
 
 /* 
@@ -61,7 +61,7 @@ Error Message
 }
 
 .error_message{
-	padding:10px;
+	padding:1%;
 }
 
 /*
@@ -165,6 +165,10 @@ a {
     text-align:center;
     text-decoration:none;
     color:#307699;
+}
+
+.grid_box{
+	background-color:white;
 }
 
 .padding a {
