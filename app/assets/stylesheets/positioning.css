@@ -152,12 +152,12 @@ input {
 }
 
 .nav_bar_horizontal_padding{
-	padding: 10%;
+	padding: 5%;
 	background-color:white;
-	margin-bottom:20px;
+	margin-bottom: 5%;
 }
 .nav_bar_vertical_padding{
-	margin-right:20px;
+	margin-right: 5%;
 }
 
 a {
