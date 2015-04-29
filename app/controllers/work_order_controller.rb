@@ -112,9 +112,6 @@ class WorkOrderController < ApplicationController
 				flash[:notice] = "Not enough items in inventory."
 				p "hi" * 80
 			end
-		else
-			flash[:notice] = "The Care Package is already closed"
-			p "hi7" * 80
 		end
 
 		if flash[:notice]
