@@ -9,7 +9,7 @@
 %div{:class => "box_outline"}
   %section{:class => "row"}
     %div{:class => "col-12"}
-      %table#items{:border => "1"}
+      %table#items{:border => "1", :class => "table"}
         %thead
           %tr
             %th= link_to 'Item', update_quantity_path(:order => :name), :class => "select_item"

@@ -37,11 +37,11 @@
               :method => :delete
 
 %div{:class => "outer_box"}
-  %div{:class => "btns left"}
+  %div{:class => "btns left right"}
     = link_to image_tag('add_item.png', :class => "icon_btns"), add_item_path({:id => @entry.id__c}), :id => "Store Item"
     %label{:class => "icon_title"} Add
   
-  %div{:class => "btns"}
+  %div{:class => "btns right"}
     = link_to image_tag('scanner_store.png', :class => "icon_btns"), store_item_path, :id => "Scan"
     %label{:class => "icon_title"} Scan
   

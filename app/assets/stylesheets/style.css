@@ -116,23 +116,25 @@ For sizing containers
 
 
 .btns{
-	/*border:1px solid black;*/
-	width:200px;
-	height:100px;
+	width:30%;
+	height:30%;
 	display:inline-block;
 	margin:0;
 	background-color:white;
-	margin-right:6px;
-	padding-top:20px;
+	padding-top:3%;
+	padding-bottom:3%;
 }
 
 .outer_box{
 	width:51%;
 	margin:0 auto;
 	margin-top:5%;
-
 }
 
+
+.right{
+	margin-right:2%;
+}
 .left{
-	margin-left:1.5px;
+	margin-left:2%;
 }

@@ -1,5 +1,5 @@
 .box_outline{
-    width:800px;
+    width:40%;
     background-color:white;
     margin:0 auto;
     margin-top:40px;
@@ -58,4 +58,16 @@ td{
 .select_item:hover{
     color:#1199c3;
     text-decoration:underline;
+}
+
+.align-left{
+    float:left;
+}
+
+.align-right{
+    float:right;
+}
+
+.center-block{
+    margin:0 auto;
 }
