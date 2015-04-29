@@ -92,7 +92,7 @@ class WorkOrderController < ApplicationController
 		if @entry.Status__c == "Open"
 			canTakeOut = true
 			for elem in @list_details
-				@currItem = Item__c.find_by_Name(elem.Name)
+				@currItem = Item__c.find_by_Code__c(elem.Name)
 				numInventory = @currItem.Quantity__c.to_i
 				if elem.Quantity__c > numInventory
 					canTakeOut = false
@@ -101,21 +101,24 @@ class WorkOrderController < ApplicationController
 			end
 			if canTakeOut
 				for elem in @list_details
-					@currItem = Item__c.find_by_Name(elem.Name)
+					@currItem = Item__c.find_by_Code__c(elem.Name)
 					numInventory = @currItem.Quantity__c.to_i
-					@currItem.Quantity__c = (numInventory - elem.Quantity__c).to_s
+					@currItem.Quantity__c = ((numInventory - elem.Quantity__c).to_i).to_s
 					@currItem.save
 				end
 				@entry.Status__c = "Closed"
 				@entry.save
 			else
 				flash[:notice] = "Not enough items in inventory."
+				p "hi" * 80
 			end
 		else
 			flash[:notice] = "The Care Package is already closed"
+			p "hi7" * 80
 		end
 
 		if flash[:notice]
+			p "hi2" * 80
 			redirect_to confirmation_path(@entry.id__c)
 		else
 			flash[:notice] = "Delivery Confirmed"
