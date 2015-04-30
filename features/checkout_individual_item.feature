@@ -21,7 +21,7 @@ Feature: Checkout Individual Item
     And I follow "Store Item"
     And I fill in "ItemCode" with "13371"
   	And I fill in "Quantity" with "3"
-  	And I press "Store"
+  	And I press "Add"
   	Then I should see "test1" with quantity "1"
 
   Scenario: Refresh Salesforce state
