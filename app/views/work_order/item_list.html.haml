@@ -32,9 +32,9 @@
                   = text_field :item, :newvalue, :value => item.Quantity__c,:class => "quantity"
                   = text_field :item, :pid, :value => item.Id, :type => "hidden"
                   = submit_tag 'Update', :class => "update_btn"
-              %td= link_to image_tag('delete_button.png', 
-              :class => "delete_img"), item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), 
-              :method => :delete
+                %td= link_to image_tag('delete_button.png', 
+                :class => "delete_img"), item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), 
+                :method => :delete
 
 %div{:class => "outer_box"}
   %div{:class => "btns left right"}
@@ -42,7 +42,7 @@
     %label{:class => "icon_title"} Add
   
   %div{:class => "btns right"}
-    = link_to image_tag('scanner_store.png', :class => "icon_btns"), store_item_path, :id => "Scan"
+    = link_to image_tag('scanner_store.png', :class => "icon_btns"), "pic2shop://scan?callback=https://twcinventorytracker.herokuapp.com/item_list_add/" + @entry.id__c + "/", :id => "Scan"
     %label{:class => "icon_title"} Scan
   
   %div{:class => "btns"}

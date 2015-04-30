@@ -24,7 +24,7 @@ end
 
 Given(/I should be able to use the scanner for work order "(.*)"/) do |code|
   url = "pic2shop://scan?callback=https://twcinventorytracker.herokuapp.com/item_list_add/" + code + "/"
-  page.should have_link("Add Using Scanner", :href => url)   
+  page.should have_link("Scan", :href => url)   
 end
 
 Given(/I should be able to use the store item scanner$/) do 
