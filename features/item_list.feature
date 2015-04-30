@@ -26,7 +26,7 @@ Scenario: add valid item
   And I follow "Store Item"
   And I fill in "ItemCode" with "13373"
   And I fill in "Quantity" with "3"
-  And I press "Store"
+  And I press "Add"
   Then I should see "test1" with quantity "1"
   And I should see "test2" with quantity "1"
   And I should see "test3" with quantity "3"
