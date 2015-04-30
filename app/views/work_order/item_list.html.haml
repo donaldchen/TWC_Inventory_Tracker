@@ -44,9 +44,6 @@
   %div{:class => "btns right"}
     = link_to image_tag('scanner_store.png', :class => "icon_btns"), "pic2shop://scan?callback=https://twcinventorytracker.herokuapp.com/item_list_add/" + @entry.id__c + "/", :id => "Scan"
     %label{:class => "icon_title"} Scan
-
-    /  = link_to "pic2shop://scan?callback=https://twcinventorytracker.herokuapp.com/item_list_add/" + @entry.id__c + "/" do
-    / Add Using Scanner
   
   %div{:class => "btns"}
     = link_to image_tag('checkout.png', :class => "icon_btns"), confirmation_path(@entry.id__c), :id => "Checkout"
