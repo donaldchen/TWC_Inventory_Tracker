@@ -30,6 +30,8 @@ module NavigationHelpers
 
     when /^the Update Item page for "(.*)"$/ then update_item_path($1)
 
+    when /^the Analytics page$/ then analytics_path
+
   
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
