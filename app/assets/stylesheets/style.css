@@ -42,6 +42,10 @@ For sizing containers
 .row {
 	width:100%;
 	display:flex;
+	display: -webkit-box;
+    display: moz-box-flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
 	margin:0 auto;
 }
 
