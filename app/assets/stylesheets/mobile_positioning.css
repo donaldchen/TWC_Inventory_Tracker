@@ -1,4 +1,4 @@
-/*https://scotch.io/quick-tips/default-sizes-for-twitter-bootstraps-media-queries*/
+
 @media only screen 
 and (max-device-width : 1024px)
     {
@@ -19,6 +19,11 @@ and (max-device-width : 1024px)
 	        padding-bottom:2%;
         }
 
+        .logo{
+            height:30%;
+            width:30%;
+        }
+        
         .outer_box{
 	        width:60%;
 	        margin:0 auto;
@@ -43,12 +48,67 @@ and (max-device-width : 1024px)
 	        color:white;
 	        padding-top:10%;
 	        float:left;
-	        margin-left:10%;
+	        margin-left:12%;
         }
         
         
     }
 
+@media only screen 
+and (max-device-width : 768px)
+    {
+        .box{
+           width:300px;
+           padding:60px 20px 60px 20px;
+        }
+        
+        .btns{
+	        /*border:1px solid black;*/
+        	width:30%;
+	        height:30%;
+	        display:inline-block;
+	        margin:0;
+	        background-color:white;
+	        margin-right:2%;
+	        padding-top:2%;
+	        padding-bottom:2%;
+        }
+
+        .logo{
+            height:40%;
+            width:40%;
+        }
+        
+        .outer_box{
+	        width:60%;
+	        margin:0 auto;
+	        margin-top:5%;
+        }
+        
+        .nav_box{
+            width:300px;
+        }
+        
+        .box_outline{
+            width:570px;
+        }
+        
+        .delete_img{
+            width:10%;
+        }
+        
+        .back_arrow{
+	        width:25%;
+	        height:25%;
+	        color:white;
+	        padding-top:17%;
+	        float:left;
+	        margin-left:15%;
+        }
+        
+        
+    }
+    
 @media only screen 
 and (max-device-width : 480px)
     {

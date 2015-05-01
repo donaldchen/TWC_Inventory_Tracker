@@ -5,7 +5,7 @@
   %div{:class => "col-8 header_padding"}
     %h1{:class => "header_text"}Item Page
 
-%p= @entry.Special_Instructions__c
+
 
 %div{:class => "container"}
   %section{:class => "row"}
@@ -36,6 +36,8 @@
                 :class => "delete_img"), item_list_delete_path({:pid => item.Id, :id => @entry.id__c}), 
                 :method => :delete
 
+%p{:class => "special_instructions"}= @entry.Special_Instructions__c
+
 %div{:class => "outer_box"}
   %div{:class => "btns left right"}
     = link_to image_tag('add_item.png', :class => "icon_btns"), add_item_path({:id => @entry.id__c}), :id => "Store Item"
@@ -48,3 +50,5 @@
   %div{:class => "btns"}
     = link_to image_tag('checkout.png', :class => "icon_btns"), confirmation_path(@entry.id__c), :id => "Checkout"
     %label{:class => "icon_title"} Checkout
+
+%div{:class => "padding"}

@@ -12,14 +12,14 @@
   %div{:class => "row"}
     %div{:class => "col-6 grid_box nav_bar_horizontal_padding nav_bar_vertical_padding"}
       =link_to image_tag('scanner_store.png'), "pic2shop://scan?callback=https://twcinventorytracker.herokuapp.com/store_item/", :id => "Scanner Store"
-      %label{:class => "icon_title"} Scanner Store
+      %label{:class => "icon_title"} Scan Item
     %div{:class => "col-6 grid_box nav_bar_horizontal_padding"}
       = link_to image_tag( 'work_order.png'), work_order_home_path, :id => "Work Order"
       %label{:class => "icon_title"} Work Order
   %div{:class => "row"}
     %div{:class => "col-6 grid_box nav_bar_horizontal_padding nav_bar_vertical_padding"}
       = link_to image_tag( 'store_item.png'), store_item_path, :id => "Store Item"
-      %label{:class => "icon_title"} Add Item
+      %label{:class => "icon_title"} Manual Add
     %div{:class => "col-6 grid_box nav_bar_horizontal_padding"}
       = link_to image_tag( 'update_quantity.png'), update_quantity_path, :id => "Update Quantity"
       %label{:class => "icon_title"} Update Items
