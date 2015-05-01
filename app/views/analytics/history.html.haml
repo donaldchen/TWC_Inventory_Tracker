@@ -10,7 +10,7 @@
   %div{:class => "dateentry"}
     %div{:class => "datelabel"}
       %label= d.d.strftime("%B %d, %Y")
-    %table{:class => "datetable"}
+    %table{:class => "datetable table-striped"}
       %thead
         %tr
           %th= "Item"
@@ -29,4 +29,5 @@
             %td= v[2]
             %td= v[3]
     
- 
+
+%div{:class => "padding"}

@@ -71,3 +71,7 @@ td{
 .center-block{
     margin:0 auto;
 }
+
+tbody td{
+    padding-top:2%;
+}
