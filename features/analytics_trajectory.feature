@@ -6,21 +6,19 @@ Feature: Analytics - Trajectory
 Background:
   Given the following items exist in the inventory
 	  | item                  | code         | quantity  | price  |
-	  | test1                 | 13371        | 1347      | 1      |
+	  | goat                  | 67890        | 4         | 9000   |
   
   Given the following changes to the inventory occurred
      | item                   | amount       | date            |
-     | test1                  | -13          | 1/1/2015        |
-     | test1                  | -5           | 2/1/2015        |
-     | test1                  | -7           | 3/1/2015        |
-     | test1                  | +16          | 12/1/2014       |
   
   Given I am logged in as admin
   Given I am on the Analytics Trajectory Page
+
+Scenario: Display list of all items
+  Then I should see "goat"
   
-Scenario: Display average change per month
-  When I click "per month"
-  Then I should see "test1" with quantity "-2.25"
-  
-Scenario: Display average change per year
-  Then I should see "test1" with quantity "-0.75"
+Scenario: Display average change for goat
+  When I follow goat
+  Then I should see "Day"
+  Then I should see "Month"
+  Then I should see "year"

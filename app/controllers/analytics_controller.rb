@@ -107,7 +107,7 @@ class AnalyticsController < ApplicationController
             elsif @time - entry.CreatedDate < 2592000
                 @Month += entry.NewValue.to_i - entry.OldValue.to_i
                 @Year += entry.NewValue.to_i - entry.OldValue.to_i
-            elsif @time - entry.CreatedDate < 31,536,000
+            elsif @time - entry.CreatedDate < 31536000
                 @Year += entry.NewValue.to_i - entry.OldValue.to_i
             end
         end
