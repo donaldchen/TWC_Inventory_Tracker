@@ -18,6 +18,21 @@ Given(/^I am logged in$/) do
   click_button("Login")
 end
 
+Given(/^I am logged in as admin$/) do
+  visit("/")
+  fill_in("email", :with => "testadmin@testadmin.com")
+  fill_in("password", :with => "testadmin")
+  click_button("Login")
+end
+
+Then(/^I should see "(.*?)" before "(.*?)"$/) do |arg1, arg2|
+  page.should have_content(arg1)
+  page.should have_content(arg2)
+  one_pos = page.body.index(arg1)
+  two_pos = page.body.index(arg2)
+  one_pos.should < two_pos
+end
+
 Given(/^I am not logged in$/) do
   # Don't do anything
 end
