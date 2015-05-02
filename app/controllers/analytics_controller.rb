@@ -97,13 +97,18 @@ class AnalyticsController < ApplicationController
         @history = Item__History.find_all_by_ParentId(params[:id])
         @Day = 0
         @Month = 0
+        @Year = 0
         @time = Time.now
         @history.each do |entry|
             if @time - entry.CreatedDate < 86400
                 @Day += entry.NewValue.to_i - entry.OldValue.to_i
                 @Month += entry.NewValue.to_i - entry.OldValue.to_i
+                @Year += entry.NewValue.to_i - entry.OldValue.to_i
             elsif @time - entry.CreatedDate < 2592000
                 @Month += entry.NewValue.to_i - entry.OldValue.to_i
+                @Year += entry.NewValue.to_i - entry.OldValue.to_i
+            elsif @time - entry.CreatedDate < 31,536,000
+                @Year += entry.NewValue.to_i - entry.OldValue.to_i
             end
         end
     end
