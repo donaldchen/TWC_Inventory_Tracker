@@ -18,7 +18,7 @@ module NavigationHelpers
     when /^the Work Order page$/ then work_order_home_path
     when /^the Analytics Inventory Overview Page$/ then analytics_overview_path
     when /^the Analytics Trajectory Page$/ then analytics_trajectory_path
-
+    when /^the Analytics History Page$/ then analytics_history_path
     # we still need to access the specific page for a work order's item list. item_list_path(work order id)
     when /^the Item List page for order number "(.*)"$/ then item_list_path($1)
 

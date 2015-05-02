@@ -7,8 +7,8 @@ Feature: Add Items
     Given I am logged in
   	Given the following items exist in the inventory
 	  | item                  | code         | quantity  |
-	  | test1                 | 13371        | 1345      |
-	  | bananas               | 000001235    | 15        |
+	  | test1                 | 13371        | 1347      |
+	  | Bananas               | 000001235    | 165        |
 
   	Given I am on the Store Item page
 
@@ -30,7 +30,14 @@ Feature: Add Items
     When I am on the Update Quantities page
     And I follow "test1"
     Then I should be on the Update Item page for "13371"
-    When I fill in "New Quantity" with "1345"
+    When I fill in "New Quantity" with "1347"
     And I press "Update"
     Then I should be on the Update Quantities page
+    When I am on the Update Quantities page
+    And I follow "Bananas"
+    Then I should be on the Update Item page for "000001235"
+    When I fill in "New Quantity" with "165"
+    And I press "Update"
+    Then I should be on the Update Quantities page
+
 

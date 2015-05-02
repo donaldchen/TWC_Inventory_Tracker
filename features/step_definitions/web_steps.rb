@@ -25,10 +25,14 @@ Given(/^I am logged in as admin$/) do
   click_button("Login")
 end
 
+Given(/^the following changes to the inventory occurred$/) do |table|
+   # Don't do anything
+end
+
 Then(/^I should see "(.*?)" before "(.*?)"$/) do |arg1, arg2|
   page.should have_content(arg1)
   page.should have_content(arg2)
-  one_pos = page.body.index(arg1)
+  one_pos = page.body.index(arg1.to_s)
   two_pos = page.body.index(arg2)
   one_pos.should < two_pos
 end
@@ -91,7 +95,7 @@ Given(/^I delete Work Order with id "(.*)"$/) do |id|
   @care_package.delete
 end
 
-Given(/^the following items exist in the inventory$/) do |item_table|
+Given(/^the following items exist in the inventory.*$/) do |item_table|
   item_table.hashes.each do |item|
     entry = Inventory.create(item: item['item'], code: item['code'], quantity: item['quantity'])
   end
