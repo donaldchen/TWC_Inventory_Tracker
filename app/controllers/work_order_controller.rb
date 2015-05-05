@@ -110,15 +110,11 @@ class WorkOrderController < ApplicationController
 				@entry.save
 			else
 				flash[:notice] = "Not enough items in inventory."
-				p "hi" * 80
 			end
 		else
 			flash[:notice] = "The Care Package is already closed"
-			p "hi7" * 80
 		end
-
 		if flash[:notice]
-			p "hi2" * 80
 			redirect_to confirmation_path(@entry.id__c)
 		else
 			flash[:notice] = "Delivery Confirmed"
