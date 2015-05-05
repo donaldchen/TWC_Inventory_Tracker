@@ -12,16 +12,19 @@
   <%= stylesheet_link_tag "mobile_positioning.css"%>
   
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+  <%= javascript_include_tag 'events.js'%>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body no-data-turbolinks>
 <!--<% if flash[:notice]%>-->
 <!--	<p><%= flash[:notice]%></p>-->
 <!--<% end %>-->
 
 <%= yield %>
-<%= javascript_include_tag 'events.js'%>
 </body>
 </html>

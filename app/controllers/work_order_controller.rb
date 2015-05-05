@@ -105,20 +105,25 @@ class WorkOrderController < ApplicationController
 					numInventory = @currItem.Quantity__c.to_i
 					@currItem.Quantity__c = ((numInventory - elem.Quantity__c).to_i).to_s
 					@currItem.save
-				end
-				@entry.Status__c = "Closed"
-				@entry.save
+				end	
 			else
 				flash[:notice] = "Not enough items in inventory."
 			end
 		else
 			flash[:notice] = "The Care Package is already closed"
 		end
+		p "*" * 80
+		p flash[:notice]
 		if flash[:notice]
-			redirect_to confirmation_path(@entry.id__c)
+			#redirect_to confirmation_path(@entry.id__c)
+			redirect_to confirmation_path(params[:id])
+			return nil
 		else
+			@entry.Status__c = "Closed"
+			@entry.save
 			flash[:notice] = "Delivery Confirmed"
 			redirect_to work_order_home_path
+			return nil
 		end
 	end
 
