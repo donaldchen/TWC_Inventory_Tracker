@@ -8,7 +8,6 @@
 
 .datelabel{
     width: 15%;
-    border-right: 5px solid black;
 }
 
 .datelabel label{
@@ -19,13 +18,20 @@
 }
 
 .dateentry{
-    background-color: #b0c4de;
-    border-radius: 30px;
-    border: 5px solid black;
+    background-color:white;
+    border-radius: 10px;
     display: flex;
     width: 90%;
     position: relative;
     left: 5%;
+}
+
+tbody tr {
+   border-bottom:2px solid #E0E0E0;
+}
+
+tbody tr:last-child {
+   border-bottom:0;
 }
 
 @media only screen 

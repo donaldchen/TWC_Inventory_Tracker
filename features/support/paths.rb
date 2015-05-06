@@ -16,7 +16,9 @@ module NavigationHelpers
     # edit this. this is just a placeholder to make cucumber work
     when /^the (TWC )?login\s?page$/ then login_path
     when /^the Work Order page$/ then work_order_home_path
-
+    when /^the Analytics Inventory Overview Page$/ then analytics_overview_path
+    when /^the Analytics Trajectory Page$/ then analytics_trajectory_path
+    when /^the Analytics History Page$/ then analytics_history_path
     # we still need to access the specific page for a work order's item list. item_list_path(work order id)
     when /^the Item List page for order number "(.*)"$/ then item_list_path($1)
 
@@ -29,6 +31,8 @@ module NavigationHelpers
     when /^the Update Quantities page$/ then update_quantity_path
 
     when /^the Update Item page for "(.*)"$/ then update_item_path($1)
+
+    when /^the Analytics page$/ then analytics_path
 
   
     # Add more mappings here.

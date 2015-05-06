@@ -39,7 +39,7 @@ td{
 }
 
 .adjust_width{
-    width:25%;
+    width:20%;
 }
 
 .gray{
@@ -70,4 +70,8 @@ td{
 
 .center-block{
     margin:0 auto;
+}
+
+tbody td{
+    padding-top:2%;
 }

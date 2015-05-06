@@ -5,7 +5,7 @@ Feature: admin_login
   
 Background:
   
-  Given the following non-admin users exist:
+  Given the following users exist:
   | user_name					                | password      | admin?   |
   | test1@test1.com                   | test1  		    | N        |
   | testadmin@testadmin.com           | testadmin     | Y        |
@@ -15,19 +15,19 @@ Background:
 Scenario: Successful admin login
   When I fill in "email" with "testadmin@testadmin.com"
   And I fill in "password" with "testadmin"
-  And I press "Sign in"
-  Then I should see analytics button
+  And I press "Login"
+  Then I should see "Analytics"
   
 Scenario: Non-admin login
   When I fill in "email" with "test1@test1.com"
   And I fill in "password" with "test1"
-  And I press "Sign in"
-  Then I should not see analytics button
+  And I press "Login"
+  Then I should not see "Analytics"
   
 Scenario: Non-admin cannot access analytics page
   When I fill in "email" with "test1@test1.com"
   And I fill in "password" with "test1"
-  And I press "Sign in"
-  And I go to the Analytics Page
-  Then I should see "only admins can access analytics"
+  And I press "Login"
+  And I go to the Analytics page
+  Then I should see "Only admins can access Analytics"
   
