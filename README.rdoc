@@ -1,8 +1,0 @@
-== Client Needs 
-
-There With Care (TWC) provides meals and other services for families with critical illnesses. TWC collects and redistribute donations which they store in their physical inventory in Menlo Park. TWC needs an online inventory to track incoming and outgoing donations to help anticipate shortages of the items needed by their patients.
-
-
-== Solution and Design
-
-Our solution to the client’s need was to create a mobile friendly app that can update the existing Salesforce inventory of care packages and individual items. For quick item checkout, we added functionality for scanning item QR codes. To help the TWC staff anticipate when to restock specific items, we created a basic inventory analytics feature.
